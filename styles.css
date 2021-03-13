@@ -35,3 +35,46 @@ nav{
     padding-bottom: 7%; 
 }
 
+#about-header{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 30px;
+    font-size: 20px;
+}
+
+
+
+table{
+    float: right;
+    padding-right: 8%;
+    width: 30%;
+    font-size: 20px;
+}
+
+
+    
+}
+td{
+    padding: 5px;
+}
+
+.about-text {
+    float: left;
+    display: inline;
+    width: 60%;
+    font-size: 20px;
+}
+body{
+    position: absolute;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: grey;
+  color: white;
+  height: 100px;
+  font-size: 20px;
+}
