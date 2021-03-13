@@ -1,0 +1,37 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+}
+
+header{
+    background-image: url(images/homePageBackgroundImg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+
+#headerTint{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 800px;
+}
+
+.title{
+    color: white;
+    text-align: center;
+    font-size: 500%;
+}
+
+body{
+    background-color: darkgray;
+}
+
+nav{
+    background-color: rgba(0, 0, 0, 0.3); 
+    padding-bottom: 7%; 
+}
+
