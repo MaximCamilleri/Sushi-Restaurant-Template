@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing:border-box
 }
 html, body{
     height: 100%;
@@ -54,8 +55,8 @@ nav{
 
 .navbar ul li
 {
- width: 130 px;
- height: 10px;
+width: 120 px;
+margin: 15 px;
  background-color: rgb(181, 142, 101);
  border-radius: 3px;
  margin-left: 40px;
