@@ -11,14 +11,14 @@ body{
 /*Navbar css*/
 
 header{
-    background-image: url(images/homePageBackgroundImg1.jpg);
+    background-image: url(images/backgroundImg2.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 800px;
 }
 
 #headerTint{
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     height: 800px;
 }
 
@@ -50,9 +50,13 @@ nav{
 
 .navbar ul li
 {
- width: 120 px;
- margin: 15 px;
+ width: 130 px;
+ height: 10px;
+ background-color: rgb(181, 142, 101);
+ border-radius: 3px;
+ margin-left: 40px;
  padding: 15px;
+ margin-top: 20px;
 }
 
 .navbar ul li a{
@@ -62,7 +66,7 @@ nav{
 
 .active, .navbar ul li:hover
 {
-background:black;
+background:rgb(181, 142, 101);
 border-radius: 3px;
 }
 
@@ -134,5 +138,6 @@ border-radius: 3px;
 .title{
     color: white;
     text-align: center;
+    color: rgb(181, 142, 101);
     font-size: 500%;
 }
