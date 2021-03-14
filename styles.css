@@ -75,7 +75,7 @@ border-radius: 3px;
 {
     display: block;
     position: absolute;
-    background-color: #800020;
+    background-color: rgb(181, 142, 101);
     margin-top: 15px;
     margin-left: 15px;
 }
@@ -108,7 +108,7 @@ border-radius: 3px;
 {
     display: block;
     position: absolute;
-    background-color: #800020;
+    background-color: rgb(181, 142, 101);
     margin-top: 15px;
     margin-left: 15px;
 }
