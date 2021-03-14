@@ -2,6 +2,9 @@
     margin: 0px;
     padding: 0px;
 }
+html, body{
+    height: 100%;
+}
 
 body{
     font-family: sans-serif;
@@ -12,14 +15,15 @@ body{
 
 header{
     background-image: url(images/backgroundImg2.png);
+    height: 100%;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 800px;
 }
 
 #headerTint{
     background-color: rgba(0, 0, 0, 0.8);
-    height: 800px;
+    height: 100%;
 }
 
 .navbar{
@@ -39,7 +43,7 @@ header{
 nav{
     background-color: rgba(0, 0, 0, 0.3); 
     height: 100px; 
-    margin-bottom: 50px;
+    margin-bottom: 10%;
 }
 
 .navbar ul{
