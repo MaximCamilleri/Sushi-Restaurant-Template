@@ -1,22 +1,7 @@
-*
-{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
 
-}
 
-body{
-    font-family: sans-serif
-}
 
-.navbar
-{
-    background-color: #800020;
-    text-align: center;
-    text-align: right;
-    padding-right: 8%;
-}
+
 
 .navbar ul{
     display: inline-flex;
@@ -36,7 +21,7 @@ body{
     color: white;
 }
 
-.active,.navbar ul li:hover
+.active, .navbar ul li:hover
 {
 background:black;
 border-radius: 3px;
