@@ -77,6 +77,7 @@ border-radius: 3px;
 /* Menu*/
 .sub-menu{
     display:none;
+    transition: width 2s;
 }
 
 .navbar ul li:hover .sub-menu
