@@ -20,6 +20,14 @@ header{
     height: 475px;
 }
 
+h2{
+  color: rgb(204, 122, 0);
+}
+
+h3{
+  color: rgb(204, 122, 0);
+}
+
 .title{
     color: white;
     padding-top: 6%;
@@ -64,14 +72,16 @@ nav{
     padding-top: 70px;
     padding-left: 10%;
     left: 0;
-    background-color: white;
+    /*background-color: white;*/
+    background-color: #1a1a1d;
   }
   
   /* Control the right side */
   .right {
     padding-top: 50px;
     right: 0;
-    background-color:white;
+    /*background-color:white;*/
+    background-color: #1a1a1d;
   }
   
   /* If you want the content centered horizontally and vertically 
@@ -87,4 +97,23 @@ nav{
   .centered img {
     width: 150px;
     border-radius: 50%;
+  }
+
+  p{
+    color: bisque;
+  }
+
+  label{
+    color: bisque;
+  }
+
+  input, textarea{
+    border-color: rgb(77, 77, 77);
+    background-color: rgb(77, 77, 77);
+    color: white;
+    resize: none;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.%;
+    padding-bottom: 0.4%;
   }
