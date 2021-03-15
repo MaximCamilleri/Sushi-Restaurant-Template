@@ -57,7 +57,7 @@ nav{
 {
 width: 120 px;
 margin: 15 px;
- background-color: rgb(181, 142, 101);
+ background-color: rgb(37, 37, 116);
  border-radius: 3px;
  margin-left: 40px;
  padding: 15px;
@@ -71,7 +71,7 @@ margin: 15 px;
 
 .active, .navbar ul li:hover
 {
-background:rgb(181, 142, 101);
+background:rgb(37, 37, 116);
 border-radius: 3px;
 }
 
@@ -85,7 +85,7 @@ border-radius: 3px;
 {
     display: block;
     position: absolute;
-    background-color: rgb(181, 142, 101);
+    background-color: rgb(37, 37, 116);
     margin-top: 15px;
     margin-left: 15px;
 }
@@ -118,7 +118,7 @@ border-radius: 3px;
 {
     display: block;
     position: absolute;
-    background-color: rgb(181, 142, 101);
+    background-color: rgb(37, 37, 116);
     margin-top: 15px;
     margin-left: 15px;
 }
@@ -144,6 +144,6 @@ border-radius: 3px;
 .title{
     color: white;
     text-align: center;
-    color: rgb(181, 142, 101);
+    color: rgb(255, 255, 255);
     font-size: 500%;
 }
