@@ -14,26 +14,60 @@
                 </nav>
                 <h1 class="title">Contact Us</h1>
             </div>
+        </header>
 
         <main>
             <div class="split left">
                 <h2>Our Details</h2>
                 <br>
-                <h3>Address:</h3>
+                <h3 class="details">Address:</h3>
                 <p>Pogfish Sushi, Marfa Road, Valletta, Malta</p>
                 <br>
-                <h3>Phone and Email:</h3>
+                <h3 class="details">Phone and Email:</h3>
                 <p>+356 2170 8463</p>
                 <p>info@pogfishsushi.com</p>
                 <br>
-                <h3>Opening Hours:</h3>
-                <p>Monday to Saturday, 4:00pm to 11:00pm</p>
+                <h3 class="details">Opening Hours:</h3>
+                <table style="width:50%">
+                    <tr>
+                      <th>Day</th>
+                      <th>Hour</th>
+                    </tr>
+                    <tr>
+                      <td>Monday - Friday</td>
+                      <td>11AM - 10PM</td>
+                    </tr>
+                    <tr>
+                      <td>Saturday</td>
+                      <td>10AM - 12AM</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>10AM - 11PM</td>
+                      </tr>
+                  </table>
               </div>
               
               <div class="split right">
                 <h2>Contact Us</h2>
                 <br>
+                
                 <form>
+                    <label for="options">What do you want to contact us about?</label>
+                    <select id = "dropdownContact" name="msgType" id="msgType">
+                        <option value="general">General</option>
+                        <option value="event">Event</option>
+                        <option value="complaint">Complaint</option>                        
+                     </select>                 
+                    <!--<input type="radio" id="General" name="msgType" value="General">
+                    <label for="General">General </label>
+                    <input type="radio" id="Events" name="msgType" value="Events">
+                    <label for="Events">Events </label>
+                    <input type="radio" id="Complaints" name="msgType" value="Complaints">
+                    <label for="Complaints">Complaints </label> -->
+                    <input class = "contactSub" type="submit" value="Submit">
+                    <br>
+                    <br>
                   <label>Name:</label>
                   <br>
                   <input type="text" id = "form1">
@@ -46,8 +80,6 @@
                   <br>
                   <textarea type="text" id = "form2">
                    </textarea>
-                  <br><br>
-                  <input type="submit" value="Submit">
                 </form> 
               </div>       
         </main>

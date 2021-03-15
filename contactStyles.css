@@ -20,6 +20,10 @@ header{
     height: 475px;
 }
 
+h1{
+  font-family: "Times New Roman", Times, serif;
+}
+
 h2{
   color: rgb(204, 122, 0);
 }
@@ -45,12 +49,27 @@ nav{
 }
 
 #form1{
+  font-size: 105%;
+  font-family: 'Courier New', Courier, monospace;
   width: 750px;
 }
 
 #form2{
+  font-family: 'Courier New', Courier, monospace;
   width: 750px;
-  height: 200px;
+  height: 175px;
+}
+
+.contactSub{
+  float: right;
+  margin-right: 30%;
+}
+
+#dropdownContact{
+  background-color: rgb(77, 77, 77);
+  border-color: rgb(77, 77, 77);
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 
@@ -116,4 +135,17 @@ nav{
     padding-right: 1%;
     padding-top: 0.%;
     padding-bottom: 0.4%;
+  }
+
+  th{
+    text-align: left;
+    color: bisque;
+  }
+
+  td{
+    color: bisque;
+  }
+
+  .details{
+    padding-bottom: 0.5%;
   }
