@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+html{
+    min-height: 100%;
+}
+
 .logo{
     width: 200px;
     height: 200px;
@@ -43,6 +47,9 @@ nav{
     font-size: 20px;
 }
 
+main{
+    min-height: calc(100vh - 50px);
+}
 
 
 table{
