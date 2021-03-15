@@ -32,12 +32,17 @@ header{
 }
 
 body{
-    background-color: darkgray;
+    background-color: #1a1a1d;
+    color: white;
 }
 
 nav{
     background-color: rgba(0, 0, 0, 0.3); 
     padding-bottom: 7%; 
+}
+
+.about #aboutheader{
+    width: 50%;
 }
 
 #about-header{
@@ -46,6 +51,8 @@ nav{
     display: flex;
     padding: 30px;
     font-size: 20px;
+    width: 65%;
+   
 }
 
 main{
@@ -58,7 +65,15 @@ table{
     padding-right: 8%;
     width: 30%;
     font-size: 20px;
+    background-color: rgb(203,172,167);
+    padding-bottom: 800px;  
+    margin-top: -100px;
+    border-left: rgb(227, 138, 162) 7px solid;
+    color: black;
+
 }
+
+
 
 td{
     padding: 5px;
@@ -69,6 +84,7 @@ td{
     display: inline;
     width: 60%;
     font-size: 20px;
+    padding-left: 40px;
 }
 body{
     position: absolute;
