@@ -55,13 +55,13 @@ nav{
 
 .navbar ul li
 {
-width: 120 px;
-margin: 15 px;
- background-color: rgb(37, 37, 116);
- border-radius: 3px;
- margin-left: 40px;
- padding: 15px;
- margin-top: 20px;
+    width: 120 px;
+    margin: 15 px;
+    background-color: rgb(153, 92, 0);
+    border-radius: 3px;
+    margin-left: 40px;
+    padding: 15px;
+    margin-top: 20px;
 }
 
 .navbar ul li a{
@@ -71,32 +71,37 @@ margin: 15 px;
 
 .active, .navbar ul li:hover
 {
-background:rgb(37, 37, 116);
+background:rgb(153, 92, 0);
 border-radius: 3px;
 }
 
 /* Menu*/
 .sub-menu{
     display:none;
-    transition: width 2s;
+}
+
+.navbar ul li:hover
+{
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 
 .navbar ul li:hover .sub-menu
 {
     display: block;
     position: absolute;
-    background-color: rgb(37, 37, 116);
+    background-color: rgb(153, 92, 0);
     margin-top: 15px;
-    margin-left: 15px;
+    margin-left: -15px;
 }
-
 
 .navbar ul li:hover .sub-menu ul{
     display: block;
     margin: 10px;
+    margin-left: -20px; 
 }
 .navbar ul li:hover .sub-menu ul li{
-    width: 150px;
+    width: 99px;
     padding: 10 px;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -118,18 +123,20 @@ border-radius: 3px;
 {
     display: block;
     position: absolute;
-    background-color: rgb(37, 37, 116);
+    background-color: rgb(153, 92, 0);
     margin-top: 15px;
-    margin-left: 15px;
+    margin-left: -15px;
+    
 }
 
 .navbar ul li:hover .sub-contact ul{
     display: block;
     margin: 10px;
+    margin-left: -20px;
 }
 
 .navbar ul li:hover .sub-contact ul li{
-    width: 150px;
+    width: 135px;
     padding: 10 px;
     border-bottom: 1px solid #fff;
     background: transparent;
