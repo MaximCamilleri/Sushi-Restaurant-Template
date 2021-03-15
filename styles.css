@@ -14,6 +14,7 @@ html{
 
 header{
     background-image: url(images/homePageBackgroundImg1.jpg);
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     height: 800px;
