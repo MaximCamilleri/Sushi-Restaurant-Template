@@ -60,9 +60,12 @@ nav{
   height: 175px;
 }
 
+form{
+  max-width: 750px;
+}
+
 .contactSub{
-  float: right;
-  margin-right: 30%;
+ float: right
 }
 
 #dropdownContact{
