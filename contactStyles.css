@@ -3,26 +3,25 @@
     padding: 0px;
 }
 
-h1{
-  font-family: "Times New Roman", Times, serif;
-}
-
 h2{
   color: rgb(204, 122, 0);
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h3{
   color: rgb(204, 122, 0);
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #form1{
   font-size: 105%;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Raleway', sans-serif;
   width: 750px;
 }
 
 #form2{
-  font-family: 'Courier New', Courier, monospace;
+  font-size: 105%;
+  font-family: 'Raleway', sans-serif;
   width: 750px;
   height: 175px;
 }
@@ -39,7 +38,7 @@ form{
   background-color: rgb(77, 77, 77);
   border-color: rgb(77, 77, 77);
   color: white;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Raleway', sans-serif;
 }
 
 
@@ -90,11 +89,17 @@ form{
 
   p{
     color: bisque;
+    font-family: 'Raleway', sans-serif;
   }
 
   label{
     color: bisque;
+    font-family: 'Ubuntu', sans-serif;
   }
+
+  input:focus, textarea:focus {
+    outline: none;
+}
 
   input, textarea{
     border-color: rgb(77, 77, 77);
@@ -110,10 +115,12 @@ form{
   th{
     text-align: left;
     color: bisque;
+    font-family: 'Ubuntu', sans-serif;
   }
 
   td{
     color: bisque;
+    font-family: 'Raleway', sans-serif;
   }
 
   .details{
@@ -125,7 +132,7 @@ form{
 /*Navbar css*/
 
 header{
-  background-image: url(images/homePageBackgroundImg1.jpg);
+  background-image: url(images/backgroundImg2.png);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -261,6 +268,7 @@ border-radius: 3px;
 .title{
   color: white;
   text-align: center;
+  font-family: 'Philosopher', sans-serif;
   color: rgb(255, 255, 255);
   font-size: 500%;
 }
