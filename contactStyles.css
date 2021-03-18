@@ -3,13 +3,22 @@
     padding: 0px;
 }
 
+html, body{
+  height: 70%;
+}
+
 h2{
   color: rgb(204, 122, 0);
   font-family: 'Ubuntu', sans-serif;
 }
 
+#email{
+  margin-top: 3px;
+}
+
 h3{
   color: rgb(204, 122, 0);
+  margin-top: 2%;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -31,7 +40,12 @@ form{
 }
 
 .contactSub{
- float: right
+ float: right;
+ font-family: 'Ubuntu', sans-serif;
+ color: bisque;
+ border-color: rgb(77, 77, 77);
+ background-color: rgb(77, 77, 77);
+ padding: 5px;
 }
 
 #dropdownContact{
@@ -97,7 +111,7 @@ form{
     font-family: 'Ubuntu', sans-serif;
   }
 
-  input:focus, textarea:focus {
+  input:focus, textarea:focus, dropdownContact:focus{
     outline: none;
 }
 
@@ -110,6 +124,7 @@ form{
     padding-right: 1%;
     padding-top: 0.%;
     padding-bottom: 0.4%;
+    border-radius: 5px;
   }
 
   th{
@@ -161,13 +176,14 @@ header{
 nav{
   background-color: rgba(0, 0, 0, 0.3); 
   height: 100px; 
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .navbar ul{
   display: inline-flex;
   list-style: none;
   color: white;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .navbar ul li
@@ -219,17 +235,12 @@ border-radius: 3px;
 }
 .navbar ul li:hover .sub-menu ul li{
   width: 99px;
-  padding: 10 px;
+  padding: 7px;
   border-bottom: 1px solid #fff;
   background: transparent;
   border-radius: 0;
   text-align: left;
 }
-.navbar ul li:hover .sub-menu ul li:last-child{
-  border-bottom: none;
-}
-
-
 
 /* Contact*/
 .sub-contact{
@@ -254,15 +265,11 @@ border-radius: 3px;
 
 .navbar ul li:hover .sub-contact ul li{
   width: 135px;
-  padding: 10 px;
+  padding: 7px;
   border-bottom: 1px solid #fff;
   background: transparent;
   border-radius: 0;
   text-align: left;
-}
-
-.navbar ul li:hover .sub-contact ul li:last-child{
-  border-bottom: none;
 }
 
 .title{
