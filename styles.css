@@ -50,7 +50,7 @@ nav{
     align-items: center;
     display: flex;
     padding: 30px;
-    font-size: 20px;
+    font-size: 30px;
     width: 65%;
    
 }
@@ -65,18 +65,22 @@ table{
     padding-right: 8%;
     width: 30%;
     font-size: 20px;
-    background-color: rgb(203,172,167);
+    background-color: #D8B58D ;
     padding-bottom: 800px;  
-    margin-top: -100px;
-    border-left: rgb(227, 138, 162) 7px solid;
+    margin-top: -110px;
+    border-left: #A95F23  px solid;
     color: black;
 
 }
 
 
 
+
 td{
-    padding: 5px;
+    
+    padding: 15px;
+    padding-left: 75px;
+    font-size: 20px;
 }
 
 .about-text {
@@ -94,8 +98,9 @@ body{
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: grey;
+  background: #3C2F2A;
   color: white;
-  height: 100px;
+  
+  height: 150px;
   font-size: 20px;
 }
