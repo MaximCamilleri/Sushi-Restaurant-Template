@@ -2,34 +2,59 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="cssBooking.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E" />
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Raleway:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+
     </head>
 
     <body>
         <div class = "background">
             <div class =  "box">
-            <p id = "bookingTitle" >
-                Book Your Table!
-            </p>
+                <p id = "bookingHeader">
+                    Reservation:
+                </p>
+                <p id = "bookingTitle" >
+                  Book Your Table
+             </p>
 
             
-            <p>Name</p>
-            <input type="text" id="name" class = "textbox" placeholder="Name"/>
+             <p class = "textboxTitle"> Name</p>
+                <input type="text" id="name" class = "textbox" placeholder="Name"/>
 
-            <p>Contact Number</p>
-            <input type="text" id="nos" class = "textbox" placeholder="Number"/>
+             <p class = "textboxTitle"> Contact Number</p>
+                <input type="text" id="nos" class = "textbox" placeholder="Number"/>
         
-            <p>Date</p>
-            <input type="text" id="date" class = "textbox" placeholder="Date"/>
-            
-            <p>Guests</p>
-            <input type="text" id="guests" class = "textbox" placeholder="Number of Guests"/>
-
-            <p>Time</p>
-            <input type="text" id="time" class = "textbox" placeholder="Hours : Minutes"/>
-
+            <p class = "textboxTitle"> Date</p>
+              <input type="text" id="date" class = "textbox" placeholder="Date"/>
+            <!--
+            <p class = "textboxTitle"> Guests *</p>
+                <input type="text" id="guests" class = "textbox" placeholder="Number of Guests"/> -->
             
 
-
+            <p class = "textboxTitle"> <label for="options" > Guests * </label> </p>
+            
+            <p id = "guestNumber" class = "textbox" placeholder = "Guests">
+            <select name="guests" id = "guestOptions">
+                <option value="oneG">1 Guest</option>
+                <option value="twoG">2 Guests</option>
+                <option value="threeG">3 Guests</option>
+                <option value="fourG">4 Guests</option>
+                <option value="fiveG">5 Guests</option>
+                <option value="sixG">6 Guests</option>
+                <option value="sevenG">7 Guests</option>
+                <option value="eightG">8 Guests</option>
+                <option value="nineG">9 Guests</option>
+                <option value="tenG">10 Guests</option>          
+            </select>
+        </p>
+        
+       
+         
+            <p class = "textboxTitle"> Time</p>
+                <input type="text" id="time" class = "textbox" placeholder="Hours : Minutes"/> 
         </div>
+
+
+        <p id = "footnote"> * If the number of guests is larger than 10, please go to the "Events" section.</p>
     </div>
     </body>
