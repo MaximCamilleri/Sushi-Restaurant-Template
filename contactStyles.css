@@ -324,4 +324,7 @@ footer p{
     margin-top: 60px;
   }
 
+  main{
+    font-size: 150%;
+  }
 }
