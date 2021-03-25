@@ -1,15 +1,20 @@
 *{
     margin: 0px;
     padding: 0px;
+    
 }
 
 html, body{
   height: 70%;
+  background-color: #1a1a1d;
 }
 
 h2{
+  padding-top: 3%;
+  padding-left: 20%;
   color: rgb(204, 122, 0);
   font-family: 'Ubuntu', sans-serif;
+  font-size: 175%;
 }
 
 #email{
@@ -19,20 +24,43 @@ h2{
 h3{
   color: rgb(204, 122, 0);
   margin-top: 2%;
+  padding-left: 20%;
   font-family: 'Ubuntu', sans-serif;
+  font-size: 150%;
+}
+
+form{
+  font-size: 125%;
+  margin-top: 1%;
+  padding-left: 20%;
 }
 
 #form1{
+  padding-left: 2%;
+  padding-right: 2%;
   font-size: 105%;
   font-family: 'Raleway', sans-serif;
-  width: 750px;
+  width: 50%;
+  float: left;
+  color: bisque;
 }
 
 #form2{
+  padding-left: 2%;
+  padding-right: 2%;
   font-size: 105%;
   font-family: 'Raleway', sans-serif;
-  width: 750px;
+  width: 150%;
+  float: left;
+  color: bisque;
+}
+
+#form3{
+  font-size: 105%;
+  font-family: 'Raleway', sans-serif;
+  width: 152%;
   height: 175px;
+  color: bisque;
 }
 
 form{
@@ -54,52 +82,6 @@ form{
   color: white;
   font-family: 'Raleway', sans-serif;
 }
-
-
-/*
-    This is a gotten from this site:
-    https://www.w3schools.com/howto/howto_css_split_screen.asp
-*/
-
-.split {
-    height: 400%;
-    width: 50%;
-    position: fixed;
-    z-index: 1;
-    overflow-x: hidden;
-  }
-  
-  /* Control the left side */
-  .left {
-    padding-top: 70px;
-    padding-left: 10%;
-    left: 0;
-    /*background-color: white;*/
-    background-color: #1a1a1d;
-  }
-  
-  /* Control the right side */
-  .right {
-    padding-top: 50px;
-    right: 0;
-    /*background-color:white;*/
-    background-color: #1a1a1d;
-  }
-  
-  /* If you want the content centered horizontally and vertically 
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  } */
-  
-  /* Style the image inside the centered container, if needed */
-  .centered img {
-    width: 150px;
-    border-radius: 50%;
-  }
 
   p{
     color: bisque;
@@ -134,12 +116,25 @@ form{
   }
 
   td{
+    width: 70%;
     color: bisque;
     font-family: 'Raleway', sans-serif;
   }
 
   .details{
     padding-bottom: 0.5%;
+  }
+
+  #formApp{
+    width: 130%;
+  }
+
+  #formAp2p{
+    width:140%;
+  }
+
+  #formApp2 td{
+    width:50%;
   }
 
 /*navbar*/
@@ -188,8 +183,8 @@ nav{
 
 .navbar ul li
 {
-  width: 120 px;
-  margin: 15 px;
+  width: 120;
+  margin: 15;
   background-color: rgb(153, 92, 0);
   border-radius: 3px;
   margin-left: 40px;
@@ -278,4 +273,22 @@ border-radius: 3px;
   font-family: 'Philosopher', sans-serif;
   color: rgb(255, 255, 255);
   font-size: 500%;
+}
+
+footer{
+  color: bisque;
+  position: relative;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  height: 50px; 
+  font-family: 'Raleway', sans-serif;
+  background-color: rgba(61, 48, 42, 0.2);
+  border-top: solid 3px;
+  border-color: rgba(61, 48, 42, 0.4);
+  font-size: 12px;
+}
+
+footer p{
+  padding-left: 8%;
 }
