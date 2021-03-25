@@ -8,6 +8,40 @@
     </head>
 
     <body>
+        <header>
+                <nav>
+                    <img id="logo" src="https://image.freepik.com/free-vector/sushi-restaurant-logo_8169-12.jpg" alt="PogFish Sushi restaurant logo">
+                    <div class="navbar">
+                        <ul>
+                  
+                          <li class = "active"><a href = "#"> Home </a> </li>
+                  
+                            <li><a href = "#">Menu </a> 
+                              <div class = "sub-menu">
+                                  <ul>
+                                          <li><a href = "#">Food</a></li>
+                                          <li><a href = "#">Drink</a></li>
+                                  </ul>
+                              </div>
+                           </li>
+                  
+                  
+                            <li><a href = "#">Contact</a> 
+                              <div class = "sub-contact">
+                                  <ul>
+                                      <li><a href = "#">Book a Table</a></li>
+                                      <li><a href = "#">Events</a></li>
+                                      <li><a href = "#">Takeaway</a></li>
+                                      <li><a href = "#">Complaints</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                  
+                  
+                      </ul>
+                      </div>
+                </nav>          
+        </header>
         <div class = "background">
             <div class =  "box">
                 <p id = "bookingHeader">
@@ -26,9 +60,6 @@
         
             <p class = "textboxTitle"> Date</p>
               <input type="text" id="date" class = "textbox" placeholder="Date"/>
-            <!--
-            <p class = "textboxTitle"> Guests *</p>
-                <input type="text" id="guests" class = "textbox" placeholder="Number of Guests"/> -->
             
 
             <p class = "textboxTitle"> <label for="options" > Guests * </label> </p>
@@ -47,14 +78,24 @@
                 <option value="tenG">10 Guests</option>          
             </select>
         </p>
+
+        <p class = "textboxTitle"> Time</p>
+            <input type="text" id="time" class = "textbox" placeholder="Time AM/PM"/> 
         
+        <p>
+        <button type = "submit" form = "bookings" value = "Submit" id = "submitReserve" >Reserve</button>
+        </p>
+
+    </div> 
+    </div>    
+            
        
-         
-            <p class = "textboxTitle"> Time</p>
-                <input type="text" id="time" class = "textbox" placeholder="Hours : Minutes"/> 
-        </div>
 
-
-        <p id = "footnote"> * If the number of guests is larger than 10, please go to the "Events" section.</p>
-    </div>
+        <footer>
+            <p>&copy pogfishsushi, All Rights Reserved. Designed by Max Camilleri, Mathias Vaaben, Lucas Lautier</p>
+            <p id = "footnote"> * If the number of guests is larger than 10, please go to the "Events" section in the "Contact" tab.</p>
+          </footer>
+  
+       
     </body>
+</html>
