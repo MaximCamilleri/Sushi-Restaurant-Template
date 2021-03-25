@@ -7,9 +7,8 @@ html, body{
     height: 100%;
 }
 
-body{
-    font-family: sans-serif;
-    background-color: darkgray;
+html{
+    min-height: 100%;
 }
 
 /*Navbar css*/
@@ -32,13 +31,17 @@ header{
     padding-right: 8%;
 }
 
-
 #logo{
     width: 100px;
     height: 100px;
     max-width: 100px;
     float: left;
     display: inline;
+}
+
+body{
+    background-color: #1a1a1d;
+    color: white;
 }
 
 nav{
@@ -148,9 +151,71 @@ border-radius: 3px;
     border-bottom: none;
 }
 
+
 .title{
     color: white;
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 500%;
 }
+
+.about #aboutheader{
+    width: 50%;
+}
+
+#about-header{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 30px;
+    font-size: 30px;
+    width: 65%;
+   
+}
+
+main{
+    min-height: calc(100vh - 50px);
+}
+
+table{
+    float: right;
+    padding-right: 8%;
+    width: 30%;
+    font-size: 20px;
+    background-color: #D8B58D ;
+    padding-bottom: 800px;  
+    margin-top: -110px;
+    border-left: #A95F23  px solid;
+    color: black;
+
+}
+
+td{
+    
+    padding: 15px;
+    padding-left: 75px;
+    font-size: 20px;
+}
+
+.about-text {
+    float: left;
+    display: inline;
+    width: 60%;
+    font-size: 20px;
+    padding-left: 40px;
+}
+body{
+    position: absolute;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #3C2F2A;
+  color: white;
+  
+  height: 150px;
+  font-size: 20px;
+}
+
