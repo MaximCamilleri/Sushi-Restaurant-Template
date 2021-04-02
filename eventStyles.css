@@ -33,6 +33,18 @@ form{
   font-size: 125%;
   margin-top: 1%;
   padding-left: 20%;
+  width: 800px;
+  margin-right: 5%;
+}
+
+#tableForm{
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 105%;
+  font-family: 'Raleway', sans-serif;
+  width: 65%;
+  float: left;
+  color: bisque;
 }
 
 #form1{
@@ -61,10 +73,6 @@ form{
   width: 152%;
   height: 175px;
   color: bisque;
-}
-
-form{
-  max-width: 750px;
 }
 
 .contactSub{
@@ -126,11 +134,15 @@ form{
   }
 
   #formApp{
-    width: 130%;
+    width: 140%;
   }
 
-  #formAp2p{
-    width:140%;
+  #formApp td{
+    width:70%;
+  }
+
+  #formApp2{
+    width:130%;
   }
 
   #formApp2 td{
@@ -158,7 +170,6 @@ header{
   text-align: right;
   padding-right: 8%;
 }
-
 
 #logo{
   width: 100px;
