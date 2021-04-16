@@ -6,4 +6,12 @@
     text-align: center;
     position: relative; 
     top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    display: inline-block;
+}
+
+#credentials{
+    margin-left: 10px;
+    display: inline-block;
 }
