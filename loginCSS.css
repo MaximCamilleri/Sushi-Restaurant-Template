@@ -1,4 +1,6 @@
 #welcome{
     background-color: rgb(190, 126, 65);
     padding: 10px;
+    width: 50%;
+    height: 100px;
 }
