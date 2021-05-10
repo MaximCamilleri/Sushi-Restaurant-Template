@@ -26,6 +26,16 @@
                               <ul>
                                       <li><a href = "#">Food</a></li>
                                       <li><a href = "#">Drink</a></li>
+                                        
+                                      <?php
+                                        if(isset($_SESSION["userId"])){
+                                            echo "<li><a href = '#'>Favourites</a></li>"
+                                        }else{
+                                            echo "<li><a href = '#'>Login</a></li>"
+                                        }
+                                      ?>
+
+                                      
                               </ul>
                           </div>
                        </li>

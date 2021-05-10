@@ -23,9 +23,9 @@
             <div class = right>
                 <form method="POST", action="includes/login.inc.php">
                     <section class = "copy">
-                        <h2> Sign Up</h2>
+                        <h2> Log In</h2>
                         <div class = "login">
-                            <p>Already have an account? <a href = "#"><strong>Log In</strong></a></p>
+                            <p>Don't have an account?<a href = "#"><strong>Sign Up</strong></a></p>
                         </div>
                     </section>
 

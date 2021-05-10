@@ -59,3 +59,32 @@ function createUser($conn, $firstname, $lastname, $email, $password){
     header("location: ../signup.php?error=none");
 
 }
+
+function emptyInputLogin($email, $password){
+    $result = false;
+    if(empty($email) || empty($password)){
+        $result = true;
+    }
+    return $result;
+}
+
+function loginUser($conn, $email, $password){
+    $exists = emailExists($email, $conn);
+
+    if($exists === false){
+        header("location: ../login.php?error=wronglogin");
+        exit();
+    }
+
+    $pwdHashed = $exists["usersPassword"];
+    $checkPwd = password_verify($password, $pwdHashed);
+    if($checkPwd === false){
+        header("location: ../login.php?error=wronglogin");
+    }else if($checkPwd === true){
+        session_start();
+        $_SESSION["userId"] = $exists["userId"];
+        $_SESSION["email"] = $exists["usersEmail"];
+        //header("location: ../login.php?error=wronglogin"); needs to go to the main page
+        exit();
+    }
+}
