@@ -21,7 +21,7 @@
             </div>
             
             <div class = right>
-                <form method="POST", action="signup.inc.php">
+                <form method="POST", action="includes/login.inc.php">
                     <section class = "copy">
                         <h2> Sign Up</h2>
                         <div class = "login">
@@ -45,12 +45,18 @@
                     
                     <button type="submit" name="submit" class = "login-button">Login</button>
                     
-                   
-                    
-                    <!-- <section class = "legal">
-                        <p>By continuing, you will be agreeing to our Terms & Conditions</p>
-                    </section> -->
                 </form>
+
+                <?php
+                    if(isset($_GET["error"])){
+                        if($_GET["error"] == "emptyinput"){
+                            echo "<p>Fill in all the required fields<p>";
+                        }
+                        if($_GET["error"] == "wronglogin"){
+                            echo "<p>The email of password was incorrect<p>";
+                        }
+                    }
+                ?>
             </div>
            
         </div>
