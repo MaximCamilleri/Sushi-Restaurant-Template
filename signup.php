@@ -13,7 +13,7 @@
     </head>
         
         <h1>Sign up page</h1>
-        <form method="POST", action="signup.inc.php">
+        <form method="POST", action="includes/signup.inc.php">
                 <label for="">First Name</label>
                 <input type="text" name="firstname">
                 <br>
@@ -23,16 +23,28 @@
                 <label for="">Email</label>
                 <input type="text" name="email">
                 <br>
-                <label for="">Telephone Number</label>
-                <input type="text" name="telNumber">
-                <br>
                 <label for="">Password</label>
                 <input type="text" name="password">
                 <br>
                 <button type="submit" name="submit">Sign up</button>
 
             </form>
-        
+        <?php
+            if(isset($_GET["error"])){
+                if($_GET["error"] == "emptyinput"){
+                    echo "<p>Fill in all the required fields<p>";
+                }
+                if($_GET["error"] == "invalidemail"){
+                    echo "<p>A valid email was not entered<p>";
+                }
+                if($_GET["error"] == "emailexists"){
+                    echo "<p>Email is already in use<p>";
+                }
+                if($_GET["error"] == "none"){
+                    echo "<p>Signup was succesful<p>";
+                }
+            }
+        ?>
     </body>
 </html>
 
