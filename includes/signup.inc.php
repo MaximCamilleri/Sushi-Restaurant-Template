@@ -1,6 +1,12 @@
 <?php
     include_once "dbh.inc.php";
 
+    if(isset($_POST["submit"])){
+
+    }else{
+        
+    }
+
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
