@@ -5,7 +5,7 @@
         <title>PogFish Sushi</title>
         <!-- <link rel="stylesheet" href="contactStyles.css"> -->
         <link rel="stylesheet" href="signUpCSS.css">
-
+        <script src="loginJS.js"></script>
         <!--Fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Raleway:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@
                     <div class = "password-container">
                         <label for="password">Password</label>
                         <input id = "password" type="password" name="password">
-                        <i class>See password</i> 
+                        <input class = "password-checkbox" type="checkbox" onclick="myFunction()"><i class>See password</i> 
                     </div>
                     <br>
 

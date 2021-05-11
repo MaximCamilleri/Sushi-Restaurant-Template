@@ -101,6 +101,13 @@ label{
     top: 42px;
     right: 16px;
 }
+
+.password-checkbox{
+    position: absolute;
+    top: 44px;
+    right: 115px;
+}
+
 .checkbox{
     display: block;
     position: relative;
