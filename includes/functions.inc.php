@@ -84,7 +84,7 @@ function loginUser($conn, $email, $password){
         session_start();
         $_SESSION["userId"] = $exists["userId"];
         $_SESSION["email"] = $exists["usersEmail"];
-        //header("location: ../login.php?error=wronglogin"); needs to go to the main page
+        header("location: ../index.php");
         exit();
     }
 }
