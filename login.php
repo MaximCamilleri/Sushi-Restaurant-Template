@@ -12,32 +12,33 @@
 
     </head>
     <body>
-        <div class = split>
-            <div class = left>
+        <div class = "split">
+            <div class = "left">
                 <section class = "copy">
-                    <h1>PogFish Sushi</h1>
-                    <p>The best sushi restaurant on the UOM Campus</p>
+                    <h1 class = "title">PogFish Sushi</h1>
+                    <p class = "text">The best sushi restaurant on the UOM Campus</p>
                 </section>
             </div>
             
-            <div class = right>
+            
+            <div class = "right">
                 <form method="POST", action="includes/login.inc.php">
                     <section class = "copy">
-                        <h2> Log In</h2>
+                        <h2 class = "title"> Log In</h2>
                         <div class = "login">
-                            <p>Don't have an account?<a href = "signup.php"><strong>Sign Up</strong></a></p>
+                            <p class = "text">Don't have an account?<a href = "signup.php"><strong>Sign Up</strong></a></p>
                         </div>
                     </section>
 
                    
-                    <label for="email">Email</label>
-                    <input id = "email" type="email" name="email">
+                    <label class = "title" for="email">Email</label>
+                    <input class = "title" id = "email" type="email" name="email">
                     <br>
                    
                     <div class = "password-container">
                         <label for="password">Password</label>
                         <input id = "password" type="password" name="password">
-                        <i class>See password</i> 
+                        <i class = "text">See password</i> 
                     </div>
                     <br>
 
