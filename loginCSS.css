@@ -26,6 +26,10 @@ a{
     color: #0000A3
 }
 
+.right{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 a:hover{
     text-decoration: underline;
 }
@@ -42,17 +46,19 @@ a:hover{
 .left, .right{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-
-
 .left{
-    background: bisque;
+    background-image: url(images/signupBackground.pg.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(255, 255, 255, 0.5);
 /*
  background: linear-gradient(,), url:('');
 */
 }
+
 
 .left, .copy{
     color: white;
@@ -139,4 +145,12 @@ label{
         width: 50%;
         height: auto;
     }
+}
+
+.text{
+    font-family: 'Raleway', sans-serif;
+}
+
+.title{
+    font-family: 'Ubuntu', sans-serif;
 }
