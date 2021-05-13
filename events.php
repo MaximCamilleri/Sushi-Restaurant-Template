@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>PogFish Sushi</title>
-        <link rel="stylesheet" href="eventStyles.css">
+        <link rel="stylesheet" href="eventStyles2.css">
 
         <!--Fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
