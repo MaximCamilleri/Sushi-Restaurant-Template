@@ -84,7 +84,7 @@ function loginUser($conn, $email, $password){
         session_start();
         $_SESSION["userId"] = $exists["userId"];
         $_SESSION["email"] = $exists["usersEmail"];
-        header("location: ../index.php");
+        header("location: ../../Home/index.php");
         exit();
     }
 }
