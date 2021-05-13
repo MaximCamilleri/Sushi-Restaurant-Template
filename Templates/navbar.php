@@ -9,9 +9,11 @@
             <div class="navbar">
                 <ul>
             
-                    <li class = "active"><a href = "#"> Home </a> </li>
-            
-                    <li><a href = "#">Menu </a> 
+                    <li class = "active"><a href = "../Home/index.php"> Home </a> </li>
+
+                        
+                    
+                    <li><a href = "../Menu/menu.html">Menu </a> 
                         <div class = "sub-menu">
                             <ul>
                                     <li><a href = "#">Food</a></li>
@@ -21,7 +23,7 @@
                     </li>
 
             
-                    <li><a href = "#">Contact</a> 
+                    <li><a href = "../Contact/contact.php">Contact</a> 
                         <div class = "sub-contact">
                             <ul>
                                 <li><a href = "#">Book a Table</a></li>
