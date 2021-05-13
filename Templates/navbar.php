@@ -13,7 +13,7 @@
 
                         
                     
-                    <li><a href = "../Menu/menu.html">Menu </a> 
+                    <li><a href = "#">Menu </a> 
                         <div class = "sub-menu">
                             <ul>
                                     <li><a href = "#">Food</a></li>
@@ -36,10 +36,10 @@
                     <?php
                         if(isset($_SESSION["userId"])){
                             echo "<li><a href = '#'>Favourites</a></li>";
-                            echo "<li><a href = 'includes/logout.inc.php'>logout</a></li>";
+                            echo "<li><a href = '../SignUpAndLogIn/includes/logout.inc.php'>logout</a></li>";
                         }else{
-                            echo "<li><a href = 'login.php'>Login</a></li>";
-                            echo "<li><a href = 'signup.php'>Signup</a></li>";
+                            echo "<li><a href = '../SignUpAndLogIn/login.php'>Login</a></li>";
+                            echo "<li><a href = '../SignUpAndLogIn/signup.php'>Signup</a></li>";
                         }
                     ?>
                 </ul>

@@ -14,7 +14,7 @@ html{
 /*Navbar css*/
 
 header{
-    background-image: url(images/backgroundImg2.png);
+    background-image: url(../Background/backgroundImg2.png);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
