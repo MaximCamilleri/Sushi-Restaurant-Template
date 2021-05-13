@@ -1,0 +1,44 @@
+#sidenav {
+    width: 70px;
+    position: fixed;
+    z-index:1;
+    top: 20px;
+    left: 10px;
+    width: 200px;
+    overflow-x: hidden; 
+    padding: 6px;
+}
+
+#sidenav a{
+    padding-top: 5px;
+    padding-right: 7px;
+    padding-bottom:5px;
+    padding-left: 15px;
+    font-size: 25px; 
+    color: black;
+    display:block;
+    padding: 15px;
+}
+
+ #sidenav a.active{
+    background: rgb(182,8,37);
+    color: white;
+    border-radius: 8px;
+}  
+
+.option{
+    border-radius: 8px;
+} 
+
+.active, .option:hover{
+    background: rgb(182,8,37);
+    color: white;
+    border-radius: 8px;
+}
+
+#sidenav a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+    border-radius: 8px;
+} 
+ 
