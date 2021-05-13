@@ -133,7 +133,6 @@ label{
 }
 
 @media (min-width: 900px) {
-
     .split{
         flex-direction: row;
         height: 100vh;
