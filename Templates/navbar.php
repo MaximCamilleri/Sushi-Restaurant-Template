@@ -27,9 +27,9 @@
                         <div class = "sub-contact">
                             <ul>
                                 <li><a href = "#">Book a Table</a></li>
-                                <li><a href = "#">Events</a></li>
+                                <li><a href = "../Events/events.php">Events</a></li>
                                 <li><a href = "#">Takeaway</a></li>
-                                <li><a href = "#">Complaints</a></li>
+                                <li><a href = "../Contact/contact.php">Complaints</a></li>
                             </ul>
                         </div>
                     </li>

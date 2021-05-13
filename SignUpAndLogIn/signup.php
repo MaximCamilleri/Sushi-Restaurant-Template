@@ -15,8 +15,8 @@
         <div class = split>
             <div class = left>
                 <section class = "copy">
-                    <h1>PogFish Sushi</h1>
-                    <p>The best sushi restaurant on the UOM Campus</p>
+                    <h1 class = "title">PogFish Sushi</h1>
+                    <p class = "text">The best sushi restaurant on the UOM Campus</p>
                 </section>
             </div>
             
