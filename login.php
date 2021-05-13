@@ -38,7 +38,7 @@
                     <div class = "password-container">
                         <label for="password">Password</label>
                         <input id = "password" type="password" name="password">
-                        <input class = "password-checkbox" type="checkbox" onclick="myFunction()"><i class = "text">See password</i> 
+                        <input class = "password-checkbox" type="checkbox" onclick="myFunction()"> 
                     </div>
                     <br>
 

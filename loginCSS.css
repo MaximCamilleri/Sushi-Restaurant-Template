@@ -9,6 +9,9 @@ body{
     margin:0;
     font-family: Arial;
     font-weight:500;
+    background-image: linear-gradient(to right, transparent, rgb(254,251,234) 65%), url("images/loginimg5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1{
@@ -26,9 +29,6 @@ a{
     color: #0000A3
 }
 
-.right{
-    background-color: rgba(255, 255, 255, 0.5);
-}
 
 a:hover{
     text-decoration: underline;
@@ -50,13 +50,8 @@ a:hover{
 }
 
 .left{
-    background-image: url(images/signupBackground.pg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgba(255, 255, 255, 0.5);
-/*
- background: linear-gradient(,), url:('');
-*/
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+    border-right: bisque solid px;
 }
 
 
@@ -112,8 +107,8 @@ label{
 
 .password-checkbox{
     position: absolute;
-    top: 44px;
-    right: 115px;
+    top: 35px;
+    right: 10px;
 }
 .checkbox{
     display: block;
