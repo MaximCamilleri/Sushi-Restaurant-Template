@@ -26,7 +26,7 @@
                     <section class = "copy">
                         <h2 class = "title"> Log In</h2>
                         <div class = "login">
-                            <p class = "text">Don't have an account?<a href = "signup.php"><strong>Sign Up</strong></a></p>
+                            <p class = "text">Don't have an account?<a href = "signup.php"><strong> Sign Up</strong></a></p>
                         </div>
                     </section>
 
