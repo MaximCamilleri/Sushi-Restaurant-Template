@@ -51,7 +51,7 @@
                   Book Your Table
              </p>
 
-            <form action="booking.inc.php">
+            <form method = "POST" action="booking.inc.php">
                 <p class = "textboxTitle"> Name</p>
                         <input type="text" id="name" class = "textbox" placeholder="Name" name = "name"/>
 
