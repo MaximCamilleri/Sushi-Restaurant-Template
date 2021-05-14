@@ -14,7 +14,7 @@ function createBooking($conn, $name, $contactNumber, $bookingData, $numGuests, $
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
-        header("location: booking.php?error=stmtfailed2");
+        header("location: ../booking.php?error=stmtfailed2");
         exit();
     }
 
@@ -23,6 +23,6 @@ function createBooking($conn, $name, $contactNumber, $bookingData, $numGuests, $
     mysqli_stmt_close($stmt);
 
 
-    header("location: booking.php?error=none");
+    header("location: ../booking.php?error=none");
 
 }

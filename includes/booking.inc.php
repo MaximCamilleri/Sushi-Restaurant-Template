@@ -10,7 +10,7 @@
         require_once "functions.booking.inc.php";
 
         if(emptyInputBooking($connBooking, $name, $tel, $date, $numGuests, $time) !== false){
-            header("location: booking.php?error=emptyinput");
+            header("location: ../booking.php?error=emptyinput");
             exit();
         }
 
@@ -18,7 +18,7 @@
 
 
     }else{
-        header("location: booking.php");
+        header("location: ../booking.php");
     }
 
     
