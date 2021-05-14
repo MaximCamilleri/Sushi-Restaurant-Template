@@ -59,18 +59,18 @@
                         <td><br></td>
                     </tr>
                     <tr>
-                        <td><input type = "text" id = "tableForm" placeholder= "John"></td>
-                        <td><input type = "text" id = "tableForm" placeholder = "Doe"></td>
+                        <td><input type = "text" id = "tableForm" placeholder= "John" name = "name"></td>
+                        <td><input type = "text" id = "tableForm" placeholder = "Doe" name = "surname"></td>
                     </tr>                    
                 </table>
                 <br><br>
                 <label for = "emailDetails" id = "latter">Email</label>
                 <br><br>
-                <input type = "text" id = "form2" placeholder = "JohnDoe@email.com">
+                <input type = "text" id = "form2" placeholder = "JohnDoe@email.com" name = "email">
                 <br><br><br>
                 <label for = "emailDetails" id = "latter">Phone</label>
                 <br><br>
-                <input type = "text" id = "form2" placeholder = "2154 3860">
+                <input type = "text" id = "form2" placeholder = "2154 3860" name = "tel">
                 <br><br><br>
                 <table id = "formApp2">
                     <tr>
