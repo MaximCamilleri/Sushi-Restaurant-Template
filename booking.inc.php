@@ -1,32 +1,27 @@
 <?php
-    if(isset($_POST["submit"])){
+    if(isset($_POST["subBooking"])){
         $name = $_POST["name"];
         $tel = $_POST["tel"];
-        $numGuests = $_POST["guest"];
+        $numGuests = $_POST["guests"];;
         $date = $_POST["date"];
         $time = $_POST["time"];
 
         require_once "dbh.booking.inc.php";
         require_once "functions.booking.inc.php";
 
-        if(emptyInputBooking($conn, $name, $tel, $date, $numGuests, $time) !== false){
-            header("location: ../signup.php?error=emptyinput");
+        if(emptyInputBooking($connBooking, $name, $tel, $date, $numGuests, $time) !== false){
+            header("location: booking.php?error=emptyinput");
             exit();
         }
 
-        if(emailExists($email, $conn) !== false){
-            header("location: ../signup.php?error=emailexists");
-            exit();
-        }
-
-        createBooking($conn, $name, $lastname, $email, $password);
+        createBooking($connBooking, $name, $tel, $date, $numGuests, $time);
 
 
     }else{
-        header("location: ../signup.php");
+        header("location: booking.php");
     }
 
     
 
-    $sql = "INSERT INTO users (user_firstname, user_lastname, user_email, user_telNumber, user_password) VALUES ($firstname, $lastname, $email, $telNumber, $password);";
-    mysqli_query($conn, $sql);
+    $sql = "INSERT INTO bookings (name, contactNumber, bookingDate, numGuests, time) VALUES ($name, $tel, $date, $numGuests, $time);";
+    mysqli_query($connBooking, $sql);

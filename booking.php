@@ -65,26 +65,27 @@
                     <p class = "textboxTitle"> <label for="options" > Guests * </label> </p>
                     
                     <p id = "guestNumber" class = "textbox" placeholder = "Guests">
-                    <select name="guests" id = "guestOptions" name = guest>
-                        <option value="oneG">1 Guest</option>
-                        <option value="twoG">2 Guests</option>
-                        <option value="threeG">3 Guests</option>
-                        <option value="fourG">4 Guests</option>
-                        <option value="fiveG">5 Guests</option>
-                        <option value="sixG">6 Guests</option>
-                        <option value="sevenG">7 Guests</option>
-                        <option value="eightG">8 Guests</option>
-                        <option value="nineG">9 Guests</option>
-                        <option value="tenG">10 Guests</option>          
+                    <select name="guests" id = "guestOptions">
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5">5 Guests</option>
+                        <option value="6">6 Guests</option>
+                        <option value="7">7 Guests</option>
+                        <option value="8">8 Guests</option>
+                        <option value="9">9 Guests</option>
+                        <option value="10">10 Guests</option>          
                     </select>
                 </p>
 
                 <p class = "textboxTitle"> Time</p>
-                    <input type="text" id="time" class = "textbox" placeholder="Time AM/PM" name = time/> 
+                <input type="text" id="time" class = "textbox" placeholder="Time AM/PM" name = "time"/> 
+
+                <div>
+                    <button type = "submit" value = "Submit" id = "submitReserve" name = "subBooking">Reserve</button>
+                </div>
                 
-                <p>
-                <button type = "submit" form = "bookings" value = "Submit" id = "submitReserve" >Reserve</button>
-                </p>
             </form> 
                 
 

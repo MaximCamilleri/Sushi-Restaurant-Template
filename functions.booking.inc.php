@@ -9,20 +9,20 @@ function emptyInputBooking($name, $tel, $numGuests, $date, $time){
     return $result;
 }
 
-function createBooking($conn, $name, $cantactNumber, $bookingData, $numGuests, $time){
-    $sql = "INSERT INTO users (name, cantactNumber, bookingData, numGuests, time) VALUES (?, ?, ?, ?, ?);";
+function createBooking($conn, $name, $contactNumber, $bookingData, $numGuests, $time){
+    $sql = "INSERT INTO bookings (name, contactNumber, bookingDate, numGuests, time) VALUES (?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
-        header("location: ../booking.php?error=stmtfailed2");
+        header("location: booking.php?error=stmtfailed2");
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "ssss", $name, $cantactNumber, $bookingData, $numGuests, $time);
+    mysqli_stmt_bind_param($stmt, "sssss", $name, $contactNumber, $bookingData, $numGuests, $time);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
 
-    header("location: ../booking.php?error=none");
+    header("location: booking.php?error=none");
 
 }
