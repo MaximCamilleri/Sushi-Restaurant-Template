@@ -51,40 +51,42 @@
                   Book Your Table
              </p>
 
-            
-             <p class = "textboxTitle"> Name</p>
-                <input type="text" id="name" class = "textbox" placeholder="Name"/>
+            <form action="booking.inc.php">
+                <p class = "textboxTitle"> Name</p>
+                        <input type="text" id="name" class = "textbox" placeholder="Name" name = "name"/>
 
-             <p class = "textboxTitle"> Contact Number</p>
-                <input type="text" id="nos" class = "textbox" placeholder="Number"/>
-        
-            <p class = "textboxTitle"> Date</p>
-              <input type="text" id="date" class = "textbox" placeholder="Date"/>
-            
+                    <p class = "textboxTitle"> Contact Number</p>
+                        <input type="text" id="nos" class = "textbox" placeholder="Number" name = "tel"/>
+                
+                    <p class = "textboxTitle"> Date</p>
+                    <input type="text" id="date" class = "textbox" placeholder="Date" name = "date"/>
+                    
 
-            <p class = "textboxTitle"> <label for="options" > Guests * </label> </p>
-            
-            <p id = "guestNumber" class = "textbox" placeholder = "Guests">
-            <select name="guests" id = "guestOptions">
-                <option value="oneG">1 Guest</option>
-                <option value="twoG">2 Guests</option>
-                <option value="threeG">3 Guests</option>
-                <option value="fourG">4 Guests</option>
-                <option value="fiveG">5 Guests</option>
-                <option value="sixG">6 Guests</option>
-                <option value="sevenG">7 Guests</option>
-                <option value="eightG">8 Guests</option>
-                <option value="nineG">9 Guests</option>
-                <option value="tenG">10 Guests</option>          
-            </select>
-        </p>
+                    <p class = "textboxTitle"> <label for="options" > Guests * </label> </p>
+                    
+                    <p id = "guestNumber" class = "textbox" placeholder = "Guests">
+                    <select name="guests" id = "guestOptions" name = guest>
+                        <option value="oneG">1 Guest</option>
+                        <option value="twoG">2 Guests</option>
+                        <option value="threeG">3 Guests</option>
+                        <option value="fourG">4 Guests</option>
+                        <option value="fiveG">5 Guests</option>
+                        <option value="sixG">6 Guests</option>
+                        <option value="sevenG">7 Guests</option>
+                        <option value="eightG">8 Guests</option>
+                        <option value="nineG">9 Guests</option>
+                        <option value="tenG">10 Guests</option>          
+                    </select>
+                </p>
 
-        <p class = "textboxTitle"> Time</p>
-            <input type="text" id="time" class = "textbox" placeholder="Time AM/PM"/> 
-        
-        <p>
-        <button type = "submit" form = "bookings" value = "Submit" id = "submitReserve" >Reserve</button>
-        </p>
+                <p class = "textboxTitle"> Time</p>
+                    <input type="text" id="time" class = "textbox" placeholder="Time AM/PM" name = time/> 
+                
+                <p>
+                <button type = "submit" form = "bookings" value = "Submit" id = "submitReserve" >Reserve</button>
+                </p>
+            </form> 
+                
 
     </div> 
     </div>    
