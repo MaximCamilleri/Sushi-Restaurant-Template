@@ -9,20 +9,17 @@
         require_once "dbh.booking.inc.php";
         require_once "functions.booking.inc.php";
 
-        if(emptyInputBooking($name, $tel, $numGuests, $date, $time) !== false){
+        if(emptyInputBooking($conn, $name, $tel, $date, $numGuests, $time) !== false){
             header("location: ../signup.php?error=emptyinput");
             exit();
         }
-        if(invalidEmail($email) !== false){
-            header("location: ../signup.php?error=invalidemail");
-            exit();
-        }
+
         if(emailExists($email, $conn) !== false){
             header("location: ../signup.php?error=emailexists");
             exit();
         }
 
-        createUser($conn, $firstname, $lastname, $email, $password);
+        createBooking($conn, $name, $lastname, $email, $password);
 
 
     }else{
