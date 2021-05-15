@@ -90,7 +90,7 @@ form{
   
   /* Control the right side */
   .right {
-    padding-top: 50px;
+    padding-top: 70px;
     right: 0;
     /*background-color:white;*/
     background-color: #1a1a1d;
@@ -143,7 +143,7 @@ form{
 
 header{
   background-image: url(images/backgroundImg2.png);
-  height: 100%;
+  height: auto;
   width: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -173,7 +173,7 @@ header{
 nav{
   background-color: rgba(0, 0, 0, 0.3); 
   height: 100px; 
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 .navbar ul{
@@ -277,6 +277,10 @@ border-radius: 3px;
   font-size: 500%;
 }
 
+h2.title{
+  padding-bottom: 3%;
+}
+
 footer{
   z-index: 2;
   color: bisque;
@@ -294,6 +298,34 @@ footer{
 
 footer p{
   padding-left: 8%;
+}
+
+.contactSub2{
+  float: right;
+  font-family: 'Ubuntu', sans-serif;
+  color: bisque;
+  border-color: rgb(77, 77, 77);
+  background-color: rgb(77, 77, 77);
+  padding: 5px;
+  display: none;
+ }
+
+@media screen and (max-width: 515px){
+  #logo{
+    display: none;
+  }
+
+  .title{
+    display: none;
+  }
+
+  .left{
+    padding-top: 20px;
+  }
+
+  .right{
+    padding-top: 20px;
+  }
 }
 
 @media screen and (max-width: 1600px){
@@ -318,7 +350,6 @@ footer p{
   }
 
   .left {
-    padding-top: 70px;
     display: block;
     padding-left: 10%;
     background-color: #1a1a1d;
@@ -326,7 +357,6 @@ footer p{
   }
 
   .right{
-    padding-top: 70px;
     padding-left: 10%;
     display: block;
     background-color: #1a1a1d;
@@ -336,10 +366,46 @@ footer p{
   footer{
     position: relative;
     box-sizing: border-box;
-    margin-top: 60px;
+    margin-top: 2%;
   }
 
   main{
     font-size: 150%;
+  }
+
+  .contactSub{
+    display: none;
+   }
+
+  .contactSub2{
+    margin-top: 10px;
+    display: inline;    
+   }
+}
+
+@media screen and (max-height: 640px){
+  .title{
+    display: none;
+  }
+
+  #headerTint{
+    height: auto;
+  }
+
+  header{
+    background-image: url(images/backgroundImg2.png);
+    height: auto;
+  } 
+
+  .left{
+    padding-top: 20px;
+  }
+
+  .right{
+    padding-top: 20px;
+  }
+
+  nav{
+    margin-bottom: 2%;
   }
 }
