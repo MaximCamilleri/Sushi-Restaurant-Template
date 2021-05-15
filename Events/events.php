@@ -20,7 +20,7 @@
           
             <h2>Organize an Event at PogFish Sushi</h2>
             <h3>Fill in Your Details</h3>
-            <form>
+            <form method = "POST"  action="includes/events.inc.php">
                 <!--
                 <div class = "split left">
                     <label for = "firstName">First Name</label>
@@ -81,15 +81,15 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="radio" name="time" value="lunch">
+                            <input type="radio" name="time" value="Lunch">
                             <label for="lunch">Lunch</label><br>
                         </td>
                         <td>
-                            <input type="radio" name="time" value="dinner">
+                            <input type="radio" name="time" value="Dinner">
                             <label for="dinner">Dinner</label><br>
                         </td>
                         <td>
-                            <input type="radio" name="time" value="reception">
+                            <input type="radio" name="time" value="Reception">
                             <label for="reception">Reception</label><br>
                         </td>
                     </tr>
@@ -97,8 +97,9 @@
                 <br><br>
                 <label for="lname">Details</label>
                 <br><br>
-                <textarea type="text" id = "form3" placeholder="The restaurant is greater 10/10 would come here again"></textarea>
+                <textarea type="text" id = "form3" placeholder="The restaurant is greater 10/10 would come here again" name = "details"></textarea>
                 <br><br><br>
+                <button type="submit" name="submit" name = "submit">Book Event</button>
             </form>
 
         </main>
