@@ -23,7 +23,7 @@
                     </li>
 
             
-                    <li><a href = "../Contact/contact.php">Contact</a> 
+                    <li><a href = "../Contact/contactPage/contact.php">Contact</a> 
                         <div class = "sub-contact">
                             <ul>
                                 <li><a href = "#">Book a Table</a></li>

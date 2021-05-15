@@ -12,7 +12,7 @@
 
     <body>
         <?php
-            include "../Templates/navbar.php";
+            include "../../Templates/navbar.php";
         ?>
         <main>
             <div class="split left">
@@ -77,7 +77,7 @@
         </main>
 
         <?php 
-        include "../Templates/footer.php";
+        include "../../Templates/footer.php";
         ?>
 
     </body>
