@@ -71,6 +71,7 @@
                   <label for="lname">Details:</label>
                   <br>
                   <textarea type="text" id = "form2" placeholder="The restaurant is greater 10/10 would come here again"></textarea>
+                  <input class = "contactSub2" type="submit" value="Submit">
                 </form> 
               </div>       
         </main>
