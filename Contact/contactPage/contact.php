@@ -77,7 +77,7 @@
         </main>
 
         <?php 
-        include "../Templates/footer.php";
+        include "../../Templates/footer.php";
         ?>
 
     </body>

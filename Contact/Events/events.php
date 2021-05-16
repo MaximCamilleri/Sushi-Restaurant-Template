@@ -13,7 +13,7 @@
 
     <body>
         <?php
-        include "../Templates/navbar.php";
+        include "../../Templates/navbar.php";
         ?>
 
         <main>
@@ -78,6 +78,7 @@
                     </tr>
                     <tr>
                         <td><br></td>
+                        <td><br></td>
                     </tr>
                     <tr>
                         <td>
@@ -99,7 +100,7 @@
                 <br><br>
                 <textarea type="text" id = "form3" placeholder="The restaurant is greater 10/10 would come here again" name = "details"></textarea>
                 <br><br><br>
-                <button type="submit" name="submit" name = "submit">Book Event</button>
+                <button type="submit" name="submit" name = "submit" id = "BookButton">Book Event</button>
             </form>
 
         </main>
