@@ -34,142 +34,48 @@
                 <h2>Starters</h2> 
               
                 <div class = "row">
-                    <div class="container column">
-                        <img src="https://www.thespruceeats.com/thmb/I4_DdSYieYQ1x6I4X6GUadh4Pis=/1215x911/smart/filters:no_upscale()/wontoncomplete-569d86335f9b58eba4ac29a7.jpg" alt="Spring Rolls" class="image">
-                        <div class="overlay">
-                            <div class="desc">Item Desc</div>
-                        </div>
-                    </div> 
+                    <?php
+                    include_once "includes/dbh.menu.inc.php";
+                    $sql = "SELECT * FROM menu ORDER BY itemOrder ASC;";
+                    $stmt = mysqli_stmt_init($connMenu);
+                    if(!mysqli_stmt_prepare($stmt, $sql)){
+                        header("Location: ../menu.php?error=stmt2");
+                    }else{
+                        mysqli_stmt_execute($stmt);
+                        $result = mysqli_stmt_get_result($stmt);
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo '<div class="container column">
+                                    <img src="images/gallery/'.$row["itemImg"].'" alt="Spring Rolls" class="image">
+                                    <div class="overlay">
+                                        <h2>'.$row["itemName"].'</h2>
+                                        <div class="desc">'.$row["itemIngredients"].'</div>
+                                    </div>
+                                </div> ';
+                        }
+                    }
 
-                    <div class="container column" >
-                        <img src="https://www.thespruceeats.com/thmb/I4_DdSYieYQ1x6I4X6GUadh4Pis=/1215x911/smart/filters:no_upscale()/wontoncomplete-569d86335f9b58eba4ac29a7.jpg" alt="Spring Rolls" class="image">
-                        <div class="overlay">
-                            <div class="desc">Item Desc</div>
-                        </div>
-                    </div>
-                    <div class="container column" >
-                        <img src="https://www.thespruceeats.com/thmb/I4_DdSYieYQ1x6I4X6GUadh4Pis=/1215x911/smart/filters:no_upscale()/wontoncomplete-569d86335f9b58eba4ac29a7.jpg" alt="Spring Rolls" class="image">
-                        <div class="overlay">
-                            <div class="desc">Item Desc</div>
-                        </div>
-                    </div>
-                    <div class="container column" >
-                        <img src="https://www.thespruceeats.com/thmb/I4_DdSYieYQ1x6I4X6GUadh4Pis=/1215x911/smart/filters:no_upscale()/wontoncomplete-569d86335f9b58eba4ac29a7.jpg" alt="Spring Rolls" class="image">
-                        <div class="overlay">
-                            <div class="desc">Item Desc</div>
-                        </div>
-                    </div>
-             
-                </div>
+                    
+                        
+                    ?>
+
+                    
             </div>
         
 
             <div id = "sushi" class = "area">
                 <h2>Sushi</h2> 
-          
-                <div class = "row">
-                    <div class="container column">
-                        <img src="https://www.thespruceeats.com/thmb/I4_DdSYieYQ1x6I4X6GUadh4Pis=/1215x911/smart/filters:no_upscale()/wontoncomplete-569d86335f9b58eba4ac29a7.jpg" alt="Spring Rolls" class="image">
-                        <div class="overlay">
-                            <div class="desc">Item Desc</div>
-                        </div>
-                    </div> 
-
-                    <div class="container column" >
-                        <img src="https://www.thespruceeats.com/thmb/I4_DdSYieYQ1x6I4X6GUadh4Pis=/1215x911/smart/filters:no_upscale()/wontoncomplete-569d86335f9b58eba4ac29a7.jpg" alt="Spring Rolls" class="image">
-                        <div class="overlay">
-                            <div class="desc">Item Desc</div>
-                        </div>
-                    </div>
-
-                    <div class="container column" >
-                        <img src="https://www.thespruceeats.com/thmb/I4_DdSYieYQ1x6I4X6GUadh4Pis=/1215x911/smart/filters:no_upscale()/wontoncomplete-569d86335f9b58eba4ac29a7.jpg" alt="Spring Rolls" class="image">
-                        <div class="overlay">
-                            <div class="desc">Item Desc</div>
-                        </div>
-                    </div>
-
-                    <div class="container column" >
-                         <img src="https://www.thespruceeats.com/thmb/I4_DdSYieYQ1x6I4X6GUadh4Pis=/1215x911/smart/filters:no_upscale()/wontoncomplete-569d86335f9b58eba4ac29a7.jpg" alt="Spring Rolls" class="image">
-                         <div class="overlay">
-                             <div class="desc">Item Desc</div>
-                        </div>
-                    </div>
-         
-                </div>
             </div>
-    
 
             <div id = "ramen" class = "area">
                 <h2>Ramen</h2> 
-      
-                <div class = "row">
-                    <div class="container column">
-                        <img src="https://n5s3k8m4.rocketcdn.me/wp-content/uploads/2020/07/Kitakata-Ramen-1-scaled.jpg" alt="Naruto Style Ramen" class="image">
-                        <div class="overlay">
-                            <div class="desc">Item Desc</div>
-                        </div>
-                    </div> 
-
-                    <div class="container column" >
-                        <img src="https://n5s3k8m4.rocketcdn.me/wp-content/uploads/2020/07/Kitakata-Ramen-1-scaled.jpg" alt="Naruto Style Ramen" class="image">
-                        <div class="overlay">
-                            <div class="desc">Item Desc</div>
-                        </div>
-                    </div>
-
-                    <div class="container column" >
-                        <img src="https://n5s3k8m4.rocketcdn.me/wp-content/uploads/2020/07/Kitakata-Ramen-1-scaled.jpg" alt="Naruto Style Ramen" class="image">
-                        <div class="overlay">
-                             <div class="desc">Item Desc</div>
-                        </div>
-                    </div>
-
-                    <div class="container column" >
-                        <img src="https://n5s3k8m4.rocketcdn.me/wp-content/uploads/2020/07/Kitakata-Ramen-1-scaled.jpg" alt="Naruto Style Ramen" class="image">
-                        <div class="overlay">
-                            <div class="desc">Item Desc</div>
-                        </div>
-                    </div>
-     
-                </div>
-        </div>
-
-
-        <div id = "Dessert" class = "area">
-            <h2>Dessert</h2> 
-  
-            <div class = "row">
-                <div class="container column">
-                    <img src="https://www.thespruceeats.com/thmb/I4_DdSYieYQ1x6I4X6GUadh4Pis=/1215x911/smart/filters:no_upscale()/wontoncomplete-569d86335f9b58eba4ac29a7.jpg" alt="Spring Rolls" class="image">
-                    <div class="overlay">
-                        <div class="desc">Item Desc</div>
-                    </div>
-                </div> 
-
-                <div class="container column" >
-                    <img src="https://www.thespruceeats.com/thmb/I4_DdSYieYQ1x6I4X6GUadh4Pis=/1215x911/smart/filters:no_upscale()/wontoncomplete-569d86335f9b58eba4ac29a7.jpg" alt="Spring Rolls" class="image">
-                    <div class="overlay">
-                        <div class="desc">Item Desc</div>
-                    </div>
-                </div>
-
-                <div class="container column" >
-                    <img src="https://www.thespruceeats.com/thmb/I4_DdSYieYQ1x6I4X6GUadh4Pis=/1215x911/smart/filters:no_upscale()/wontoncomplete-569d86335f9b58eba4ac29a7.jpg" alt="Spring Rolls" class="image">
-                    <div class="overlay">
-                        <div class="desc">Item Desc</div>
-                    </div>
-                </div>
-
-                <div class="container column" >
-                    <img src="https://www.thespruceeats.com/thmb/I4_DdSYieYQ1x6I4X6GUadh4Pis=/1215x911/smart/filters:no_upscale()/wontoncomplete-569d86335f9b58eba4ac29a7.jpg" alt="Spring Rolls" class="image">
-                    <div class="overlay">
-                        <div class="desc">Item Desc</div>
-                    </div>
-                </div>
- 
             </div>
-        </div>
+
+
+            <div id = "Dessert" class = "area">
+                <h2>Dessert</h2> 
+            </div>
+  
+            
     </div>
     <?php
         if(isset($_SESSION['userId'])){
@@ -182,6 +88,8 @@
                     <input type="text" name="title" placeholder="Dish Title...">
                     <input type="text" name="ingredients" placeholder="list of ingredients...">
                     <input type="text" name="price" placeholder="Price">
+                    <input type="text" name="spice" placeholder="Spice Level">
+                    <input type="text" name="section" placeholder="Starter/Sushi/Accompaniments/Soup/Curry/Dessert">
                     <input type="file" name="file">
                     <button type="submit" name="submit">Submit</button>
                 </form>
