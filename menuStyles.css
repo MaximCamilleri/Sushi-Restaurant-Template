@@ -37,13 +37,13 @@ html{
 .sidenav a.active{
     background: rgb(182,8,37);
     color: white;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 .sidenav a:hover:not(.active){
     background: #555;
     color:white;
-    border-radius:8px;
+    border-radius:4px;
 }
 
 .food{
