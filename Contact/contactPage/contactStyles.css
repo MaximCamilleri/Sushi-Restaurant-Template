@@ -142,7 +142,7 @@ form{
 /*Navbar css*/
 
 header{
-  background-image: url(../Background/backgroundImg2.png);
+  background-image: url(../../Background/backgroundImg2.png);
   height: auto;
   width: cover;
   background-position: center;
@@ -310,7 +310,7 @@ footer p{
   display: none;
  }
 
-@media screen and (max-width: 515px){
+@media screen and (max-width: 750px){
   #logo{
     display: none;
   }
@@ -393,7 +393,7 @@ footer p{
   }
 
   header{
-    background-image: url(../Background/backgroundImg2.png);
+    background-image: url(../../Background/backgroundImg2.png);
     height: auto;
   } 
 

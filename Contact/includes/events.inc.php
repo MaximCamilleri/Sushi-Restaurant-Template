@@ -8,26 +8,26 @@ if(isset($_POST["submit"])){
     $surname = $_POST["surname"];
     $details = $_POST["details"];
 
-    require_once "dbh.events.inc.php";
-    require_once "eventFunctions.inc.php";
+    require_once "dbh.contact.inc.php";
+    require_once "contactFunctions.inc.php";
 
     
     if(emptyInputEvents($email, $tel, $time, $name, $surname, $details) !== false){
-        header("location: ../events.php?error=emptyinput");
+        header("location: ../Events/events.php?error=emptyinput");
         exit();
     }
     if(invalidEmail($email) !== false){
-        header("location: ../events.php?error=invalidemail");
+        header("location: ../Events/events.php?error=invalidemail");
         exit();
     }
 
-    createBooking($connEvents, $email, $tel, $time, $name, $surname, $details);
+    createBooking($connContact, $email, $tel, $time, $name, $surname, $details);
 
 }
 else{
-    header("location: ../events.php");
+    header("location: ../Events/events.php");
     exit();
 }
 
 $sql = "INSERT INTO events (name, surname, email, phone, eventType, details) VALUES ($name, $surname, $email, $phone, $eventType, $details);";
-mysqli_query($connEvents, $sql);
+mysqli_query($connContact, $sql);

@@ -5,9 +5,9 @@ $dbUsername = "root";
 $dbPassword = "";
 $dbName = "contact_system";
 
-$connEvents = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+$connContact = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
-if(!$connEvents){
+if(!$connContact){
     die("Connection failed: ". mysqli_connect_error());
 }
    

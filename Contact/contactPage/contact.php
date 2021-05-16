@@ -12,7 +12,7 @@
 
     <body>
         <?php
-            include "../Templates/navbar.php";
+            include "../../Templates/navbar.php";
         ?>
         <main>
             <div class="split left">
@@ -50,28 +50,28 @@
                 <h2>Contact Us</h2>
                 <br>
                 
-                <form>
+                <form method = "POST" action = "../includes/contactPage.inc.php">
                     <label for="options">What do you want to contact us about?</label>
                     <select id = "dropdownContact" name="msgType" id="msgType">
                         <option value="general">General</option>
                         <option value="event">Event</option>
                         <option value="complaint">Complaint</option>                        
                      </select>                 
-                    <input class = "contactSub" type="submit" value="Submit">
+                     <button class = "contactSub" type="submit" name="submitContact" >Submit</button>
                     <br>
                     <br>
                   <label>Name:</label>
                   <br>
-                  <input type="text" id = "form1" placeholder="John Doe">
+                  <input type="text" id = "form1" placeholder="John Doe" name = "name">
                   <br><br>
                   <label for="lname">Email:</label>
                   <br>
-                  <input type="text" id = "form1" placeholder="thisIsAnEmail@gmail.com">
+                  <input type="text" id = "form1" placeholder="thisIsAnEmail@gmail.com" name = "email">
                   <br><br>
                   <label for="lname">Details:</label>
                   <br>
-                  <textarea type="text" id = "form2" placeholder="The restaurant is greater 10/10 would come here again"></textarea>
-                  <input class = "contactSub2" type="submit" value="Submit">
+                  <textarea type="text" id = "form2" placeholder="The restaurant is greater 10/10 would come here again" name = "details"></textarea>
+                  <button class = "contactSub2" type="submit" name="submitContact" >Submit</button>
                 </form> 
               </div>       
         </main>

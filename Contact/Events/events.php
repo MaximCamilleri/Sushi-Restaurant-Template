@@ -20,7 +20,7 @@
           
             <h2>Organize an Event at PogFish Sushi</h2>
             <h3>Fill in Your Details</h3>
-            <form method = "POST"  action="includes/events.inc.php">
+            <form method = "POST"  action="../includes/events.inc.php">
                 <!--
                 <div class = "split left">
                     <label for = "firstName">First Name</label>

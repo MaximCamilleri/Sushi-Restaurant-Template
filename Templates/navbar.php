@@ -23,13 +23,13 @@
                     </li>
 
             
-                    <li><a href = "../Contact/contact.php">Contact</a> 
+                    <li><a href = "../Contact/ContactPage/contact.php">Contact</a> 
                         <div class = "sub-contact">
                             <ul>
                                 <li><a href = "#">Book a Table</a></li>
-                                <li><a href = "../Events/events.php">Events</a></li>
+                                <li><a href = "../Contact/Events/events.php">Events</a></li>
                                 <li><a href = "#">Takeaway</a></li>
-                                <li><a href = "../Contact/contact.php">Complaints</a></li>
+                                <li><a href = "../Contact/ContactPage/contact.php">Complaints</a></li>
                             </ul>
                         </div>
                     </li>
