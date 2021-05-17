@@ -11,3 +11,4 @@ function menu(num){
 
     options[num].className = "option active"
 }
+

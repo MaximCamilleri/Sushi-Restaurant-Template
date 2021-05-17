@@ -9,14 +9,15 @@ html{
 }
 .sidenav {
     width: 70px;
-    position: fixed;
+    position: sticky;
     z-index:1;
-    top: 15%;
+    top: 2%;
     left: 10px;
     width: 200px;
     overflow-x: hidden; 
     padding: 6px 0;
-    margin-bottom: 100%;
+    float: left;
+
 }
 
 .sidenav a{
@@ -175,10 +176,14 @@ figure{
 #inputForm, input{
     align-items: center;
     align-content: center;
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
 }
 
-#inputForm h1{
+#inputForm, h1{
     color: white;
+    text-align: center;
 }
 
 
