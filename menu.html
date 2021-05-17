@@ -19,7 +19,7 @@
             <a class = "active option" onClick = "menu(0)" href = "#starters">Starters</a></li>
             <a class = "option" onClick = "menu(1)" href = "#sushi">Sushi</a></li>
             <a class = "option" onClick = "menu(2)" href = "#ramen">Ramen</a></li>
-            <a class = "option" onClick = "menu(3)" href = "#dessert">Dessert</a></li>
+            <a class = "option" onClick = "menu(3)" href = "#Dessert">Dessert</a></li>
 
         </div>
     
@@ -37,7 +37,10 @@
                     <div class="container column">
                         <img src="https://www.thespruceeats.com/thmb/I4_DdSYieYQ1x6I4X6GUadh4Pis=/1215x911/smart/filters:no_upscale()/wontoncomplete-569d86335f9b58eba4ac29a7.jpg" alt="Spring Rolls" class="image">
                         <div class="overlay">
-                            <div class="desc">Item Desc</div>
+                            <h2 class="title">sushi</h2>
+                            <p class="desc">the finest sushi made from the back of the greatest tuna</p>
+                            <p class="price">10.99</p>
+                            <p class="spice">Hot</p>
                         </div>
                     </div> 
 
@@ -168,8 +171,20 @@
                     </div>
                 </div>
  
-             </div>
+            </div>
         </div>
+    </div>
+
+    <div>
+        <form action="includes/menu-upload.inc.php" method="post" enctype="multipart/form-data">
+            <label for=""></label>
+            <input type="text" name="filename" placeholder="File name...">
+            <input type="text" name="name" placeholder="Dish Name...">
+            <input type="text" name="ingredients" placeholder="list of ingredients...">
+            <input type="text" name="price" placeholder="Price">
+            <input type="file" name="file">
+            <button type="submit" name="submit">Submit</button>
+        </form>
     </div>
 
 
