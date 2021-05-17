@@ -20,7 +20,7 @@
     </head>
     <body>
         <?php
-            include_once "navbar.php";
+            include_once "../Templates/navbar.php";
         ?>
         
         <div class = "sidenav">
@@ -96,10 +96,8 @@
     </div>
 
     <?php
-        if(isset($_SESSION['userId'])){
-
-        }
-        echo '<div>
+        if($_SESSION['userId'] === 4){
+            echo '<div>
                 <form id = "inputForm" action="includes/menu-upload.inc.php" method="POST" enctype="multipart/form-data">
                     <h1>Input</h1>
                     <label for=""></label>
@@ -120,6 +118,8 @@
                     <button type="submit" name="submit">Submit</button>
                 </form>
             </div>';
+        }
+        
     ?>
 
 
