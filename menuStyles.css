@@ -4,12 +4,14 @@
 
 html{
     scroll-behavior: smooth;
+    background-color: rgb(15, 14, 12);
+
 }
 .sidenav {
     width: 70px;
     position: fixed;
     z-index:1;
-    top: 20px;
+    top: 15%;
     left: 10px;
     width: 200px;
     overflow-x: hidden; 
@@ -24,7 +26,7 @@ html{
     padding-left: 15px;
     text-decoration: none;
     font-size: 25px; 
-    color: black;
+    color: white;
     display:block;
 }
 
@@ -55,6 +57,10 @@ html{
 .area {
     height: 100vh;
     
+}
+
+h2{
+    color: white;
 }
 
 h2:after{

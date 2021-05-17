@@ -32,7 +32,7 @@
 nav{
     background-color: rgba(0, 0, 0, 0.3); 
     height: 100px; 
-    margin-bottom: 10%;
+    margin-bottom: 2%;
 }
 
 .navbar ul{
@@ -136,13 +136,6 @@ border-radius: 3px;
     border-bottom: none;
 }
 
-
-.title{
-    color: white;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-size: 500%;
-}
 </style>
 
 <header>

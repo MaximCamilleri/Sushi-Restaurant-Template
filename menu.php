@@ -19,6 +19,9 @@
 
     </head>
     <body>
+        <?php
+            include_once "navbar.php";
+        ?>
         
         <div class = "sidenav">
             <a class = "active option" onClick = "menu(0)" href = "#starters">Starters</a></li>
@@ -91,6 +94,7 @@
   
             
     </div>
+
     <?php
         if(isset($_SESSION['userId'])){
 
@@ -98,13 +102,13 @@
         echo '<div>
                 <form action="includes/menu-upload.inc.php" method="POST" enctype="multipart/form-data">
                     <label for=""></label>
-                    <input type="text" name="filename" placeholder="File name...">
-                    <input type="text" name="title" placeholder="Dish Title...">
-                    <input type="text" name="ingredients" placeholder="list of ingredients...">
-                    <input type="text" name="price" placeholder="Price">
-                    <input type="text" name="spice" placeholder="Spice Level">
-                    <input type="text" name="section" placeholder="Starter/Sushi/Accompaniments/Soup/Curry/Dessert">
-                    <input type="file" name="file">
+                    <input id="fileName" type="text" name="filename" placeholder="File name...">
+                    <input id="dishName" type="text" name="title" placeholder="Dish Title...">
+                    <input id="ingredients" type="text" name="ingredients" placeholder="list of ingredients...">
+                    <input id="price" type="text" name="price" placeholder="Price">
+                    <input id="spice" type="text" name="spice" placeholder="Spice Level">
+                    <input id="section" type="text" name="section" placeholder="Starter/Sushi/Accompaniments/Soup/Curry/Dessert">
+                    <input id="fileName" type="file" name="file">
                     <button type="submit" name="submit">Submit</button>
                 </form>
             </div>';

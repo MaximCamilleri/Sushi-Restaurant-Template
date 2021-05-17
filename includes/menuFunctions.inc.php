@@ -23,7 +23,7 @@ function addMenuItem($itemType, $connMenu){
                     <div class="overlay">
                         <h2 class="title">'.$row['itemName'].'</h2>
                         <p class="desc">'.$row["itemIngredients"].'</p>
-                        <p class="price">'.$row['itemPrice'].'</p>
+                        <p class="price">€'.$row['itemPrice'].'</p>
                         <p class="spice">'.$row['itemSpiceLevel'].'</p>
                     </div>
                 </div> ';
