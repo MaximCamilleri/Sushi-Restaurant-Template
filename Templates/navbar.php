@@ -1,5 +1,12 @@
 <?php
     session_start();
+    include_once "../getCWD.php";
+    $homeWD = $cwd."/"."Home/index.php";
+    $contactWD = $cwd."/"."Contact/contactPage/contact.php";
+    $eventWD = $cwd."/"."Contact/Events/events.php";
+    $menuWD = $cwd."/"."Menu/menu.php";
+    $logWD = $cwd."/"."SignUpAndLogin/login.php";
+    $signWD = $cwd."/"."SignUpAndLogin/singup.php";
 ?>
 
 <header>
@@ -27,7 +34,7 @@
                         <div class = "sub-contact">
                             <ul>
                                 <li><a href = "#">Book a Table</a></li>
-                                <li><a href = "../Contact/Events/events.php">Events</a></li>
+                                <li><?php echo "<a href='$eventWD'>Event</a>"; ?></li>
                                 <li><a href = "#">Takeaway</a></li>
                                 <li><a href = "../Contact/contactPage/contact.php">Complaints</a></li>
                             </ul>
