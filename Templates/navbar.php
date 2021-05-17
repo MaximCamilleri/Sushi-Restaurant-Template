@@ -13,10 +13,10 @@
 
                         
                     
-                    <li><a href = "#">Menu </a> 
+                    <li><a href = "../Menu/menu.php">Menu </a> 
                         <div class = "sub-menu">
                             <ul>
-                                    <li><a href = "#">Food</a></li>
+                                    <li><a href = "../Menu/menu.php">Food</a></li>
                                     <li><a href = "#">Drink</a></li>
                             </ul>
                         </div>
