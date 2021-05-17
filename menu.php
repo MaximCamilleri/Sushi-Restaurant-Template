@@ -100,15 +100,23 @@
 
         }
         echo '<div>
-                <form action="includes/menu-upload.inc.php" method="POST" enctype="multipart/form-data">
+                <form id = "inputForm" action="includes/menu-upload.inc.php" method="POST" enctype="multipart/form-data">
+                    <h1>Input</h1>
                     <label for=""></label>
                     <input id="fileName" type="text" name="filename" placeholder="File name...">
+                    <br>
                     <input id="dishName" type="text" name="title" placeholder="Dish Title...">
+                    <br>
                     <input id="ingredients" type="text" name="ingredients" placeholder="list of ingredients...">
+                    <br>
                     <input id="price" type="text" name="price" placeholder="Price">
+                    <br>
                     <input id="spice" type="text" name="spice" placeholder="Spice Level">
+                    <br>
                     <input id="section" type="text" name="section" placeholder="Starter/Sushi/Accompaniments/Soup/Curry/Dessert">
+                    <br>
                     <input id="fileName" type="file" name="file">
+                    <br>
                     <button type="submit" name="submit">Submit</button>
                 </form>
             </div>';

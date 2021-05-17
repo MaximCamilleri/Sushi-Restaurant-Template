@@ -164,4 +164,21 @@ figure{
     display: table;
 }
 
+#inputForm{
+    border-top: red solid 2px;
+    padding-top: 5%;
+    display: block;
+    align-content: center;
+    
+}
+
+#inputForm, input{
+    align-items: center;
+    align-content: center;
+}
+
+#inputForm h1{
+    color: white;
+}
+
 
