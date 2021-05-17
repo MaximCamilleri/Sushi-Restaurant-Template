@@ -1,3 +1,8 @@
+<?php
+    include_once "includes/menuFunctions.inc.php";
+    include_once "includes/dbh.menu.inc.php";
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -35,44 +40,62 @@
               
                 <div class = "row">
                     <?php
-                    include_once "includes/dbh.menu.inc.php";
-                    $sql = "SELECT * FROM menu ORDER BY itemOrder ASC;";
-                    $stmt = mysqli_stmt_init($connMenu);
-                    if(!mysqli_stmt_prepare($stmt, $sql)){
-                        header("Location: ../menu.php?error=stmt2");
-                    }else{
-                        mysqli_stmt_execute($stmt);
-                        $result = mysqli_stmt_get_result($stmt);
-                        while($row = mysqli_fetch_assoc($result)){
-                            echo '<div class="container column">
-                                    <img src="images/gallery/'.$row["itemImg"].'" alt="Spring Rolls" class="image">
-                                    <div class="overlay">
-                                        <h2>'.$row["itemName"].'</h2>
-                                        <div class="desc">'.$row["itemIngredients"].'</div>
-                                    </div>
-                                </div> ';
-                        }
-                    }
-
-                    
-                        
+                        $itemType = "starter";
+                        addMenuItem($itemType, $connMenu); 
                     ?>
-
-                    
+                </div>  
             </div>
         
 
             <div id = "sushi" class = "area">
                 <h2>Sushi</h2> 
+                <div class = "row">
+                    <?php
+                        $itemType = "sushi";
+                        addMenuItem($itemType, $connMenu); 
+                    ?>
+                </div> 
+            </div>
+
+            <div id = "soup" class = "area">
+                <h2>Soup</h2> 
+                <div class = "row">
+                    <?php
+                        $itemType = "soup";
+                        addMenuItem($itemType, $connMenu); 
+                    ?>
+                </div> 
+            </div>
+
+            <div id = "curry" class = "area">
+                <h2>Curry</h2> 
+                <div class = "row">
+                    <?php
+                        $itemType = "curry";
+                        addMenuItem($itemType, $connMenu); 
+                    ?>
+                </div> 
             </div>
 
             <div id = "ramen" class = "area">
                 <h2>Ramen</h2> 
+                <div class = "row">
+                    <?php
+                        $itemType = "ramen";
+                        addMenuItem($itemType, $connMenu); 
+                    ?>
+                </div> 
             </div>
 
 
             <div id = "Dessert" class = "area">
-                <h2>Dessert</h2> 
+                <h2>Dessert</h2>
+                <div class = "row">
+                    <?php
+                        $itemType = "dessert";
+                        addMenuItem($itemType, $connMenu); 
+                    ?>
+                </div>  
             </div>
   
             

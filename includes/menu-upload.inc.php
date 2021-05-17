@@ -5,7 +5,7 @@ if(isset($_POST['submit'])){
     if(empty($newfileName)){
         $newfileName = "gallery";
     }else{
-        $newfileName = strtolower(str_replace(" ", "-", $fileName));
+        $newfileName = strtolower(str_replace(" ", "-", $newfileName));
     }
     $title = $_POST['title'];
     $ingredients = $_POST['ingredients'];
@@ -32,8 +32,8 @@ if(isset($_POST['submit'])){
             if($fileSize > 2000000){
                 header("Location: ../menu.php?error=size");
             }else{
-                $imageFullName = $newfileName . "." . uniqid("", true) . $fileExt;
-                $fileDestination = "images/gallery/" . $imageFullName;
+                $imageFullName = $newfileName . "." . uniqid("", true) . "." . $fileExt;
+                $fileDestination = "../images/gallery/" . $imageFullName;
 
                 include_once "dbh.menu.inc.php";
                 if(emptyInput($title, $ingredients, $price, $file) == true){
