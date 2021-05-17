@@ -21,8 +21,10 @@ function addMenuItem($itemType, $connMenu){
             echo '<div class="container column">
                     <img src="images/gallery/'.$row["itemImg"].'" alt="Spring Rolls" class="image">
                     <div class="overlay">
-                        <h2>'.$row['itemName'].'</h2>
-                        <div class="desc">'.$row["itemIngredients"].'</div>
+                        <h2 class="title">'.$row['itemName'].'</h2>
+                        <p class="desc">'.$row["itemIngredients"].'</p>
+                        <p class="price">'.$row['itemPrice'].'</p>
+                        <p class="spice">'.$row['itemSpiceLevel'].'</p>
                     </div>
                 </div> ';
         }

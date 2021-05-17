@@ -23,8 +23,10 @@
         <div class = "sidenav">
             <a class = "active option" onClick = "menu(0)" href = "#starters">Starters</a></li>
             <a class = "option" onClick = "menu(1)" href = "#sushi">Sushi</a></li>
-            <a class = "option" onClick = "menu(2)" href = "#ramen">Ramen</a></li>
-            <a class = "option" onClick = "menu(3)" href = "#Dessert">Dessert</a></li>
+            <a class = "option" onClick = "menu(2)" href = "#soup">Soup</a></li>
+            <a class = "option" onClick = "menu(3)" href = "#curry">Curry</a></li>
+            <a class = "option" onClick = "menu(4)" href = "#Dessert">Dessert</a></li>
+
 
         </div>
     
@@ -76,17 +78,6 @@
                     ?>
                 </div> 
             </div>
-
-            <div id = "ramen" class = "area">
-                <h2>Ramen</h2> 
-                <div class = "row">
-                    <?php
-                        $itemType = "ramen";
-                        addMenuItem($itemType, $connMenu); 
-                    ?>
-                </div> 
-            </div>
-
 
             <div id = "Dessert" class = "area">
                 <h2>Dessert</h2>

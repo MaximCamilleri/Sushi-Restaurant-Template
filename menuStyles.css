@@ -75,7 +75,8 @@ figure{
   
 .image {
     display: inline-block;
-    width: 100%;
+    width: 90%;
+    height: 400px;
     height: auto;
        
 }
@@ -84,11 +85,10 @@ figure{
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
     opacity: 0.8;
     background-color:rgb(182,8,37) ;
     overflow: hidden;
-    width: 100%;
+    width: 90%;
     height: 0;
     transition: .5s ease;
 }
@@ -101,13 +101,48 @@ figure{
     color: white;
     font-size: 20px;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+.title{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-bottom: #8B0000 4px solid;
+    text-align: center;
+    text-emphasis: bold;
+    color: white;
+}
+
+.price{
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.spice{
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
 }
 
 /* .row{
