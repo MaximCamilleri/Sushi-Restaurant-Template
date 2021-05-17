@@ -131,7 +131,7 @@ figure{
 
 .price{
     position: absolute;
-    top: 90%;
+    top: 85%;
     left: 90%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -142,8 +142,9 @@ figure{
 
 .spice{
     position: absolute;
-    top: 90%;
+    top: 85%;
     left: 10%;
+    width: 60px;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -151,9 +152,6 @@ figure{
     color: white;
 }
 
-/* .row{
- /* display: flex;     */
-    
 .column{
     float:left;
     width: 33.33%;

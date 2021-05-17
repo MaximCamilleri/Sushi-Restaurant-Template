@@ -23,10 +23,19 @@ function addMenuItem($itemType, $connMenu){
                     <div class="overlay">
                         <h2 class="title">'.$row['itemName'].'</h2>
                         <p class="desc">'.$row["itemIngredients"].'</p>
-                        <p class="price">€'.$row['itemPrice'].'</p>
-                        <p class="spice">'.$row['itemSpiceLevel'].'</p>
-                    </div>
-                </div> ';
+                        <p class="price">€'.$row['itemPrice'].'</p>';
+
+            if($row['itemSpiceLevel'] == "none"){
+                echo '<img src="images/spiceLevels/green.png" class="spice">';
+            }else if($row['itemSpiceLevel'] == "mild"){
+                echo '<img src="images/spiceLevels/orange.png" class="spice">';
+            }else if($row['itemSpiceLevel'] == "hot"){
+                echo '<img src="images/spiceLevels/red.png" class="spice">';
+            }else if($row['itemSpiceLevel'] == "hell"){
+                echo '<img src="images/spiceLevels/hotred.png" class="spice">';
+            }
+            echo ' </div>
+                </div>';
         }
     }   
 }
