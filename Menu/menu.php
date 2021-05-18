@@ -28,7 +28,8 @@
             <a class = "option" onClick = "menu(1)" href = "#sushi">Sushi</a></li>
             <a class = "option" onClick = "menu(2)" href = "#soup">Soup</a></li>
             <a class = "option" onClick = "menu(3)" href = "#curry">Curry</a></li>
-            <a class = "option" onClick = "menu(4)" href = "#Dessert">Dessert</a></li>
+            <a class = "option" onClick = "menu(4)" href = "#accompaniments">Accompaniments</a></li>
+            <a class = "option" onClick = "menu(5)" href = "#Dessert">Dessert</a></li>
 
 
         </div>
@@ -77,6 +78,16 @@
                 <div class = "row">
                     <?php
                         $itemType = "curry";
+                        addMenuItem($itemType, $connMenu); 
+                    ?>
+                </div> 
+            </div>
+
+            <div id = "accompaniments" class = "area">
+                <h2>Accompaniments</h2> 
+                <div class = "row">
+                    <?php
+                        $itemType = "accompaniments";
                         addMenuItem($itemType, $connMenu); 
                     ?>
                 </div> 

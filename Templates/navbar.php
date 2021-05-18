@@ -1,7 +1,7 @@
 <?php
     session_start();
 ?>
-
+<link rel="stylesheet" href="navbar.css">
 <header>
     <div id="headerTint">
         <nav>
