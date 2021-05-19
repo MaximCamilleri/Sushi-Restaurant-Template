@@ -179,8 +179,7 @@
             <div class="navbar">
                 <ul>
                     <?php
-                        print_r($homeWD);
-                        echo '<li class = "active"><a href = /'.$homeWD.' >Home </a> </li>';
+                        echo '<li class = "active"><a href = "../Home/index.php" >Home </a> </li>';
                     ?>
                         
                     

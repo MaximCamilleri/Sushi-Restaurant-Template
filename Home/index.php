@@ -52,15 +52,15 @@
 
             <div class="slideshow-container">
                 <div class="mySlides fade" id="firstImg">
-                    <img class="slideshowImg"  src="images/slideshow1.jfif" alt="">
+                    <img class="slideshowImg"  src="images/slide2.jpg" alt="">
                 </div>
 
                 <div class="mySlides fade">
-                    <img class="slideshowImg" src="images/slideshow2.jfif" alt="">
+                    <img class="slideshowImg" src="images/slide1.jpg" alt="">
                 </div>
 
                 <div class="mySlides fade">
-                    <img class="slideshowImg" src="images/slideshow3.jfif" alt="">
+                    <img class="slideshowImg" src="images/slide3.jpg" alt="">
                 </div>
 
                 <!--change image buttons-->
@@ -68,7 +68,7 @@
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
         </main>
-
+        
         <footer>
             <p>&copy pogfishsushi, All Rights Reserved. Designed by Max Camilleri, Mathias Vaaben, Lucas Lautier</p>
         </footer>
