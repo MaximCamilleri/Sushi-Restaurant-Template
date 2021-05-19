@@ -6,7 +6,6 @@
 <!doctype html>
 <html lang="en">
     <head>
-
         <meta charset="UTF-8">
         <title>PogFish Sushi</title>
         
@@ -20,7 +19,7 @@
     </head>
     <body>
         <?php
-            include_once "../Templates/navbar.php";
+            include "../Templates/navbar.php";
         ?>
         
         <div class = "sidenav">
@@ -107,7 +106,7 @@
     </div>
 
     <?php
-        if($_SESSION['userId'] === 4){
+        if(isset($_SESSION['userId']) && $_SESSION['userId'] === 4){
             echo '<div>
                 <form id = "inputForm" action="includes/menu-upload.inc.php" method="POST" enctype="multipart/form-data">
                     <h1>Input</h1>
