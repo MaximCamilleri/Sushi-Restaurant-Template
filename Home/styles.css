@@ -9,6 +9,7 @@ html, body{
 
 html{
     min-height: 100%;
+    background-image: url(images/indexBackImg.jpg);
 }
 
 /*Navbar css*/
@@ -47,7 +48,7 @@ body{
 nav{
     background-color: rgba(0, 0, 0, 0.3); 
     height: 100px; 
-    margin-bottom: 10%;
+    margin-bottom: 15%;
 }
 
 .navbar ul{
@@ -174,7 +175,7 @@ border-radius: 3px;
     padding: 30px;
     font-size: 30px;
     width: 65%;
-   
+    font-family: 'Ubuntu', sans-serif;
 }
 
 main{
