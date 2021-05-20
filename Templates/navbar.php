@@ -1,22 +1,5 @@
 <?php
     session_start();
-    include "../getCWD.php";
-    $cwdExplode = explode("\\",$cwd);
-    $cwdCount = count($cwdExplode);
-    $newCWD = $cwdExplode[0];
-    $newCWD = $newCWD . "\\";
-    for($i = 1; $i < $cwdCount-1; $i++){
-        $newCWD = $newCWD . $cwdExplode[$i];
-        $newCWD = $newCWD . "\\";
-    }
-    $cwd = $newCWD;
-
-    $homeWD = $cwd."Home\index.php";
-    $contactWD = $cwd."Contact/contactPage/contact.php";
-    $eventWD = $cwd."Contact/Events/events.php";
-    $menuWD = $cwd."Menu/menu.php";
-    $logWD = $cwd."SignUpAndLogin/login.php";
-    $signWD = $cwd."SignUpAndLogin/singup.php";
 ?>
 
 <header>
@@ -183,29 +166,29 @@
                     ?>
                         
                     
-                    <li><a href = "../Menu/menu.php">Menu </a> 
+                    <li><a href = "../FoodMenu/menu.php">Menu </a> 
                         <div class = "sub-menu">
                             <ul>
-                                    <li><a href = "../Menu/menu.php">Food</a></li>
+                                    <li><a href = "../FoodMenu/menu.php">Food</a></li>
                                     <li><a href = "#">Drink</a></li>
                             </ul>
                         </div>
                     </li>
 
             
-                    <li><a href = "../Contact/contactPage/contact.php">Contact</a> 
+                    <li><a href = "../Contact/contact.php">Contact</a> 
                         <div class = "sub-contact">
                             <ul>
                                 <li><a href = "#">Book a Table</a></li>
-                                <li><?php echo "<a href='$eventWD'>Event</a>"; ?></li>
+                                <li><a href="../Events/events.php">Event</a></li>
                                 <li><a href = "#">Takeaway</a></li>
-                                <li><a href = "../Contact/contactPage/contact.php">Complaints</a></li>
+                                <li><a href = "../Contact/contact.php?type=complaints">Complaints</a></li>
                             </ul>
                         </div>
                     </li>
                     <?php
                         if(isset($_SESSION["userId"])){
-                            echo "<li><a href = '#'>Favourites</a></li>";
+                            echo "<li><a href = '../Favourites/favourites.php'>Favourites</a></li>";
                             echo "<li><a href = '../SignUpAndLogIn/includes/logout.inc.php'>logout</a></li>";
                         }else{
                             echo "<li><a href = '../SignUpAndLogIn/login.php'>Login</a></li>";

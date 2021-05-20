@@ -9,8 +9,8 @@
         <meta charset="UTF-8">
         <title>PogFish Sushi</title>
         
-        <link rel="stylesheet" href="menuStyles.css">
-        <script src="menuJS.js"></script>
+        <link rel="stylesheet" href="../MenuIncludes/menuStyles.css">
+        <script src="../MenuIncludes/menuJS.js"></script>
         
         <!--Fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
@@ -23,12 +23,8 @@
         ?>
         
         <div class = "sidenav">
-            <a class = "active option" onClick = "menu(0)" href = "#starters">Starters</a></li>
-            <a class = "option" onClick = "menu(1)" href = "#sushi">Sushi</a></li>
-            <a class = "option" onClick = "menu(2)" href = "#soup">Soup</a></li>
-            <a class = "option" onClick = "menu(3)" href = "#curry">Curry</a></li>
-            <a class = "option" onClick = "menu(4)" href = "#accompaniments">Accompaniments</a></li>
-            <a class = "option" onClick = "menu(5)" href = "#Dessert">Dessert</a></li>
+            <a class = "active option" onClick = "menu(0)" href = "#food">Food</a></li>
+            <a class = "option" onClick = "menu(1)" href = "#drinks">Drinks</a></li>
 
 
         </div>
@@ -40,8 +36,8 @@
                 </figure> -->
                  
         <div class = "food">
-            <div id = "starters" class = "area">
-                <h2>Starters</h2> 
+            <div id = "food" class = "area">
+                <h2>Food</h2> 
               
                 <div class = "row">
                     <?php
@@ -52,8 +48,8 @@
             </div>
         
 
-            <div id = "sushi" class = "area">
-                <h2>Sushi</h2> 
+            <div id = "drinks" class = "area">
+                <h2>Drinks</h2> 
                 <div class = "row">
                     <?php
                         $itemType = "sushi";
@@ -61,47 +57,6 @@
                     ?>
                 </div> 
             </div>
-
-            <div id = "soup" class = "area">
-                <h2>Soup</h2> 
-                <div class = "row">
-                    <?php
-                        $itemType = "soup";
-                        addMenuItem($itemType, $connMenu); 
-                    ?>
-                </div> 
-            </div>
-
-            <div id = "curry" class = "area">
-                <h2>Curry</h2> 
-                <div class = "row">
-                    <?php
-                        $itemType = "curry";
-                        addMenuItem($itemType, $connMenu); 
-                    ?>
-                </div> 
-            </div>
-
-            <div id = "accompaniments" class = "area">
-                <h2>Accompaniments</h2> 
-                <div class = "row">
-                    <?php
-                        $itemType = "accompaniments";
-                        addMenuItem($itemType, $connMenu); 
-                    ?>
-                </div> 
-            </div>
-
-            <div id = "Dessert" class = "area">
-                <h2>Dessert</h2>
-                <div class = "row">
-                    <?php
-                        $itemType = "dessert";
-                        addMenuItem($itemType, $connMenu); 
-                    ?>
-                </div>  
-            </div>
-  
             
     </div>
 
