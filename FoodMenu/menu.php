@@ -1,6 +1,7 @@
 <?php
     include_once "includes/menuFunctions.inc.php";
     include_once "../GeneralIncludes/dbh.inc.php";
+    include_once "../MenuIncludes/menuFunctions.inc.php"
 ?>
 
 <!doctype html>
@@ -32,12 +33,6 @@
 
 
         </div>
-    
-             <!-- extra idea for pics:
-                 <figure>
-                    <img src = 'nigiriSashimi.jpg' alt = 'Sushi Nigiri'>
-                    <figcaption>Price goes here</figcaption>
-                </figure> -->
                  
         <div class = "food">
             <div id = "starters" class = "area">

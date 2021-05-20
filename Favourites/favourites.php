@@ -1,6 +1,6 @@
 <?php
-    include_once "includes/menuFunctions.inc.php";
-    include_once "includes/dbh.menu.inc.php";
+    include_once "../GeneralIncludes/dbh.inc.php";
+    include_once "includes/favouritesFunctions.php";
 ?>
 
 <!doctype html>
@@ -41,8 +41,13 @@
               
                 <div class = "row">
                     <?php
-                        $itemType = "starter";
-                        addMenuItem($itemType, $connMenu); 
+                        if(isset($_SESSION["userId"])){
+                            $userId = $_SESSION["userId"];
+                        }else{
+                            header("location: ../SignUpAndLogin/login.php");
+                            exit();
+                        }
+                        addFavItem($conn, $userId)
                     ?>
                 </div>  
             </div>
