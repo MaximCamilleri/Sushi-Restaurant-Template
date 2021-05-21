@@ -10,7 +10,7 @@ function emptyInput($title, $ingredients, $price, $file){
 
 
 function addMenuItem($itemType, $connMenu){
-    $sql = "SELECT * FROM menu WHERE itemType = '$itemType' ORDER BY itemOrder ASC;";
+    $sql = "SELECT * FROM food_menu WHERE itemType = '$itemType' ORDER BY itemOrder ASC;";
     $stmt = mysqli_stmt_init($connMenu);
     if(!mysqli_stmt_prepare($stmt, $sql)){
         header("Location: ../menu.php?error=stmt2");
@@ -21,7 +21,8 @@ function addMenuItem($itemType, $connMenu){
             echo '<div class="container column">
                     <img src="images/gallery/'.$row["itemImg"].'" alt="Spring Rolls" class="image">
                     <div class="overlay">
-                        <h2 class="title">'.$row['itemName'].'</h2>
+                        <h2 class="titleMenu">'.$row['itemName'].'</h2>
+                        <a href="../MenuIncludes/addToFav.inc.php?itemId='.$row["itemId"].'">FAV</a>
                         <p class="desc">'.$row["itemIngredients"].'</p>
                         <p class="price">€'.$row['itemPrice'].'</p>';
 

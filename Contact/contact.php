@@ -12,7 +12,7 @@
 
     <body>
         <?php
-            include "../../Templates/navbar.php";
+            include "../Templates/navbar.php";
         ?>
         <main>
             <div class="split left">
@@ -50,12 +50,21 @@
                 <h2>Contact Us</h2>
                 <br>
                 
-                <form method = "POST" action = "../includes/contactPage.inc.php">
+                <form method = "POST" action = "../ContactIncludes/contactPage.inc.php">
                     <label for="options">What do you want to contact us about?</label>
                     <select id = "dropdownContact" name="msgType" id="msgType">
                         <option value="general">General</option>
                         <option value="event">Event</option>
-                        <option value="complaint">Complaint</option>                        
+                        <?php
+                          if(isset($_GET['type'])){
+                            if($_GET['type'] === "complaints"){
+                              echo '<option value="complaint" selected>Complaint</option>'; 
+                            }else{
+                              echo '<option value="complaint">Complaint</option>'; 
+                            }
+                          }
+                        ?>
+                                             
                      </select>                 
                      <button class = "contactSub" type="submit" name="submitContact" >Submit</button>
                     <br>

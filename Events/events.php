@@ -13,43 +13,14 @@
 
     <body>
         <?php
-        include "../../Templates/navbar.php";
+        include "../Templates/navbar.php";
         ?>
 
         <main>
           
             <h2>Organize an Event at PogFish Sushi</h2>
             <h3>Fill in Your Details</h3>
-            <form method = "POST"  action="../includes/events.inc.php">
-                <!--
-                <div class = "split left">
-                    <label for = "firstName">First Name</label>
-                    <br><br>
-                    <input type = "text" id = "form1" placeholder="John">
-                </div>
-                <div class = "split right">
-                    <label for = "lastName">Last Name</label>
-                    <br><br>
-                    <input type = "text" id = "form1" placeholder = "Doe">
-                </div>
-                
-                <label for = "firstName">First Name</label>
-                <br><br>
-                <input type = "text" id = "form1" placeholder="John">
-                <br><br><br>
-                <label for = "lastName">Last Name</label>
-                <br><br>
-                <input type = "text" id = "form1" placeholder = "Doe">
-                <br><br><br>
-                <label for = "emailDetails" id = "latter">Email</label>
-                <br><br>
-                <input type = "text" id = "form1" placeholder = "JohnDoe@email.com">
-                <br><br><br>
-                <label for = "emailDetails" id = "latter">Phone</label>
-                <br><br>
-                <input type = "text" id = "form1" placeholder = "9981 2921">
-                <br><br><br>
-                -->
+            <form method = "POST"  action="../ContactIncludes/events.inc.php">
                 <table id = "formApp">
                     <tr>
                         <td><label for = "firstName">First Name</label></td>

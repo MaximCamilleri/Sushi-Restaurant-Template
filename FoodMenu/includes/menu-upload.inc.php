@@ -35,13 +35,13 @@ if(isset($_POST['submit'])){
                 $imageFullName = $newfileName . "." . uniqid("", true) . "." . $fileExt;
                 $fileDestination = "../images/gallery/" . $imageFullName;
 
-                include_once "dbh.menu.inc.php";
+                include_once "../../GeneralIncludes/dbh.inc.php";
                 if(emptyInput($title, $ingredients, $price, $file) == true){
                     header("Location: ../menu.php?error=emptyInput");
                     exit();
                 }else{
-                    $sql = "SELECT * FROM menu;";
-                    $stmt = mysqli_stmt_init($connMenu);
+                    $sql = "SELECT * FROM food_menu;";
+                    $stmt = mysqli_stmt_init($conn);
                     if(!mysqli_stmt_prepare($stmt, $sql)){
                         header("Location: ../menu.php?error=stmt");
                     }else{
@@ -50,7 +50,7 @@ if(isset($_POST['submit'])){
                         $rowCount = mysqli_num_rows($result);
                         $setOrder = $rowCount + 1;
 
-                        $sql = "INSERT INTO menu (itemName, itemIngredients, itemPrice, itemImg, itemOrder, itemType, itemSpiceLevel) VALUES (?, ?, ?, ?, ?, ?, ?);";
+                        $sql = "INSERT INTO food_menu (itemName, itemIngredients, itemPrice, itemImg, itemOrder, itemType, itemSpiceLevel) VALUES (?, ?, ?, ?, ?, ?, ?);";
                         if(!mysqli_stmt_prepare($stmt, $sql)){
                             header("Location: ../menu.php?error=stmt");
                         } else{

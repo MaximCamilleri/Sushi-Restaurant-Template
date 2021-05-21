@@ -1,17 +1,17 @@
 <?php
     include_once "includes/menuFunctions.inc.php";
-    include_once "includes/dbh.menu.inc.php";
+    include_once "../GeneralIncludes/dbh.inc.php";
+    include_once "../MenuIncludes/menuFunctions.inc.php"
 ?>
 
 <!doctype html>
 <html lang="en">
     <head>
-
         <meta charset="UTF-8">
         <title>PogFish Sushi</title>
         
-        <link rel="stylesheet" href="menuStyles.css">
-        <script src="menuJS.js"></script>
+        <link rel="stylesheet" href="../MenuIncludes/menuStyles.css">
+        <script src="../MenuIncludes/menuJS.js"></script>
         
         <!--Fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
@@ -20,7 +20,7 @@
     </head>
     <body>
         <?php
-            include_once "../Templates/navbar.php";
+            include "../Templates/navbar.php";
         ?>
         
         <div class = "sidenav">
@@ -28,16 +28,11 @@
             <a class = "option" onClick = "menu(1)" href = "#sushi">Sushi</a></li>
             <a class = "option" onClick = "menu(2)" href = "#soup">Soup</a></li>
             <a class = "option" onClick = "menu(3)" href = "#curry">Curry</a></li>
-            <a class = "option" onClick = "menu(4)" href = "#Dessert">Dessert</a></li>
+            <a class = "option" onClick = "menu(4)" href = "#accompaniments">Accompaniments</a></li>
+            <a class = "option" onClick = "menu(5)" href = "#Dessert">Dessert</a></li>
 
 
         </div>
-    
-             <!-- extra idea for pics:
-                 <figure>
-                    <img src = 'nigiriSashimi.jpg' alt = 'Sushi Nigiri'>
-                    <figcaption>Price goes here</figcaption>
-                </figure> -->
                  
         <div class = "food">
             <div id = "starters" class = "area">
@@ -46,7 +41,7 @@
                 <div class = "row">
                     <?php
                         $itemType = "starter";
-                        addMenuItem($itemType, $connMenu); 
+                        addMenuItem($itemType, $conn); 
                     ?>
                 </div>  
             </div>
@@ -57,7 +52,7 @@
                 <div class = "row">
                     <?php
                         $itemType = "sushi";
-                        addMenuItem($itemType, $connMenu); 
+                        addMenuItem($itemType, $conn); 
                     ?>
                 </div> 
             </div>
@@ -67,7 +62,7 @@
                 <div class = "row">
                     <?php
                         $itemType = "soup";
-                        addMenuItem($itemType, $connMenu); 
+                        addMenuItem($itemType, $conn); 
                     ?>
                 </div> 
             </div>
@@ -77,7 +72,17 @@
                 <div class = "row">
                     <?php
                         $itemType = "curry";
-                        addMenuItem($itemType, $connMenu); 
+                        addMenuItem($itemType, $conn); 
+                    ?>
+                </div> 
+            </div>
+
+            <div id = "accompaniments" class = "area">
+                <h2>Accompaniments</h2> 
+                <div class = "row">
+                    <?php
+                        $itemType = "accompaniments";
+                        addMenuItem($itemType, $conn); 
                     ?>
                 </div> 
             </div>
@@ -87,7 +92,7 @@
                 <div class = "row">
                     <?php
                         $itemType = "dessert";
-                        addMenuItem($itemType, $connMenu); 
+                        addMenuItem($itemType, $conn); 
                     ?>
                 </div>  
             </div>
@@ -96,7 +101,7 @@
     </div>
 
     <?php
-        if($_SESSION['userId'] === 4){
+        if(isset($_SESSION['userId']) && $_SESSION['userId'] === 3){
             echo '<div>
                 <form id = "inputForm" action="includes/menu-upload.inc.php" method="POST" enctype="multipart/form-data">
                     <h1>Input</h1>
