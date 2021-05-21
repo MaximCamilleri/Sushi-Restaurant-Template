@@ -38,6 +38,6 @@ function addMenuItem($itemType, $connMenu){
             echo ' </div>
                 </div>';
         }
-    }   
+    }
 }
 
