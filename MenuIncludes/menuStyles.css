@@ -75,9 +75,7 @@ figure{
 }
 */
 .container {
-    position: relative;
-    
-    
+    position: relative;  
 }
   
 .image {
@@ -152,11 +150,6 @@ figure{
     color: white;
 }
 
-.column{
-    float:left;
-    width: 33.33%;
-    padding: 5px;
-}
 
 .row::after{
     content: "";
@@ -170,6 +163,12 @@ figure{
     display: block;
     align-content: center;
     
+}
+
+.column{
+    float:left;
+    width: 33.33%;
+    padding: 5px;
 }
 
 #inputForm, input{
@@ -189,4 +188,31 @@ figure{
     margin-bottom: 40px;
 }
 
+@media screen and (min-width: 2000px){
+    .column{
+        float:left;
+        width: 25%;
+        padding: 5px;
+    }
+}
 
+@media screen and (max-width: 1480px){
+    .column{
+        float:left;
+        width: 50%;
+        padding: 5px;
+    }
+}
+
+
+@media screen and (max-width: 1080px){
+    .column{
+        float:right;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .column{
+        padding-left: 20%;
+    }
+}
