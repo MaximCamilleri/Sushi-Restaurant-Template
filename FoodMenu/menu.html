@@ -1,8 +1,8 @@
-{% extends "layout.html" %}
+{% extends "../Templates/layout.html" %}
 
 {% block content %}
 
-    <link rel="stylesheet" href="MenuIncludes/menuStyles.css">
+    <link rel="stylesheet" href="../MenuIncludes/menuStyles.css">
     <script src="../MenuIncludes/menuJS.js"></script>
 
     <div class = "sidenav">
@@ -16,7 +16,7 @@
                 
     <div class = "food">
         <div id = "starters" class = "area">
-            <h2>Starters</h2> 
+            <h2 class="foodType">Starters</h2> 
                 <div class = "row">
                     {% block starters %}
                     {% endblock %}
@@ -25,7 +25,7 @@
         </div>
 
         <div id = "sushi" class = "area">
-            <h2>Sushi</h2> 
+            <h2 class="foodType">Sushi</h2> 
                 <div class = "row">
                     {% block sushi %}
                     {% endblock %}
@@ -33,7 +33,7 @@
         </div>
 
         <div id = "soup" class = "area">
-            <h2>Soup</h2> 
+            <h2 class="foodType">Soup</h2> 
                 <div class = "row">
                     {% block soup %}
                     {% endblock %}
@@ -41,7 +41,7 @@
         </div>
 
         <div id = "curry" class = "area">
-            <h2>Curry</h2> 
+            <h2 class="foodType">Curry</h2> 
                 <div class = "row">
                     {% block curry %}
                     {% endblock %}
@@ -49,7 +49,7 @@
         </div>
 
         <div id = "accompaniments" class = "area">
-            <h2>Accompaniments</h2> 
+            <h2 class="foodType">Accompaniments</h2> 
                 <div class = "row">
                     {% block accompaniments %}
                     {% endblock %}
@@ -57,7 +57,7 @@
         </div>
 
         <div id = "dessert" class = "area">
-            <h2>Dessert</h2> 
+            <h2 class="foodType">Dessert</h2> 
                 <div class = "row">
                     {% block dessert %}
                     {% endblock %}

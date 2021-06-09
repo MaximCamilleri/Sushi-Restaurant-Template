@@ -54,7 +54,7 @@ if(isset($_POST['submit'])){
                         if(!mysqli_stmt_prepare($stmt, $sql)){
                             header("Location: ../menu.php?error=stmt");
                         } else{
-                            mysqli_stmt_bind_param($stmt, "sssssss", $title, $ingredients, $price, $fileDestination, $setOrder, $section, $spice);
+                            mysqli_stmt_bind_param($stmt, "sssssss", $title, $ingredients, $price, $imageFullName, $setOrder, $section, $spice);
                             mysqli_stmt_execute($stmt);
 
                             move_uploaded_file($fileTmp, $fileDestination);

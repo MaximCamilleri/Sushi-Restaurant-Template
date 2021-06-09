@@ -7,12 +7,10 @@
         <img id="logo" src="https://image.freepik.com/free-vector/sushi-restaurant-logo_8169-12.jpg" alt="PogFish Sushi restaurant logo">
         <div class="navbar">
             <ul>
-                <?php
-                    echo '<li class = "active"><a href = "../Home/index.php" >Home </a> </li>';
-                ?>
+                <li class = "active"><a href = "../Home/index.php" >Home </a> </li>
                     
                 
-                <li><a href = "../FoodMenu/menu.php">Menu </a> 
+                <li><a href = "../Templates/menu.php">Menu </a> 
                     <div class = "sub-menu">
                         <ul>
                                 <li><a href = "../FoodMenu/menu.php">Food</a></li>

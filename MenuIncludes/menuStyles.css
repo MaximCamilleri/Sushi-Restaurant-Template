@@ -60,20 +60,16 @@ html{
     
 }
 
-h2{
+.foodType{
     color: white;
 }
 
-h2:after{
+.foodType:after{
     content:' ';
     display:block;
     border:2px solid rgb(182,8,37);
 }
-/* idea for pics:
-figure{
-    display: inline-block;
-}
-*/
+
 .container {
     position: relative;  
 }
@@ -184,9 +180,6 @@ figure{
     text-align: center;
 }
 
-#headerTint{
-    margin-bottom: 40px;
-}
 
 @media screen and (min-width: 2000px){
     .column{
