@@ -3,6 +3,14 @@
     require_once '../bootstrap.php';
     include_once "../GeneralIncludes/dbh.inc.php";
 
+    session_start();
+    $loggedIn = FALSE;
+    $userId = -1;
+    if(isset($_SESSION['userId'])){
+        $loggedIn = True;
+        $userId = $_SESSION['userId'];
+    }
+
     $types = ['starter', 'sushi','soup', 'curry', 'accompanimaents', 'dessert'];
     $current = 0;
     $menu = [];
@@ -15,11 +23,22 @@
         }else{
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
+            $menu[$current] = $result;
+            $current++;
         }
-        $menu[$current] = $result;
-        $current++;
+        
     }
-    echo $twig->render($dir, ['starter' => $menu[0]], ['sushi' => $menu[1]], ['soup' => $menu[2]], ['curry' => $menu[3]], ['accompanimaents' => $menu[4]], ['dessert' => $menu[5]]);
+
+    $admin = FALSE;
+    
+    if($userId == 3){
+        
+        $admin = TRUE;
+    }
+
+    echo $twig->render("FoodMenu/menu.html", ["loggedIn" => $loggedIn, 'starter' => $menu[0], 'sushi' => $menu[1], 
+    'soup' => $menu[2], 'curry' => $menu[3], 'accompanimaents' => $menu[4], 
+    'dessert' => $menu[5], 'admin' => $admin]);
 
 
     

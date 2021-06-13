@@ -72,19 +72,19 @@ function loginUser($conn, $email, $password){
     $exists = emailExists($email, $conn);
 
     if($exists === false){
-        header("location: ../login.php?error=wronglogin");
+        header("location: ../../login.php?error=wronglogin");
         exit();
     }
 
     $pwdHashed = $exists["usersPassword"];
     $checkPwd = password_verify($password, $pwdHashed);
     if($checkPwd === false){
-        header("location: ../login.php?error=wronglogin");
+        header("location: ../../login.php?error=wronglogin");
     }else if($checkPwd === true){
         session_start();
         $_SESSION["userId"] = $exists["userId"];
         $_SESSION["email"] = $exists["usersEmail"];
-        header("location: ../../Home/index.php");
+        header("location: ../../home.php");
         exit();
     }
 }

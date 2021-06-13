@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <title>PogFish Sushi</title>
         <!-- <link rel="stylesheet" href="contactStyles.css"> -->
-        <link rel="stylesheet" href="signUpCSS.css">
-        <script src="loginJS.js"></script>
+        <link rel="stylesheet" href="SignUpAndLogin/signUpCSS.css">
+
         <!--Fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Raleway:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
@@ -15,8 +15,8 @@
         <div class = split>
             <div class = left>
                 <section class = "copy">
-                    <h1 class = "title">PogFish Sushi</h1>
-                    <p class = "text">The best sushi restaurant on the UOM Campus</p>
+                    <h1>PogFish Sushi</h1>
+                    <p>The best sushi restaurant on the UOM Campus</p>
                 </section>
             </div>
             
@@ -41,7 +41,7 @@
                     <div class = "password-container">
                         <label for="password">Password</label>
                         <input id = "password" type="password" name="password">
-                        <input class = "password-checkbox" type="checkbox" onclick="myFunction()">
+                        <i class>See password</i> 
                     </div>
                     <br>
 
@@ -53,35 +53,18 @@
                     </div>
                     <br>
                     <button type="submit" name="submit" class = "signup-button">Sign up</button>
+                
+                    {% if errorInput %}
+                        <p>Fill in all the required fields<p>
+                    {% elseif errorEmail %}
+                        <p>A valid email was not entered<p>
+                    {% elseif errorExists %}
+                        <p>Email is already in use<p>
+                    {% endif %}
                     
-                   
-                    
-                    <!-- <section class = "legal">
-                        <p>By continuing, you will be agreeing to our Terms & Conditions</p>
-                    </section> -->
-                </form>
-                                
-                <?php
-                    if(isset($_GET["error"])){
-                        if($_GET["error"] == "emptyinput"){
-                            echo "<p>Fill in all the required fields<p>";
-                        }
-                        if($_GET["error"] == "invalidemail"){
-                            echo "<p>A valid email was not entered<p>";
-                        }
-                        if($_GET["error"] == "emailexists"){
-                            echo "<p>Email is already in use<p>";
-                        }
-                        if($_GET["error"] == "none"){
-                            echo "<p>Signup was succesful<p>";
-                        }
-                    }
-                ?>
+                </form>    
             </div>
-           
         </div>
-       
-        
     </body>
 </html>
 

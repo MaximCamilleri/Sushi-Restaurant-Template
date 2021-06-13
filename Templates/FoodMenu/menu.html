@@ -1,0 +1,148 @@
+{% extends "layout.html" %}
+{%set loc = "../MenuIncludes/addToFav.inc.php?itemId=" %}
+{% set imgLoc = "FoodMenu/images/gallery/" %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="../MenuIncludes/menuStyles.css">
+    <script src="../MenuIncludes/menuJS.js"></script>
+
+    <div class = "sidenav">
+        <a class = "active option" onClick = "menu(0)" href = "#starters">Starters</a></li>
+        <a class = "option" onClick = "menu(1)" href = "#sushi">Sushi</a></li>
+        <a class = "option" onClick = "menu(2)" href = "#soup">Soup</a></li>
+        <a class = "option" onClick = "menu(3)" href = "#curry">Curry</a></li>
+        <a class = "option" onClick = "menu(4)" href = "#accompaniments">Accompaniments</a></li>
+        <a class = "option" onClick = "menu(5)" href = "#Dessert">Dessert</a></li>
+    </div>
+                
+    <div class = "food">
+        <div id = "starters" class = "area">
+            <h2 class="foodType">Starters</h2> 
+                <div class = "row">
+                    {% for items in starter %}
+                        <div class="container column">
+                            <img src="{{ imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
+                            <div class="overlay">
+                                <h2 class="titleMenu">{{ items.itemName }}</h2>
+                                <a id = "favbutton" href="{{loc ~ items.itemId}}">&#9734</a>
+                                <p class="desc">{{ items.itemIngredients }}</p>
+                                <p class="price">${{ items.itemPrice }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>   
+        </div>
+
+        <div id = "sushi" class = "area">
+            <h2 class="foodType">Sushi</h2> 
+                <div class = "row">
+                    {% for items in sushi %}
+                        <div class="container column">
+                            <img src="{{imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
+                            <div class="overlay">
+                                <h2 class="titleMenu">{{ items.itemName }}</h2>
+                                <a id = "favbutton" href="{{loc ~ items.itemId}}">&#9734</a>
+                                <p class="desc">{{ items.itemIngredients }}</p>
+                                <p class="price">${{ items.itemPrice }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>  
+        </div>
+
+        <div id = "soup" class = "area">
+            <h2 class="foodType">Soup</h2> 
+                <div class = "row">
+                    {% for items in soup %}
+                        <div class="container column">
+                            <img src="{{imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
+                            <div class="overlay">
+                                <h2 class="titleMenu">{{ items.itemName }}</h2>
+                                <a id = "favbutton" href="{{loc ~ items.itemId}}">&#9734</a>
+                                <p class="desc">{{ items.itemIngredients }}</p>
+                                <p class="price">${{ items.itemPrice }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>  
+        </div>
+
+        <div id = "curry" class = "area">
+            <h2 class="foodType">Curry</h2> 
+                <div class = "row">
+                    {% for items in curry %}
+                        <div class="container column">
+                            <img src="{{imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
+                            <div class="overlay">
+                                <h2 class="titleMenu">{{ items.itemName }}</h2>
+                                <a id = "favbutton" href="{{loc ~ items.itemId}}">&#9734</a>
+                                <p class="desc">{{ items.itemIngredients }}</p>
+                                <p class="price">${{ items.itemPrice }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>  
+        </div>
+
+        <div id = "accompaniments" class = "area">
+            <h2 class="foodType">Accompaniments</h2> 
+                <div class = "row">
+                    {% for items in accompanimaents %}
+                        <div class="container column">
+                            <img src="{{imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
+                            <div class="overlay">
+                                <h2 class="titleMenu">{{ items.itemName }}</h2>
+                                <a id = "favbutton" href="{{loc ~ items.itemId}}">&#9734</a>
+                                <p class="desc">{{ items.itemIngredients }}</p>
+                                <p class="price">${{ items.itemPrice }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>  
+        </div>
+
+        <div id = "dessert" class = "area">
+            <h2 class="foodType">Dessert</h2> 
+                <div class = "row">
+                    {% for items in dessert %}
+                        <div class="container column">
+                            <img src="{{imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
+                            <div class="overlay">
+                                <h2 class="titleMenu">{{ items.itemName }}</h2>
+                                <a id = "favbutton" href="{{loc ~ items.itemId}}">&#9734</a>
+                                <p class="desc">{{ items.itemIngredients }}</p>
+                                <p class="price">${{ items.itemPrice }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>  
+        </div>
+        {% if admin %}
+            <div>
+                <form id = "inputForm" action="includes/menu-upload.inc.php" method="POST" enctype="multipart/form-data">
+                    <h1>Input</h1>
+                    <label for=""></label>
+                    <input id="fileName" type="text" name="filename" placeholder="File name...">
+                    <br>
+                    <input id="dishName" type="text" name="title" placeholder="Dish Title...">
+                    <br>
+                    <input id="ingredients" type="text" name="ingredients" placeholder="list of ingredients...">
+                    <br>
+                    <input id="price" type="text" name="price" placeholder="Price">
+                    <br>
+                    <input id="spice" type="text" name="spice" placeholder="Spice Level">
+                    <br>
+                    <input id="section" type="text" name="section" placeholder="Starter/Sushi/Accompaniments/Soup/Curry/Dessert">
+                    <br>
+                    <input id="fileName" type="file" name="file">
+                    <br>
+                    <button type="submit" name="submit">Submit</button>
+                </form>
+            </div>
+        {% endif %}
+    </div>
+
+    
+
+{% endblock %}      

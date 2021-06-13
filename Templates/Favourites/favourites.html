@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{%set loc = "../MenuIncludes/addToFav.inc.php?itemId=" %}
+{% set imgLoc = "FoodMenu/images/gallery/" %}
+
+{% block content %}
+    <body>
+        
+        <link rel="stylesheet" href="../MenuIncludes/menuStyles.css">
+        <script src="../MenuIncludes/menuJS.js"></script>
+
+        <div class = "sidenav">
+            <a class = "active option" onClick = "menu(0)" href = "#food">Food</a></li>
+            <a class = "option" onClick = "menu(1)" href = "#drinks">Drinks</a></li>
+
+
+        </div>
+    
+             <!-- extra idea for pics:
+                 <figure>
+                    <img src = 'nigiriSashimi.jpg' alt = 'Sushi Nigiri'>
+                    <figcaption>Price goes here</figcaption>
+                </figure> -->
+                 
+        <div class = "food">
+            <div id = "food" class = "area">
+                <h2 class="foodType">Food</h2> 
+              
+                <div class = "row">
+
+                        {% for items in food %}
+                        <div class="container column">
+                            <img src="{{ imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
+                            <div class="overlay">
+                                <h2 class="titleMenu">{{ items.itemName }}</h2>
+                                <a id = "favbutton" href="{{loc ~ items.itemId}}">&#9734</a>
+                                <p class="desc">{{ items.itemIngredients }}</p>
+                                <p class="price">${{ items.itemPrice }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        
+                </div>  
+            </div>
+        
+                    
+            <!-- <div id = "drinks" class = "area">
+                <h2 class="foodType">Drinks</h2> 
+                <div class = "row">
+                   
+                </div> 
+            </div> -->
+            
+    </div>
+{% endblock %}      

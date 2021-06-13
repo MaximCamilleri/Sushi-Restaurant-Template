@@ -180,6 +180,27 @@ html{
     text-align: center;
 }
 
+#favbutton{
+    border: 3px solid orange;
+    border-radius: 50px;
+    color: orange;
+    background-color: white;
+    padding: 5px 20px;
+    margin: 0 10px;
+    text-align: center;
+    display: inline;
+    position: absolute;
+    top: 1%;
+    left: 0%;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+#favbutton:hover{
+    color: white;
+    background-color: orange;
+}
+
 
 @media screen and (min-width: 2000px){
     .column{

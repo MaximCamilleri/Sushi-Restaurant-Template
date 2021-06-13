@@ -3,7 +3,7 @@
     if(isset($_SESSION["userId"])){
         $userId = $_SESSION["userId"];
     }else{
-        header("location: ../SignUpAndLogin/login.php");
+        header("location: ../Templates/login.php");
         exit();
     }
     $itemId = $_GET["itemId"];

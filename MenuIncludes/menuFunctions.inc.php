@@ -6,7 +6,7 @@ function createFav($conn, $userId, $itemId){
     
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sqlCheck)){
-        header("Location: ../Favourites/favourites.php?error=stmt2");
+        header("Location: ../Templates/favourites.php?error=stmt2");
         exit();
     }else{
         mysqli_stmt_execute($stmt);
@@ -18,7 +18,7 @@ function createFav($conn, $userId, $itemId){
             $stmt2 = mysqli_stmt_init($conn);
 
             if(!mysqli_stmt_prepare($stmt2, $sql)){
-                header("location: ../FoodMenu/menu.php?error=stmtfailed");
+                header("location: ../Templates/menu.php?error=stmtfailed");
                 exit();
             }
         
@@ -27,19 +27,31 @@ function createFav($conn, $userId, $itemId){
             mysqli_stmt_close($stmt2);
         
         
-            header("location: ../FoodMenu/menu.php?error=none");
+            header("location: ../Templates/menu.php?error=none");
         }else{
             mysqli_stmt_close($stmt);
             $sql = "DELETE FROM favourites WHERE userId = '$userId' and itemIdFood = '$itemId';";
             $stmt3 = mysqli_stmt_init($conn);
 
             if(!mysqli_stmt_prepare($stmt3, $sql)){
-                header("location: ../FoodMenu/menu.php?error=stmtfailed2");
+                header("location: ../Templates/menu.php?error=stmtfailed2");
                 exit();
             }
 
             mysqli_stmt_execute($stmt3);
-            header("location: ../FoodMenu/menu.php?error=none");
+            header("location: ../Templates/menu.php?error=none");
         }
+    }
+}
+
+function spicelevel($input){
+    if($input['itemSpiceLevel'] == "none"){
+        echo '<img src="../FoodMenu/images/spiceLevels/green.png" class="spice">';
+    }else if($input['itemSpiceLevel'] == "mild"){
+        echo '<img src="../FoodMenu/images/spiceLevels/orange.png" class="spice">';
+    }else if($input['itemSpiceLevel'] == "hot"){
+        echo '<img src="../FoodMenu/images/spiceLevels/red.png" class="spice">';
+    }else if($input['itemSpiceLevel'] == "hell"){
+        echo '<img src="../FoodMenu/images/spiceLevels/hotred.png" class="spice">';
     }
 }

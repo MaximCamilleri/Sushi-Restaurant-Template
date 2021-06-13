@@ -29,7 +29,7 @@ function createBooking($conn, $email, $tel, $time, $name, $surname, $details){
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
-        header("location: ../Events/events.php?error=stmtfailed2");
+        header("location: ../Templates/events.php?error=stmtfailed2");
         exit();
     }
 
@@ -38,7 +38,7 @@ function createBooking($conn, $email, $tel, $time, $name, $surname, $details){
     mysqli_stmt_close($stmt);
 
 
-    header("location: ../Events/events.php?error=none");
+    header("location: ../Templates/events.php?error=none");
 
 }
 
@@ -47,7 +47,7 @@ function createContact($conn, $name, $email, $details){
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
-        header("location: ../ContactPage/contact.php?error=stmtfailed2");
+        header("location: ../Templates/contact.php?error=stmtfailed2");
         exit();
     }
 
@@ -56,6 +56,6 @@ function createContact($conn, $name, $email, $details){
     mysqli_stmt_close($stmt);
 
 
-    header("location: ../ContactPage/contact.php?error=none");
+    header("location: ../Templates/contact.php?error=none");
 }
 
