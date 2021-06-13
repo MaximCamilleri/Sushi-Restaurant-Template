@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta name = "viewport" content = "width=decice-width, initilal-scale=1.0">
         <title>PogFish Sushi</title>
-        <link rel="stylesheet" href="../TemplatesCss/footerStyles.css">
+        <link rel="stylesheet" href="../TemplatesCss/test.css">
         <link rel="stylesheet" href="../TemplatesCss/navbar.css">
         
         <!--Fonts-->
@@ -59,9 +59,33 @@
         {% block content%}
         {% endblock %}
 
-        <footer>
-            <p>&copy pogfishsushi, All Rights Reserved. Designed by Max Camilleri, Mathias Vaaben, Lucas Lautier</p>
-        </footer>
+        <div class = "footer-container">
+            <div class = "footer">
+                <div class = "footer-heading footer-1">
+                    <h2>Make an Account</h2>
+                    <a href ="#signup.php">Sign Up</a>
+                </div>
+
+                <div class = "footer-heading footer-2">
+                    <h2>Visit our Restaurant</h2>
+                    <a href ="#.php">Book a Table</a>
+                    <a href ="#events.php">Planning an event?</a>
+                </div>
+
+                
+                <div class = "footer-heading footer-3">
+                    <h2>Contact Us</h2>
+                      <p>+356 9911 1002<br>
+                        testemail@sushi.com</p>
+                </div>
+
+                <div class = "footer-heading footer-4">
+                    <h2>Location</h2>
+                     <p> Valletta Waterfront<br>
+                      Valletta, VLT 3456</p>
+                </div>
+            </div>
+        </div>
 
     </body>
 </html>

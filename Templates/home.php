@@ -8,4 +8,4 @@
         $loggedIn = True;
     }
 
-    echo $twig->render("Home/index.html", ["loggedIn" =>$loggedIn]);
+    echo $twig->render("Home/home.html", ["loggedIn" =>$loggedIn]);

@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="Home/home.css">
+    <section class = "header">
+        <div class = "text-box">
+            <h1> Pogfish Asian</h1>
+            <p>The best sushi restuarant in the heart of the UOM Campus<br>By Lucas Lautier, Max Camilleri & Mathias Vaaben</p>
+            <a href="" class = "hero-btn">Learn More </a>
+        </div>
+
+    </section>
+
+    <section class = "reviews">
+        <h1>Reviews from Celebrity Guests</h1>
+        <p>What did some of the best critics think about our food?</p>
+
+        <div class = "row">
+            <div class="review-col">
+                <h3>Ben Camille</h3>
+                <p>A great environment, with great food to complememt it. Exactly what I need after a long day of modelling and hosting. Very welcoming owners who know what they are doing!<br></p>
+            </div>
+        
+            <div class="review-col">
+                <h3>Mario Vella</h3>
+                <p>Wow, just wow. This food flew me to the moon and back.</p>
+            </div>
+        
+            <div class="review-col">
+                
+                <h3>Peppi</h3>
+                <p>I might be the host of Xarabank, but no argument is needed for the best sushi in Malta.</p>
+        </div>
+
+    </section>
+
+    <section class="about-us">
+        <h1>About Us</h1>
+        <p id = "about-desc">The where, how, and why</p>
+
+        <div class="row">
+            <div class="campus-col">
+                <img src="Home/images/waterfront.jpg">
+            </div>
+            <div class="campus-col">
+                <img src="Home/images/waterfront.jpg">
+            </div>
+            <div class="campus-col">
+                <img src="Home/images/waterfront.jpg">
+            </div> 
+        </div>
+        
+        <div class = "description"></div>
+            <div class="about-row">
+                <div class="desc">
+                  Pogfish Asian was founded by 3 aspiring AI Students, who quit their course to follow their real dream: rolling fish.<br>
+                    <br>
+                  The inspiration was there: we wanted to impress our beloved teacher Mr. Chris Porter, with a mix of cooking and coding.<br>
+                  The plan was simple: Max and Lucas do the cooking, Mathias does the testing. With this ingenious plan in mind, they started.<br>
+                  <br>
+                  Segmentation faults in one hand & sushi in the other, they slowly gained traction in the lovely island of Malta, turning a small local
+                  business into a world-renowned restaurant, whose sushi is sought after by tourists and citizens alike. 
+                  <br><br>
+                  Clients get to choose whether they want to eat their spectacular food inside, whilst seeing our talented chefs cook and roll fish.
+                  Or outside, onlooking the beautiful view offerred by the Valletta Waterfront.
+                  
+                </div>
+
+                <div class="desc">
+                    <div class = "hours">
+                        <h3>Opening Times:</h3><br>
+                        <table>
+                            <tr><th>Sunday</th><td>Closed</td></tr>
+                            <tr><th>Monday</th><td>9am - 5pm</td></tr>
+                            <tr><th>Tuesday</th><td>9am - 5pm</td></tr>
+                            <tr><th>Wednesday</th><td>9am - 5pm</td></tr>
+                            <tr><th>Thursday</th><td>9am - 5pm</td></tr>
+                            <tr><th>Friday</th><td>9am - 5pm</td></tr>
+                        </table>
+                </div>
+                </div>
+
+            </div> 
+        </div>
+
+    </section>
+ {% endblock %} 
