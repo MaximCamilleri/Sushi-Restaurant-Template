@@ -1,0 +1,67 @@
+{% extends "../Templates/layout.html" %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="../MenuIncludes/menuStyles.css">
+    <script src="../MenuIncludes/menuJS.js"></script>
+
+    <div class = "sidenav">
+        <a class = "active option" onClick = "menu(0)" href = "#starters">Starters</a></li>
+        <a class = "option" onClick = "menu(1)" href = "#sushi">Sushi</a></li>
+        <a class = "option" onClick = "menu(2)" href = "#soup">Soup</a></li>
+        <a class = "option" onClick = "menu(3)" href = "#curry">Curry</a></li>
+        <a class = "option" onClick = "menu(4)" href = "#accompaniments">Accompaniments</a></li>
+        <a class = "option" onClick = "menu(5)" href = "#Dessert">Dessert</a></li>
+    </div>
+                
+    <div class = "food">
+        <div id = "starters" class = "area">
+            <h2 class="foodType">Starters</h2> 
+                <div class = "row">
+                    {% block starters %}
+                    {% endblock %}
+                </div>   
+            
+        </div>
+
+        <div id = "sushi" class = "area">
+            <h2 class="foodType">Sushi</h2> 
+                <div class = "row">
+                    {% block sushi %}
+                    {% endblock %}
+                </div>  
+        </div>
+
+        <div id = "soup" class = "area">
+            <h2 class="foodType">Soup</h2> 
+                <div class = "row">
+                    {% block soup %}
+                    {% endblock %}
+                </div>  
+        </div>
+
+        <div id = "curry" class = "area">
+            <h2 class="foodType">Curry</h2> 
+                <div class = "row">
+                    {% block curry %}
+                    {% endblock %}
+                </div>  
+        </div>
+
+        <div id = "accompaniments" class = "area">
+            <h2 class="foodType">Accompaniments</h2> 
+                <div class = "row">
+                    {% block accompaniments %}
+                    {% endblock %}
+                </div>  
+        </div>
+
+        <div id = "dessert" class = "area">
+            <h2 class="foodType">Dessert</h2> 
+                <div class = "row">
+                    {% block dessert %}
+                    {% endblock %}
+                </div>  
+        </div>  
+    </div>
+{% endblock %}      

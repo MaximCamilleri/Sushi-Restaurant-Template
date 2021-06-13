@@ -1,0 +1,89 @@
+{% extends "menu.html" %}
+{%set loc = "../MenuIncludes/addToFav.inc.php?itemId=" %}
+{% set imgLoc = "../FoodMenu/images/gallery/" %}
+
+{% block starters %}
+    {% for items in starter %}
+        <div class="container column">
+            <img src="{{ imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
+            <div class="overlay">
+                <h2 class="titleMenu">{{ items.itemName }}</h2>
+                <a href="{{loc ~ items.itemId}}">FAV</a>
+                <p class="desc">{{ items.itemIngredients }}</p>
+                <p class="price">${{ items.itemPrice }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block sushi %}
+    {% for items in sushi %}
+        <div class="container column">
+            <img src="{{imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
+            <div class="overlay">
+                <h2 class="titleMenu">{{ items.itemName }}</h2>
+                <a href="{{loc ~ items.itemId}}">FAV</a>
+                <p class="desc">{{ items.itemIngredients }}</p>
+                <p class="price">${{ items.itemPrice }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block soup %}
+    {% for items in soup %}
+        <div class="container column">
+            <img src="{{ items.itemImg }}" alt="{{ items.itemName }}" class="image">
+            <div class="overlay">
+                <h2 class="titleMenu">{{ items.itemName }}</h2>
+                <a href="{{loc ~ items.itemId}}">FAV</a>
+                <p class="desc">{{ items.itemIngredients }}</p>
+                <p class="price">${{ items.itemPrice }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block curry %}
+    {% for items in curry %}
+        <div class="container column">
+            <img src="{{ items.itemImg }}" alt="{{ items.itemName }}" class="image">
+            <div class="overlay">
+                <h2 class="titleMenu">{{ items.itemName }}</h2>
+                <a href="{{loc ~ items.itemId}}">FAV</a>
+                <p class="desc">{{ items.itemIngredients }}</p>
+                <p class="price">${{ items.itemPrice }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block accompaniments %}
+    {% for items in accompanimaents %}
+        <div class="container column">
+            <img src="{{ items.itemImg }}" alt="{{ items.itemName }}" class="image">
+            <div class="overlay">
+                <h2 class="titleMenu">{{ items.itemName }}</h2>
+                <a href="{{loc ~ items.itemId}}">FAV</a>
+                <p class="desc">{{ items.itemIngredients }}</p>
+                <p class="price">${{ items.itemPrice }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block  dessert%}
+    {% for items in dessert %}
+        <div class="container column">
+            <img src="{{ items.itemImg }}" alt="{{ items.itemName }}" class="image">
+            <div class="overlay">
+                <h2 class="titleMenu">{{ items.itemName }}</h2>
+                <a href="{{loc ~ items.itemId}}">FAV</a>
+                <p class="desc">{{ items.itemIngredients }}</p>
+                <p class="price">${{ items.itemPrice }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+                        
