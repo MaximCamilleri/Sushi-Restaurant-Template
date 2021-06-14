@@ -4,9 +4,34 @@
 
 html{
     scroll-behavior: smooth;
-    background-color: #1a1a1d;
+    background-color: #fafafa;
 
 }
+
+.title{
+    font-size: 62px;
+    font-family: Philosopher;
+    color:white;
+    z-index: 2;
+    padding-top: 20vh;
+}
+
+.textbox{
+    
+    top: 50px;
+}
+
+.headboy{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/background.jpg);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    top: -100px;
+    height:50vh;
+    width: 100%;
+}
+
+
 .sidenav {
     width: 70px;
     position: sticky;
@@ -17,7 +42,6 @@ html{
     overflow-x: hidden; 
     padding: 6px 0;
     float: left;
-
 }
 
 .sidenav a{
@@ -27,7 +51,7 @@ html{
     padding-left: 15px;
     text-decoration: none;
     font-size: 25px; 
-    color: white;
+    color: black;
     display:block;
 }
 
@@ -45,13 +69,13 @@ html{
 
 .sidenav a:hover:not(.active){
     background: #555;
-    color:white;
+    color: white;
     border-radius:4px;
 }
 
 .food{
     margin-left: 250px;
-    padding-top: 1px;
+    position: relative;
     padding-right: 15px;
 }
 
@@ -61,7 +85,7 @@ html{
 }
 
 .foodType{
-    color: white;
+    color: black;
 }
 
 .foodType:after{

@@ -1,8 +1,13 @@
-{% extends "layout.html" %}
+{% extends "layout2.html" %}
 {%set loc = "../MenuIncludes/addToFav.inc.php?itemId=" %}
 {% set imgLoc = "FoodMenu/images/gallery/" %}
 
 {% block content %}
+    <section class='headboy'>
+        <div class = "text-box">
+            <h1 class = 'title'>The Menu</h1>
+        </div>
+    </section>
 
     <link rel="stylesheet" href="../MenuIncludes/menuStyles.css">
     <script src="../MenuIncludes/menuJS.js"></script>
@@ -120,7 +125,7 @@
         </div>
         {% if admin %}
             <div>
-                <form id = "inputForm" action="includes/menu-upload.inc.php" method="POST" enctype="multipart/form-data">
+                <form id = "inputForm" action="FoodMenu/includes/menu-upload.inc.php" method="POST" enctype="multipart/form-data">
                     <h1>Input</h1>
                     <label for=""></label>
                     <input id="fileName" type="text" name="filename" placeholder="File name...">

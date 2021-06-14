@@ -9,7 +9,7 @@ html, body{
 }
 
 header{
-background-image: url(../Background/backgroundImg2.png);
+background-image: url();
 height: auto;
 width: cover;
 background-position: center;
@@ -54,7 +54,6 @@ font-family: 'Ubuntu', sans-serif;
 {
 width: 120 px;
 margin: 15 px;
-background-color: rgb(153, 92, 0);
 border-radius: 3px;
 margin-left: 40px;
 padding: 15px;
@@ -68,7 +67,6 @@ color: white;
 
 .active, .navbar ul li:hover
 {
-background:rgb(153, 92, 0);
 border-radius: 3px;
 }
 
@@ -87,7 +85,6 @@ border-bottom-left-radius: 0px;
 {
 display: block;
 position: absolute;
-background-color: rgb(153, 92, 0);
 margin-top: 15px;
 margin-left: -15px;
 }
@@ -115,7 +112,6 @@ display:none;
 {
 display: block;
 position: absolute;
-background-color: rgb(153, 92, 0);
 margin-top: 15px;
 margin-left: -15px;
 

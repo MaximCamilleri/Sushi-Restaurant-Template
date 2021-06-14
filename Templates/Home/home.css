@@ -3,12 +3,19 @@
     padding: 0;
 }
 
+html{
+    background-color: #fafafa;
+    scroll-behavior: smooth;
+}
+
 .header{
+    top: -100px;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/fish2.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/fish.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
+    z-index: 1;
 }
 
 .text-box{
@@ -141,7 +148,7 @@
     font-size: 20px;
     font-weight: 300; 
 }
-#about-us p{
+.about-us p{
     font-size: 20px;
     font-weight: 300; 
 }

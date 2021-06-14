@@ -11,7 +11,7 @@
         $userId = $_SESSION['userId'];
     }
 
-    $types = ['starter', 'sushi','soup', 'curry', 'accompanimaents', 'dessert'];
+    $types = ['starter', 'sushi','soup', 'curry', 'accompaniment', 'dessert'];
     $current = 0;
     $menu = [];
     $dir = "C:/xampp/htdocs/cis1054//FoodMenu/menuItem.html";

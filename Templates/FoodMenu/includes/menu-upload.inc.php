@@ -30,20 +30,20 @@ if(isset($_POST['submit'])){
     if(in_array($fileExt, $allowedExt)){
         if($fileError === 0){
             if($fileSize > 2000000){
-                header("Location: ../menu.php?error=size");
+                header("Location: ../../menu.php?error=size");
             }else{
                 $imageFullName = $newfileName . "." . uniqid("", true) . "." . $fileExt;
                 $fileDestination = "../images/gallery/" . $imageFullName;
 
-                include_once "../../GeneralIncludes/dbh.inc.php";
+                include_once "../../../GeneralIncludes/dbh.inc.php";
                 if(emptyInput($title, $ingredients, $price, $file) == true){
-                    header("Location: ../menu.php?error=emptyInput");
+                    header("Location: ../../menu.php?error=emptyInput");
                     exit();
                 }else{
                     $sql = "SELECT * FROM food_menu;";
                     $stmt = mysqli_stmt_init($conn);
                     if(!mysqli_stmt_prepare($stmt, $sql)){
-                        header("Location: ../menu.php?error=stmt");
+                        header("Location: ../../menu.php?error=stmt");
                     }else{
                         mysqli_stmt_execute($stmt);
                         $result = mysqli_stmt_get_result($stmt);
@@ -52,24 +52,24 @@ if(isset($_POST['submit'])){
 
                         $sql = "INSERT INTO food_menu (itemName, itemIngredients, itemPrice, itemImg, itemOrder, itemType, itemSpiceLevel) VALUES (?, ?, ?, ?, ?, ?, ?);";
                         if(!mysqli_stmt_prepare($stmt, $sql)){
-                            header("Location: ../menu.php?error=stmt");
+                            header("Location: ../../menu.php?error=stmt");
                         } else{
                             mysqli_stmt_bind_param($stmt, "sssssss", $title, $ingredients, $price, $imageFullName, $setOrder, $section, $spice);
                             mysqli_stmt_execute($stmt);
 
                             move_uploaded_file($fileTmp, $fileDestination);
 
-                            header("Location: ../menu.php?error=none");
+                            header("Location: ../../menu.php?error=none");
                         }
                     }
                 }
             }
         }else{
-            header("Location: ../menu.php?error=error");
+            header("Location: ../../menu.php?error=error");
             exit();
         }
     }else{
-        header("Location: ../menu.php?error=fileExt");
+        header("Location: ../../menu.php?error=fileExt");
         exit();
     }
 }
