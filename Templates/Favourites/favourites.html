@@ -1,6 +1,8 @@
 {% extends "layout.html" %}
 {%set loc = "../MenuIncludes/addToFav.inc.php?itemId=" %}
+{%set loc = "../MenuIncludes/addToFavDrinks.inc.php?itemId=" %}
 {% set imgLoc = "FoodMenu/images/gallery/" %}
+{% set imgLoc2 = "DrinksMenu/images/gallery/" %}
 
 {% block content %}
     <body>
@@ -18,7 +20,7 @@
              <!-- extra idea for pics:
                  <figure>
                     <img src = 'nigiriSashimi.jpg' alt = 'Sushi Nigiri'>
-                    <figcaption>Price goes here</figcaption>
+                    <figcaption>Price goes here</figcaption>n
                 </figure> -->
                  
         <div class = "food">
@@ -26,7 +28,6 @@
                 <h2 class="foodType">Food</h2> 
               
                 <div class = "row">
-
                         {% for items in food %}
                         <div class="container column">
                             <img src="{{ imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
@@ -37,18 +38,27 @@
                                 <p class="price">${{ items.itemPrice }}</p>
                             </div>
                         </div>
-                        {% endfor %}
-                        
+                        {% endfor %} 
                 </div>  
             </div>
         
                     
-            <!-- <div id = "drinks" class = "area">
+            <div id = "drinks" class = "area">
                 <h2 class="foodType">Drinks</h2> 
                 <div class = "row">
-                   
+                    {% for items in drinks %}
+                        <div class="container column">
+                            <img src="{{ imgLoc2 ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
+                            <div class="overlay">
+                                <h2 class="titleMenu">{{ items.itemName }}</h2>
+                                <a id = "favbutton" href="{{loc2 ~ items.itemId}}">&#9734</a>
+                                <p class="desc">{{ items.itemIngredients }}</p>
+                                <p class="price">${{ items.itemPrice }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div> 
-            </div> -->
+            </div>
             
     </div>
 {% endblock %}      

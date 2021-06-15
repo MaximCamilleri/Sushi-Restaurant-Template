@@ -22,9 +22,22 @@
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
     }
+
+    $sql = "SELECT * 
+    FROM users as u inner join favourites_drinks as fav
+    on fav.userId = '$userId' inner join drinks_menu as m 
+    on m.itemId = fav.itemId ;";
+
+    $stmt2 = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt2, $sql)){
+        header("Location: favourites.php?error=stmt3");
+    }else{
+        mysqli_stmt_execute($stmt2);
+        $result2 = mysqli_stmt_get_result($stmt2);
+    }
     
 
-    echo $twig->render("Favourites/favourites.html", ["loggedIn" => $loggedIn, 'food' => $result]);
+    echo $twig->render("Favourites/favourites.html", ["loggedIn" => $loggedIn, 'food' => $result, 'drinks' => $result2]);
 
 
     
