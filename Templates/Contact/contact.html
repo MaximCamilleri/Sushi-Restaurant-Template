@@ -1,8 +1,14 @@
-{% extends "layout.html" %}
+{% extends "layout2.html" %}
 
 {% block content %}
   <main>
       <link rel="stylesheet" href="Contact/contactStyles.css">
+
+      <section class='headboy'>
+          <div class = "text-box">
+              <h1 class = 'title'>Contact Us</h1>
+          </div>
+      </section>
 
       <div class="split left">
           <h2>Our Details</h2>
@@ -36,7 +42,7 @@
         </div>
         
         <div class="split right">
-          <h2>Contact Us</h2>
+          <h2 id = 'contactUsTitle'>Contact Us</h2>
           <br>
           
           <form method = "POST" action = "../ContactIncludes/contactPage.inc.php">

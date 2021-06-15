@@ -6,13 +6,32 @@
 
 html, body{
 height: 70%;
-background-color: #1a1a1d;
+background-color: #fafafa;
+}
+
+#box{
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../../MenuIncludes/images/events.jpg);
+  top: -140px;
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+h1{
+  
+  color: white;
+  text-align: center;
+  font-size: 70px;
+  font-family: Philosopher;
 }
 
 h2{
-margin-top: 3%;
 margin-left: 10%;
-color: rgb(204, 122, 0);
 font-family: 'Ubuntu', sans-serif;
 font-size: 175%;
 }
@@ -22,7 +41,7 @@ margin-top: 3px;
 }
 
 h3{
-color: rgb(204, 122, 0);
+color: black;
 margin-top: 1%;
 margin-left: 10%;
 font-family: 'Ubuntu', sans-serif;
@@ -36,6 +55,7 @@ margin-left: 10%;
 width: 75%;
 margin-right: 1%;
 height: 150%;
+margin-bottom: 7%;
 }
 
 #tableForm{
@@ -45,7 +65,7 @@ font-size: 105%;
 font-family: 'Raleway', sans-serif;
 width: 65%;
 float: left;
-color: bisque;
+color: black;
 }
 
 #form1{
@@ -55,7 +75,7 @@ font-size: 105%;
 font-family: 'Raleway', sans-serif;
 width: 50%;
 float: left;
-color: bisque;
+color: black;
 }
 
 #form2{
@@ -65,7 +85,7 @@ font-size: 105%;
 font-family: 'Raleway', sans-serif;
 width: 90%;
 float: left;
-color: bisque;
+color: black;
 }
 
 #form3{
@@ -73,33 +93,31 @@ font-size: 105%;
 font-family: 'Raleway', sans-serif;
 width: 92%;
 height: 175px;
-color: bisque;
+color: black;
 }
 
 #BookButton{
 float: right;
 font-family: 'Ubuntu', sans-serif;
-color: bisque;
+color: black;
 border-color: rgb(77, 77, 77);
-background-color: rgb(77, 77, 77);
 padding: 5px;
 margin-right: 7%; 
 }
 
 #dropdownContact{
-background-color: rgb(77, 77, 77);
 border-color: rgb(77, 77, 77);
-color: white;
+color: black;
 font-family: 'Raleway', sans-serif;
 }
 
 p{
-  color: bisque;
+  color: black;
   font-family: 'Raleway', sans-serif;
 }
 
 label{
-  color: bisque;
+  color: black;
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -109,8 +127,7 @@ input:focus, textarea:focus, dropdownContact:focus{
 
 input, textarea{
   border-color: rgb(77, 77, 77);
-  background-color: rgb(77, 77, 77);
-  color: white;
+  color: black;
   resize: none;
   padding-left: 1%;
   padding-right: 1%;
@@ -121,13 +138,13 @@ input, textarea{
 
 th{
   text-align: left;
-  color: bisque;
+  color: black;
   font-family: 'Ubuntu', sans-serif;
 }
 
 td{
   width: 70%;
-  color: bisque;
+  color: black;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -149,167 +166,6 @@ td{
 
 #formApp2 td{
   width:33%;
-}
-
-/*navbar*/
-
-/*Navbar css*/
-
-header{
-background-image: url(../../Background/backgroundImg2.png);
-height: auto;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-#headerTint{
-background-color: rgba(0, 0, 0, 0.8);
-height: 100%;
-}
-
-.navbar{
-text-align: right;
-padding-right: 8%;
-}
-
-#logo{
-width: 100px;
-height: 100px;
-max-width: 100px;
-float: left;
-display: inline;
-}
-
-nav{
-background-color: rgba(0, 0, 0, 0.3); 
-height: 100px; 
-margin-bottom: 1%;
-}
-
-.navbar ul{
-display: inline-flex;
-list-style: none;
-color: white;
-font-family: 'Ubuntu', sans-serif;
-}
-
-.navbar ul li
-{
-width: 120;
-margin: 15;
-background-color: rgb(153, 92, 0);
-border-radius: 3px;
-margin-left: 40px;
-padding: 15px;
-margin-top: 20px;
-}
-
-.navbar ul li a{
-text-decoration: none;
-color: white;
-}
-
-.active, .navbar ul li:hover
-{
-background:rgb(153, 92, 0);
-border-radius: 3px;
-}
-
-/* Menu*/
-.sub-menu{
-display:none;
-}
-
-.navbar ul li:hover
-{
-border-bottom-right-radius: 0px;
-border-bottom-left-radius: 0px;
-}
-
-.navbar ul li:hover .sub-menu
-{
-display: block;
-position: absolute;
-background-color: rgb(153, 92, 0);
-margin-top: 15px;
-margin-left: -15px;
-}
-
-.navbar ul li:hover .sub-menu ul{
-display: block;
-margin: 10px;
-margin-left: -20px; 
-}
-.navbar ul li:hover .sub-menu ul li{
-width: 99px;
-padding: 7px;
-border-bottom: 1px solid #fff;
-background: transparent;
-border-radius: 0;
-text-align: left;
-}
-
-/* Contact*/
-.sub-contact{
-display:none;
-}
-
-.navbar ul li:hover .sub-contact
-{
-display: block;
-position: absolute;
-background-color: rgb(153, 92, 0);
-margin-top: 15px;
-margin-left: -15px;
-
-}
-
-.navbar ul li:hover .sub-contact ul{
-display: block;
-margin: 10px;
-margin-left: -20px;
-}
-
-.navbar ul li:hover .sub-contact ul li{
-width: 135px;
-padding: 7px;
-border-bottom: 1px solid #fff;
-background: transparent;
-border-radius: 0;
-text-align: left;
-}
-
-.title{
-color: white;
-text-align: center;
-font-family: 'Philosopher', sans-serif;
-color: rgb(255, 255, 255);
-font-size: 500%;
-}
-
-h2.title{
-  margin-top: 0%;
-  margin-left: 0%;
-  padding-bottom: 1%;
-}
-
-footer{
-color: bisque;
-position: relative;
-padding-top: 10px;
-bottom: 0;
-width: 100%;
-height: 50px; 
-font-family: 'Raleway', sans-serif;
-background-color: rgba(61, 48, 42, 0.2);
-border-top: solid 3px;
-border-color: rgba(61, 48, 42, 0.4);
-font-size: 12px;
-}
-
-footer p{
-padding-left: 8%;
 }
 
 @media screen and (min-width: 1600px){
