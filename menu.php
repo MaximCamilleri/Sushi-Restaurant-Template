@@ -10,7 +10,7 @@
         <meta charset="UTF-8">
         <title>PogFish Sushi</title>
         
-        <link rel="stylesheet" href="menuStyles.css">
+        <link rel="stylesheet" href="menuStyles.css"> 
         <script src="menuJS.js"></script>
         
         <!--Fonts-->
@@ -29,8 +29,6 @@
             <a class = "option" onClick = "menu(2)" href = "#soup">Soup</a></li>
             <a class = "option" onClick = "menu(3)" href = "#curry">Curry</a></li>
             <a class = "option" onClick = "menu(4)" href = "#Dessert">Dessert</a></li>
-
-
         </div>
     
              <!-- extra idea for pics:
