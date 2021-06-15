@@ -40,6 +40,7 @@
     echo $twig->render("Favourites/favourites.html", ["loggedIn" => $loggedIn, 'food' => $result, 'drinks' => $result2]);
 
 
+
     
 
 
