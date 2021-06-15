@@ -225,6 +225,23 @@ html{
     background-color: orange;
 }
 
+.button{
+    display: block;
+    width: 100%;
+    background:#000075;
+    color: white;
+    font-family: Arial;
+    font-weight: 500;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.button:hover{
+    background: #2E2EFF;
+    cursor: pointer;
+}
+
 
 @media screen and (min-width: 2000px){
     .column{

@@ -27,6 +27,7 @@
     echo $twig->render("Favourites/favourites.html", ["loggedIn" => $loggedIn, 'food' => $result]);
 
 
+
     
 
 
