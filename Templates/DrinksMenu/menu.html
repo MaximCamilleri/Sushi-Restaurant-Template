@@ -1,11 +1,11 @@
 {% extends "layout2.html" %}
-{%set loc = "../MenuIncludes/addToFav.inc.php?itemId=" %}
-{% set imgLoc = "FoodMenu/images/gallery/" %}
+{%set loc = "../MenuIncludes/addToFavDrinks.inc.php?itemId=" %}
+{% set imgLoc = "DrinksMenu/images/gallery/" %}
 
 {% block content %}
     <section class='headboy'>
         <div class = "text-box">
-            <h1 class = 'title'>The Menu</h1>
+            <h1 class = 'title'>Drings Menu</h1>
         </div>
     </section>
 
@@ -13,19 +13,18 @@
     <script src="../MenuIncludes/menuJS.js"></script>
 
     <div class = "sidenav">
-        <a class = "active option" onClick = "menu(0)" href = "#starters">Starters</a></li>
-        <a class = "option" onClick = "menu(1)" href = "#sushi">Sushi</a></li>
-        <a class = "option" onClick = "menu(2)" href = "#soup">Soup</a></li>
-        <a class = "option" onClick = "menu(3)" href = "#curry">Curry</a></li>
-        <a class = "option" onClick = "menu(4)" href = "#accompaniments">Accompaniments</a></li>
-        <a class = "option" onClick = "menu(5)" href = "#Dessert">Dessert</a></li>
+        <a class = "active option" onClick = "menu(0)" href = "#softdrinks">Soft Drinks</a></li>
+        <a class = "option" onClick = "menu(1)" href = "#juice">Juice</a></li>
+        <a class = "option" onClick = "menu(2)" href = "#water">Water</a></li>
+        <a class = "option" onClick = "menu(3)" href = "#alcoholicDrinks">Alcoholic Drinks</a></li>
+        <a class = "option" onClick = "menu(4)" href = "#hotDrinks">Hot Drinks</a></li>
+        <a class = "option" onClick = "menu(5)" href = "#liquor">Liquor</a></li>
     </div>
-                
     <div class = "food">
-        <div id = "starters" class = "area">
-            <h2 class="foodType">Starters</h2> 
+        <div id = "softdrinks" class = "area">
+            <h2 class="foodType">Soft Drinks</h2> 
                 <div class = "row">
-                    {% for items in starter %}
+                    {% for items in softdrinks %}
                         <div class="container column">
                             <img src="{{ imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
                             <div class="overlay">
@@ -39,10 +38,10 @@
                 </div>   
         </div>
 
-        <div id = "sushi" class = "area">
-            <h2 class="foodType">Sushi</h2> 
+        <div id = "juice" class = "area">
+            <h2 class="foodType">Juice</h2> 
                 <div class = "row">
-                    {% for items in sushi %}
+                    {% for items in juice %}
                         <div class="container column">
                             <img src="{{imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
                             <div class="overlay">
@@ -56,10 +55,10 @@
                 </div>  
         </div>
 
-        <div id = "soup" class = "area">
-            <h2 class="foodType">Soup</h2> 
+        <div id = "water" class = "area">
+            <h2 class="foodType">Water</h2> 
                 <div class = "row">
-                    {% for items in soup %}
+                    {% for items in water %}
                         <div class="container column">
                             <img src="{{imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
                             <div class="overlay">
@@ -73,10 +72,10 @@
                 </div>  
         </div>
 
-        <div id = "curry" class = "area">
-            <h2 class="foodType">Curry</h2> 
+        <div id = "alcoholicDrinks" class = "area">
+            <h2 class="foodType">Alcoholic Drinks</h2> 
                 <div class = "row">
-                    {% for items in curry %}
+                    {% for items in alcoholicDrinks %}
                         <div class="container column">
                             <img src="{{imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
                             <div class="overlay">
@@ -90,10 +89,10 @@
                 </div>  
         </div>
 
-        <div id = "accompaniments" class = "area">
-            <h2 class="foodType">Accompaniments</h2> 
+        <div id = "hotDrinks" class = "area">
+            <h2 class="foodType">Hot Drinks</h2> 
                 <div class = "row">
-                    {% for items in accompanimaents %}
+                    {% for items in hotDrinks %}
                         <div class="container column">
                             <img src="{{imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
                             <div class="overlay">
@@ -107,10 +106,10 @@
                 </div>  
         </div>
 
-        <div id = "dessert" class = "area">
-            <h2 class="foodType">Dessert</h2> 
+        <div id = "liquor" class = "area">
+            <h2 class="foodType">liquor</h2> 
                 <div class = "row">
-                    {% for items in dessert %}
+                    {% for items in liquor %}
                         <div class="container column">
                             <img src="{{imgLoc ~ items.itemImg }}" alt="{{ items.itemName }}" class="image">
                             <div class="overlay">
@@ -125,18 +124,14 @@
         </div>
         {% if admin %}
             <div>
-                <form id = "inputForm" action="FoodMenu/includes/menu-upload.inc.php" method="POST" enctype="multipart/form-data">
+                <form id = "inputForm" action="DrinksMenu/includes/menu-upload.inc.php" method="POST" enctype="multipart/form-data">
                     <h1>Input</h1>
                     <label for=""></label>
                     <input id="fileName" type="text" name="filename" placeholder="File name...">
                     <br>
                     <input id="dishName" type="text" name="title" placeholder="Dish Title...">
                     <br>
-                    <input id="ingredients" type="text" name="ingredients" placeholder="list of ingredients...">
-                    <br>
                     <input id="price" type="text" name="price" placeholder="Price">
-                    <br>
-                    <input id="spice" type="text" name="spice" placeholder="Spice Level">
                     <br>
                     <input id="section" type="text" name="section" placeholder="Starter/Sushi/Accompaniments/Soup/Curry/Dessert">
                     <br>

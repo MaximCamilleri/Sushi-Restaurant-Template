@@ -15,7 +15,7 @@
             $errorExists = TRUE;
         }
     }
-
+    error_reporting(0);
     echo $twig->render("SignUpAndLogIn/signup.html"), ["errorInput" => $errorInput], ["errorEmail" => $errorEmail], ["errorExists" => $errorExists];
 
 
