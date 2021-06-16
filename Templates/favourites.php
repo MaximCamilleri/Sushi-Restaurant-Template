@@ -10,10 +10,10 @@
         $userId = $_SESSION['userId'];
     }
 
-    $sql = "SELECT * 
-    FROM users as u inner join favourites as fav
-    on fav.userId = '$userId' inner join food_menu as m 
-    on m.itemId = fav.itemIdFood ;";
+    $sql = "SELECT * FROM users as u inner join favourites as fav 
+    on fav.userId = u.userId inner join food_menu as m 
+    on m.itemId = fav.itemIdFood 
+    WHERE fav.userId = '$userId'";
 
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -23,13 +23,13 @@
         $result = mysqli_stmt_get_result($stmt);
     }
 
-    $sql = "SELECT * 
-    FROM users as u inner join favourites_drinks as fav
-    on fav.userId = '$userId' inner join drinks_menu as m 
-    on m.itemId = fav.itemId ;";
+    $sql2 = "SELECT * FROM users as u inner join favourites_drinks as fav 
+    on fav.userId = u.userId inner join drinks_menu as m 
+    on m.itemId = fav.itemId 
+    WHERE fav.userId = '$userId'";
 
     $stmt2 = mysqli_stmt_init($conn);
-    if(!mysqli_stmt_prepare($stmt2, $sql)){
+    if(!mysqli_stmt_prepare($stmt2, $sql2)){
         header("Location: favourites.php?error=stmt3");
     }else{
         mysqli_stmt_execute($stmt2);

@@ -31,6 +31,15 @@ html{
     width: 100%;
 }
 
+#mail{
+    margin: 20px;
+}
+
+#send{
+    width: 5%;
+    display: inline;
+}
+
 
 .sidenav {
     width: 70px;

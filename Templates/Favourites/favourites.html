@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout2.html" %}
 {%set loc = "../MenuIncludes/addToFav.inc.php?itemId=" %}
 {%set loc = "../MenuIncludes/addToFavDrinks.inc.php?itemId=" %}
 {% set imgLoc = "FoodMenu/images/gallery/" %}
@@ -6,6 +6,12 @@
 
 {% block content %}
     <body>
+
+        <section class='headboy'>
+            <div class = "text-box">
+                <h1 class = 'title'>The Favourites</h1>
+            </div>
+        </section>
         
         <link rel="stylesheet" href="../MenuIncludes/menuStyles.css">
         <script src="../MenuIncludes/menuJS.js"></script>
@@ -15,14 +21,7 @@
             <a class = "option" onClick = "menu(1)" href = "#drinks">Drinks</a></li>
 
 
-        </div>
-    
-             <!-- extra idea for pics:
-                 <figure>
-                    <img src = 'nigiriSashimi.jpg' alt = 'Sushi Nigiri'>
-                    <figcaption>Price goes here</figcaption>n
-                </figure> -->
-                 
+        </div>      
         <div class = "food">
             <div id = "food" class = "area">
                 <h2 class="foodType">Food</h2> 
@@ -58,13 +57,12 @@
                     {% endfor %}
                 </div> 
             </div>
-            
     </div>
 
-    <form method="POST", action="SignUpandLogIn/includes/login.inc.php">
+    <form id = "mail" method="POST", action="../favouriteMeals.php">
+        <h2>Send Favourites By Email</h2>
         <label for="email">Email</label>
         <input id = "email" type="email" name="email">
-        <br>
-        <button type="submit" name="submit" class = "button">Login</button>
+        <button type="submit" name="submit" class = "button" id="send">Submit</button>
     </form> 
 {% endblock %}      

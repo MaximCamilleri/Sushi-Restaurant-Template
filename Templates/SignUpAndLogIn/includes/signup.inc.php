@@ -25,7 +25,7 @@
 
 
     }else{
-        header("location: ../signup.php");
+        header("location: ../../signup.php");
     }
 
     

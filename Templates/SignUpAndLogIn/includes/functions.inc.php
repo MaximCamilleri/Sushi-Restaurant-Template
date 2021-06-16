@@ -45,7 +45,7 @@ function createUser($conn, $firstname, $lastname, $email, $password){
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
-        header("location: ../signup.php?error=stmtfailed2");
+        header("location: ../../signup.php?error=stmtfailed2");
         exit();
     }
 
@@ -56,7 +56,7 @@ function createUser($conn, $firstname, $lastname, $email, $password){
     mysqli_stmt_close($stmt);
 
 
-    header("location: ../signup.php?error=none");
+    header("location: ../../signup.php?error=none");
 
 }
 
