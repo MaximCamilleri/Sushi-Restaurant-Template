@@ -5,9 +5,9 @@
     $errorFields = FALSE;
     if(isset($_GET["error"])){
         if($_GET["error"] == "emptyinput"){
-            $errorValue = TRUE;
-        }else if($_GET["error"] == "invalidInput"){
             $errorFields = TRUE;
+        }else if($_GET["error"] == "wronglogin"){
+            $errorValue = TRUE;
         }  
     }
-    echo $twig->render("SignUpAndLogIn/login.html", ["errorValue" => $errorValue], ["errorFields" => $errorFields]);
+    echo $twig->render("SignUpAndLogIn/login.html", ["errorValue" => $errorValue, "errorFields" => $errorFields]);

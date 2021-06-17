@@ -47,13 +47,16 @@
                     <br>
                     <button type="submit" name="submit" class = "signup-button">Sign up</button>
                 
-                    {% if errorInput %}
-                        <p>Fill in all the required fields</p>
-                    {% elseif errorEmail %}
-                        <p>A valid email was not entered</p>
-                    {% elseif errorExists %}
+                    {% if errorExists %}
                         <p>Email is already in use</p>
                     {% endif %}
+                    {% if errorInput %}
+                        <p>Fill in all the required fields</p>
+                    {% endif %}
+                    {% if errorEmail %}
+                        <p>A valid email was not entered</p>
+                    {% endif %}
+                    
                     
                 </form>    
             </div>

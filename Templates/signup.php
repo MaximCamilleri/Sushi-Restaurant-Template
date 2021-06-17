@@ -8,15 +8,15 @@
         if($_GET["error"] == "emptyinput"){
             $errorInput = TRUE;
         }
-        if($_GET["error"] == "invalidemail"){
+        else if($_GET["error"] == "invalidemail"){
             $errorEmail = TRUE;
         }
-        if($_GET["error"] == "emailexists"){
+        else if($_GET["error"] == "emailexists"){
             $errorExists = TRUE;
         }
     }
     error_reporting(0);
-    echo $twig->render("SignUpAndLogIn/signup.html"), ["errorInput" => $errorInput], ["errorEmail" => $errorEmail], ["errorExists" => $errorExists];
+    echo $twig->render("SignUpAndLogIn/signup.html", ["errorInput" => $errorInput, "errorEmail" => $errorEmail, "errorExists" => $errorExists]);
 
 
     
