@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Raleway:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
 
     <body>
-
+        <!--Header w/ name of dish-->
         <section class='headboy'>
             <div class = "text-box">
                 {% for item in food%}
@@ -19,6 +19,7 @@
             </div>
         </section> 
 
+        <!--section where picture + details are outputted-->
         <main>
             {% for item in food%}
                 <img id = "img" src="{{ imgLoc ~ item.itemImg }}" alt="{{ item.itemName }}">
