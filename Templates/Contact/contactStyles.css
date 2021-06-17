@@ -1,8 +1,9 @@
+/*
 *{
   margin: 0px;
   padding: 0px;
 }
-
+*/
 .title{
   font-size: 62px;
   font-family: Philosopher;
@@ -36,9 +37,9 @@ html, body{
   color: black;
 }
 
-body {
+/* body {
 display: relative;
-}
+} */
 
 h2{
 font-family: 'Ubuntu', sans-serif;
@@ -78,27 +79,67 @@ font-family: 'Ubuntu', sans-serif;
 color: black;
 border-color: rgb(77, 77, 77);
 padding: 5px;
-}
+} 
 
-
-
-.row{
+.about-row{
   margin-top: 5%;
   display:flex;
   justify-content: space-between;
 }
 
+/* 
+.about-row{
+  margin-top: 5%;
+  display:flex;
+} */
 
+.desc{
+  font-size:20px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  text-align:left;
+  max-width:900px;
+  max-height: 400px;
+}
+
+
+/* .row{
+  margin-top: 5%;
+  display:flex;
+  justify-content: space-between;
+}
+*/
+
+.desc{
+  font-size:20px;
+  padding-right: 50px;
+  padding-bottom: 500px;
+  text-align:left;
+  max-width:900px;
+  max-height: 400px;
+}
+
+
+.det{
+  padding-left: 400px;
+}
+.forms{
+ padding-right: 300px;
+}
+.about-row{
+  margin-top: 5%;
+  display:flex;
+  justify-content: space-between;
+}
 
 .about-row{
-  padding-left: 200px;
-  width: 500px;
-}
+  margin-top: 20px;
+  display:flex;
+} 
 
 .form-row{
-  padding-right: 200px;
+  padding-right: 400x;
 }
-
 
 #dropdownContact{
 border-color: rgb(77, 77, 77);
@@ -106,31 +147,6 @@ color: black;
 font-family: 'Raleway', sans-serif;
 }
 
-#openingHours{
-width:50%;
-}
-
-.split {
-  height: 100%;
-  width: 50%;
-  position: relative;
-  z-index: 1;
-  overflow-x: hidden;
-}
-
-/* Control the left side */
-.left {
-  padding-top: 70px;
-  padding-left: 10%;
-  left: 0;
-}
-
-/* Control the right side */
-.right {
-  padding-top: 70px;
-  left: 80vh;
-  /*background-color:white;*/
-}
 
 p{
   color: black;
@@ -167,6 +183,7 @@ th{
 td{
   color: black;
   font-family: 'Raleway', sans-serif;
+  padding-right: 30px;
 }
 
 .details{
@@ -176,7 +193,7 @@ td{
 .contactSub2{
   float: right;
   font-family: 'Ubuntu', sans-serif;
-  color: bisque;
+  color: black;
   border-color: rgb(77, 77, 77);
   padding: 5px;
   display: none;
@@ -204,38 +221,19 @@ td{
   }
 }
 
-@media screen and (max-width: 1600px){
+@media screen and (max-width: 1400px){
 
-  form{
-    max-width:93%;
-    max-height: 750px;
+ 
+  .det{
+    padding-left: 200px;
   }
-
-  .right{
-    bottom: 0vh;
-    left: 0vh;
-    padding-left: 10%;
-    padding-bottom: 5%;
+  .forms{
+   padding-right: 200px;
   }
 }
 
 @media screen and (max-width: 1000px){
-  .split{
-    width: 100%;
-    position: relative;
-  }
-
-  .left {
-    display: block;
-    padding-left: 10%;
-    box-sizing: border-box;
-  }
-
-  .right{
-    padding-left: 10%;
-    display: block;
-    box-sizing: border-box;
-  }
+  
 
   footer{
     position: relative;
@@ -254,6 +252,26 @@ td{
   .contactSub2{
     margin-top: 10px;
     display: inline;    
+   }
+
+   .desc{
+    display: block;
+  }
+
+  .hours{
+    display: block;
+    padding: 20px 20px 20px 20px;
+    width: 300px;
+    
+  }
+
+  .about-row{
+    flex-direction:column;
+  }
+
+  .forms{
+    padding-left: 200px;
+    padding-right:0;
    }
 }
 
