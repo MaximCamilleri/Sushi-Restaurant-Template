@@ -5,6 +5,7 @@
         <title>PogFish Sushi</title>
         <!-- <link rel="stylesheet" href="contactStyles.css"> -->
         <link rel="stylesheet" href="SignUpAndLogin/signUpCSS.css">
+        <script src = "SignUpAndLogin/loginJS.js"></script>
 
         <!--Fonts-->
         <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
@@ -16,7 +17,7 @@
             <div class = left>
                 <section class = "copy">
                     <h1>PogFish Sushi</h1>
-                    <p>The best sushi restaurant on the UOM Campus</p>
+                    <p>The best Asian cuisine restaurant on the Valletta Waterfront</p>
                 </section>
             </div>
             
@@ -41,15 +42,7 @@
                     <div class = "password-container">
                         <label for="password">Password</label>
                         <input id = "password" type="password" name="password">
-                        <i class>See password</i> 
-                    </div>
-                    <br>
-
-                    <div class = "cta"> 
-                        <label class ="checkbox">
-                            <input type= "checkbox">
-                            Sign up for email updates
-                        </label>
+                        <input type = "checkbox" onclick="myFunction()">See password
                     </div>
                     <br>
                     <button type="submit" name="submit" class = "signup-button">Sign up</button>
