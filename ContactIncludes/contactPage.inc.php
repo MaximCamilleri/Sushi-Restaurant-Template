@@ -1,6 +1,7 @@
 <?php
 
 if(isset($_POST["submitContact"])){
+    //get the data trough post
     $name = $_POST["name"];
     $email = $_POST["email"];
     $details = $_POST["details"];
@@ -14,6 +15,7 @@ if(isset($_POST["submitContact"])){
         exit();
     }
 
+    //check that the data can be sent with no problems
     createContact($connContact, $name, $email, $details);
 
 }
@@ -22,5 +24,6 @@ else{
     exit();
 }
 
+//send the data to the server 
 $sql = "INSERT INTO contact (senderName, senderEmail, details) VALUES ($name, $email, $details);";
 mysqli_query($connContact, $sql);

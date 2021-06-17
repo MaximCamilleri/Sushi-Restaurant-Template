@@ -8,6 +8,7 @@
         require_once "../../../GeneralIncludes/dbh.inc.php";
         require_once "functions.inc.php";
 
+        //checks to ensure the data was inputed correctly 
         if(emptyInput($firstname, $lastname, $email, $password) !== false){
             header("location: ../../signup.php?error=emptyinput");
             exit();
@@ -29,7 +30,8 @@
     }
 
     
-
-    $sql = "INSERT INTO users (user_firstname, user_lastname, user_email, user_telNumber, user_password) VALUES ($firstname, $lastname, $email, $telNumber, $password);";
+    //sql query that inserts a user into the database
+    $sql = "INSERT INTO users (user_firstname, user_lastname, user_email, user_telNumber, user_password) VALUES ($firstname, $lastname, $email, $telNumber, $password);";// 2 ;'s one for the sql one for php
     mysqli_query($conn, $sql);
+    //redirect to the home page
     header("location: ../../home.php");

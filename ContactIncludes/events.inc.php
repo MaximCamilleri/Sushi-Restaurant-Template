@@ -1,6 +1,7 @@
 <?php
 
 if(isset($_POST["submit"])){
+    //get data
     $email = $_POST["email"];
     $tel = $_POST["tel"];
     $time = $_POST["time"];
@@ -12,6 +13,7 @@ if(isset($_POST["submit"])){
     require_once "contactFunctions.inc.php";
 
     
+    //a few checks for empty inputs and invalid emails
     if(emptyInputEvents($email, $tel, $time, $name, $surname, $details) !== false){
         header("location: ../Events/events.php?error=emptyinput");
         exit();
@@ -29,5 +31,6 @@ else{
     exit();
 }
 
+//send the data to the server
 $sql = "INSERT INTO events (name, surname, email, phone, eventType, details) VALUES ($name, $surname, $email, $phone, $eventType, $details);";
 mysqli_query($connContact, $sql);
