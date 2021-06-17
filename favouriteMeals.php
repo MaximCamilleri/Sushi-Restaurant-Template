@@ -23,7 +23,7 @@
     }
     
     while($row=mysqli_fetch_assoc($result)){
-        $body.= "Name:".$row['itemName']."(".$row['itemType'].")"."\nPrice:".$row['itemPrice']."\nSpice Level: ".$row['itemSpiceLevel'];
+        $body.= "\nName:".$row['itemName']."(".$row['itemType'].")"."\nPrice: $".$row['itemPrice']."\nSpice Level: ".$row['itemSpiceLevel'];
     }
 
     $to_email = $_POST['email'];
@@ -45,7 +45,7 @@
     }
 
     while($row2=mysqli_fetch_assoc($result2)){
-        $body.= "Name:".$row2['itemName']."(".$row2['itemType'].")"."\nPrice:".$row2['itemPrice'];
+        $body.= "\nName:".$row2['itemName']."(".$row2['itemType'].")"."\nPrice: $".$row2['itemPrice'];
     }
 
     mail($to_email, $subject, $body, $headers);

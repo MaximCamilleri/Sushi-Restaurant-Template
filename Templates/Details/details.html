@@ -1,0 +1,27 @@
+{% extends "layout2.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="../MenuIncludes/menuStyles.css">
+    <body>
+
+        <section class='headboy'>
+            <div class = "text-box">
+                <h1 class = 'title'>{{food.itemName}}</h1>
+            </div>
+        </section> 
+
+        <main>
+            <h3>Category: </h3>
+            <p>{{food.itemType}}</p>
+            <h3>Ingredients List: </h3>
+            <p>{{ food.itemIngredients }}</p>
+            <h3>Price: </h3>
+            <p>{{ food.itemPrice }}</p>
+            <h3>Spice Level:</h3>
+            <p>{{ food.itemSpiceLevel }}</p>
+            <br>
+            <br>
+        </main>
+
+    </body>
+{% endblock %}

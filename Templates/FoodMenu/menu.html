@@ -1,5 +1,6 @@
 {% extends "layout2.html" %}
 {%set loc = "../MenuIncludes/addToFav.inc.php?itemId=" %}
+{%set loc2 = "details.php?item=" %}
 {% set imgLoc = "FoodMenu/images/gallery/" %}
 
 {% block content %}
@@ -33,6 +34,7 @@
                                 <a id = "favbutton" href="{{loc ~ items.itemId}}">&#9734</a>
                                 <p class="desc">{{ items.itemIngredients }}</p>
                                 <p class="price">${{ items.itemPrice }}</p>
+                                <a id = "details" href="{{ loc2 ~ items.itemId}}">Details</a>
                             </div>
                         </div>
                     {% endfor %}
@@ -50,6 +52,7 @@
                                 <a id = "favbutton" href="{{loc ~ items.itemId}}">&#9734</a>
                                 <p class="desc">{{ items.itemIngredients }}</p>
                                 <p class="price">${{ items.itemPrice }}</p>
+                                <a id = "details" href="{{ loc2 ~ items.itemId}}">Details</a>
                             </div>
                         </div>
                     {% endfor %}
@@ -67,6 +70,7 @@
                                 <a id = "favbutton" href="{{loc ~ items.itemId}}">&#9734</a>
                                 <p class="desc">{{ items.itemIngredients }}</p>
                                 <p class="price">${{ items.itemPrice }}</p>
+                                <a id = "details" href="{{ loc2 ~ items.itemId}}">Details</a>
                             </div>
                         </div>
                     {% endfor %}
@@ -84,6 +88,7 @@
                                 <a id = "favbutton" href="{{loc ~ items.itemId}}">&#9734</a>
                                 <p class="desc">{{ items.itemIngredients }}</p>
                                 <p class="price">${{ items.itemPrice }}</p>
+                                <a id = "details" href="{{ loc2 ~ items.itemId}}">Details</a>
                             </div>
                         </div>
                     {% endfor %}
@@ -101,6 +106,7 @@
                                 <a id = "favbutton" href="{{loc ~ items.itemId}}">&#9734</a>
                                 <p class="desc">{{ items.itemIngredients }}</p>
                                 <p class="price">${{ items.itemPrice }}</p>
+                                <a id = "details" href="{{ loc2 ~ items.itemId}}">Details</a>
                             </div>
                         </div>
                     {% endfor %}
@@ -118,6 +124,7 @@
                                 <a id = "favbutton" href="{{loc ~ items.itemId}}">&#9734</a>
                                 <p class="desc">{{ items.itemIngredients }}</p>
                                 <p class="price">${{ items.itemPrice }}</p>
+                                <a id = "details" href="{{ loc2 ~ items.itemId}}">Details</a>
                             </div>
                         </div>
                     {% endfor %}

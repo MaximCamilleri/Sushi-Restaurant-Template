@@ -21,6 +21,8 @@ html{
     top: 50px;
 }
 
+
+
 .headboy{
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/background.jpg);
     position: relative;
@@ -129,6 +131,8 @@ html{
 .container:hover .overlay {
     height: 100%;
 }
+
+
   
 .desc {
     color: white;
@@ -141,6 +145,17 @@ html{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+}
+#details{
+    position: absolute;
+    top: 90%;
+    left: 45%;
+    background-color: bisque;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid black 2px;
+    color: black;
 }
 
 .titleMenu{
