@@ -1,6 +1,7 @@
 {% extends "layout2.html" %}
 
 {% block content %}
+<!--start of form-->
     <link rel="stylesheet" href="Bookings/booking.css">
     <form method="POST" action="includes/booking.inc.php">
 
@@ -39,7 +40,7 @@
         <p id = "formLabel">
             Number Of Guests
         </p>
-
+        <!--code for drop down list-->
         <p class = "textbox">
         <select name="guests" id = "guestOptions">
             <option value="1">1 Guest</option>
