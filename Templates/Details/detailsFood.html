@@ -1,0 +1,34 @@
+{% extends "layout2.html" %}
+{% set imgLoc = "FoodMenu/images/gallery/" %}
+
+{% block content %}
+    <link rel="stylesheet" href="../MenuIncludes/menuStyles.css">
+    <link rel="stylesheet" href="Details/styles.css">
+    <body>
+
+        <section class='headboy'>
+            <div class = "text-box">
+                {% for item in food%}
+                    <h1 class = 'title'>{{item.itemName}}</h1>
+                {% endfor %}
+            </div>
+        </section> 
+
+        <main>
+            {% for item in food%}
+                <img id = "img" src="{{ imgLoc ~ item.itemImg }}" alt="{{ item.itemName }}">
+                <h3 class = "info">Category: </h3>
+                <p class = "info">{{item.itemType}}</p>
+                <h3 class = "info">Ingredients List: </h3>
+                <p class = "info">{{ item.itemIngredients }}</p>
+                <h3 class = "info">Price: </h3>
+                <p class = "info">${{ item.itemPrice }}</p>
+                <h3 class = "info">Spice Level:</h3>
+                <p class = "info">{{ item.itemSpiceLevel }}</p>
+            {% endfor %}
+            <br>
+            <br>
+        </main>
+
+    </body>
+{% endblock %}
