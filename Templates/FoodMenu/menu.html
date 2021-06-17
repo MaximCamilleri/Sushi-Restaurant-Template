@@ -12,17 +12,20 @@
 
     <link rel="stylesheet" href="../MenuIncludes/menuStyles.css">
     <script src="../MenuIncludes/menuJS.js"></script>
-
+    <!--navigation menu on the left side for easy navigation through menu-->
     <div class = "sidenav">
         <a class = "active option" onClick = "menu(0)" href = "#starters">Starters</a></li>
         <a class = "option" onClick = "menu(1)" href = "#sushi">Sushi</a></li>
         <a class = "option" onClick = "menu(2)" href = "#soup">Soup</a></li>
         <a class = "option" onClick = "menu(3)" href = "#curry">Curry</a></li>
         <a class = "option" onClick = "menu(4)" href = "#accompaniments">Accompaniments</a></li>
-        <a class = "option" onClick = "menu(5)" href = "#Dessert">Dessert</a></li>
+        <a class = "option" onClick = "menu(5)" href = "#dessert">Dessert</a></li>
     </div>
-                
-    <div class = "food">
+    <!--
+        "overlay" class: this is the code for the hover function (when user hovers over items, translucent layer comes up with details)
+         each type of food is split into each section, also seeen in the menu
+    -->
+    <div class = "food"> <!-- container for where all food items will be-->
         <div id = "starters" class = "area">
             <h2 class="foodType">Starters</h2> 
                 <div class = "row">
@@ -130,7 +133,8 @@
                     {% endfor %}
                 </div>  
         </div>
-        {% if admin %}
+        <!-- form to update menu from the website itself-->
+        {% if admin %} <!--This is only shown if you are registered as an admin of the website -->
             <div>
                 <form id = "inputForm" action="FoodMenu/includes/menu-upload.inc.php" method="POST" enctype="multipart/form-data">
                     <h1>Input</h1>

@@ -13,20 +13,22 @@
 
     </head>
     <body>
-        <div class = split>
-            <div class = left>
+        <div class = split> <!--class to code split screen in css-->
+            <!--Left side of split screen-->
+            <div class = left> 
                 <section class = "copy">
                     <h1>PogFish Asian</h1>
                     <p>The best Asian cuisine restaurant on the Valletta Waterfront</p>
                 </section>
             </div>
-            
+            <!--right side of split screen-->
             <div class = right>
+                <!--form w/textboxes for signing up-->
                 <form method="POST", action="SignUpAndLogIn/includes/signup.inc.php">
                     <section class = "copy">
                         <h2> Sign Up</h2>
                         <div class = "login">
-                            <p>Already have an account? <a href = "login.php"><strong>Log In</strong></a></p>
+                            <p>Already have an account? <a href = "login.php"><strong>Log In</strong></a></p> <!--redirects user to login on press-->
                         </div>
                     </section>
 
@@ -42,7 +44,7 @@
                     <div class = "password-container">
                         <label for="password">Password</label>
                         <input id = "password" type="password" name="password">
-                        <input type = "checkbox" onclick="myFunction()">See password
+                        <input type = "checkbox" onclick="myFunction()">See password <!--See password function, that removes the censoring on password on user click-->
                     </div>
                     <br>
                     <button type="submit" name="submit" class = "signup-button">Sign up</button>

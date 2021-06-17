@@ -2,19 +2,24 @@
 
 {% block content %}
     <main>
+        <!--Header-->
         <link rel="stylesheet" href="Events/eventStyles.css">
         <section id = 'box'>
             <h1>Book an event</h1>
         </section>
         
+        <!-- Title-->
         <h2>Organize an Event at PogFish Sushi</h2>
         <h3>Fill in Your Details</h3>
+        <!--Where the Form Starts-->
         <form method = "POST"  action="../ContactIncludes/events.inc.php">
             <table id = "formApp">
+                
                 <tr>
                     <td><label for = "firstName">First Name</label></td>
                     <td><label for = "lastName">Last Name</label></td>
                 </tr>
+                <!--New Line-->
                 <tr>
                     <td><br></td>
                 </tr>
@@ -32,6 +37,7 @@
             <br><br>
             <input type = "text" id = "form2" placeholder = "2154 3860" name = "tel">
             <br><br><br>
+            <!--Form code for options (3 options, user checkes which one he wants)-->
             <table id = "formApp2">
                 <tr>
                     <td><label for = "eventType">Event Time</label></td>
@@ -58,7 +64,7 @@
             <br><br>
             <label for="lname">Details</label>
             <br><br>
-            <textarea type="text" id = "form3" placeholder="The restaurant is greater 10/10 would come here again" name = "details"></textarea>
+            <textarea type="text" id = "form3" placeholder="Please enter the details here" name = "details"></textarea>
             <br><br><br>
             <button type="submit" name="submit" name = "submit" id = "BookButton">Book Event</button>
         </form>
