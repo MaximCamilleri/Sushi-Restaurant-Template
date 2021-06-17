@@ -22,9 +22,9 @@
         <main>
             {% for item in food%}
                 <img id = "img" src="{{ imgLoc ~ item.itemImg }}" alt="{{ item.itemName }}">
-                <h2>Category: </h2>
+                <h2 class = "stuff">Category: </h2>
                 <p class = "info">{{item.itemType}}</p>
-                <h2>Price: </h2>
+                <h2 class = "stuff">Price: </h2>
                 <p class = "info">${{ item.itemPrice }}</p>
             {% endfor %}
             <br>

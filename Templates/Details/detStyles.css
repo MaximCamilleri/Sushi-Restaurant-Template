@@ -1,5 +1,5 @@
 #img{
-    margin: 40%;
+    margin-left: 40%;
     display: inline;
 }
 
@@ -7,10 +7,9 @@
     font-family: Philosopher;
 }
 
-h2{
-    margin: 10px;
+.stuff{
+    margin-left: 20%;
     position: relative;
-    left: 630px;
     bottom: 600px;
     font-size: 200%;
     max-width: 500px;
@@ -19,10 +18,25 @@ h2{
 
 .info{
     font-family: 'Raleway', sans-serif;
-    margin: 10px;
+    margin-left: 20%;
     position: relative;
-    left: 630px;
     bottom: 600px;
     font-size: 200%;
     max-width: 500px;
+}
+
+@media screen and (max-width: 1000px){
+    #img{
+        margin-left: 20%;
+        display: block;
+        margin-bottom: 20px;
+
+    }
+
+    .info{
+        position: static;
+    }
+    .stuff{
+        position: static;
+    }
 }
