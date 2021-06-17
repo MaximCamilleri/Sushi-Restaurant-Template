@@ -27,9 +27,26 @@
     }
 
     $to_email = $_POST['email'];
-    $subject = "Facourites List - PogFish Asian";
+    $subject = "Favourites List - PogFish Asian";
 
     $headers = "";
+
+    $sql2 = "SELECT * FROM users as u inner join favourites_drinks as fav 
+    on fav.userId = u.userId inner join drinks_menu as m 
+    on m.itemId = fav.itemId 
+    WHERE fav.userId = '$userId'";
+
+    $stmt2 = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt2, $sql2)){
+        header("Location: favourites.php?error=stmt3");
+    }else{
+        mysqli_stmt_execute($stmt2);
+        $result2 = mysqli_stmt_get_result($stmt2);
+    }
+
+    while($row2=mysqli_fetch_assoc($result2)){
+        $body.= "Name:".$row2['itemName']."(".$row2['itemType'].")"."\nPrice:".$row2['itemPrice'];
+    }
 
     mail($to_email, $subject, $body, $headers);
     header("Location: templates/home.php");
