@@ -4,6 +4,11 @@
 {% block content %}
     <link rel="stylesheet" href="../MenuIncludes/menuStyles.css">
     <link rel="stylesheet" href="Details/styles.css">
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Raleway:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+
     <body>
 
         <section class='headboy'>
@@ -17,13 +22,13 @@
         <main>
             {% for item in food%}
                 <img id = "img" src="{{ imgLoc ~ item.itemImg }}" alt="{{ item.itemName }}">
-                <h3 class = "info">Category: </h3>
+                <h2>Category: </h2>
                 <p class = "info">{{item.itemType}}</p>
-                <h3 class = "info">Ingredients List: </h3>
+                <h2>Ingredients List: </h2>
                 <p class = "info">{{ item.itemIngredients }}</p>
-                <h3 class = "info">Price: </h3>
+                <h2>Price: </h2>
                 <p class = "info">${{ item.itemPrice }}</p>
-                <h3 class = "info">Spice Level:</h3>
+                <h2>Spice Level:</h2>
                 <p class = "info">{{ item.itemSpiceLevel }}</p>
             {% endfor %}
             <br>

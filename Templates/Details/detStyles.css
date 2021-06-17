@@ -1,0 +1,28 @@
+#img{
+    margin: 40%;
+    display: inline;
+}
+
+.title{
+    font-family: Philosopher;
+}
+
+h2{
+    margin: 10px;
+    position: relative;
+    left: 630px;
+    bottom: 600px;
+    font-size: 200%;
+    max-width: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.info{
+    font-family: 'Raleway', sans-serif;
+    margin: 10px;
+    position: relative;
+    left: 630px;
+    bottom: 600px;
+    font-size: 200%;
+    max-width: 500px;
+}
