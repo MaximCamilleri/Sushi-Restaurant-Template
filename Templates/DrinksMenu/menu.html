@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="../MenuIncludes/menuStyles.css">
     <script src="../MenuIncludes/menuJS.js"></script>
-
+    <!--navigation menu on the left side for easy navigation through menu-->
     <div class = "sidenav">
         <a class = "active option" onClick = "menu(0)" href = "#softdrinks">Soft Drinks</a></li>
         <a class = "option" onClick = "menu(1)" href = "#juice">Juice</a></li>
@@ -21,6 +21,10 @@
         <a class = "option" onClick = "menu(4)" href = "#hotDrinks">Hot Drinks</a></li>
         <a class = "option" onClick = "menu(5)" href = "#liquor">Liquor</a></li>
     </div>
+    <!--
+        "overlay" class: this is the code for the hover function (when users hover over items, translucent layer comes up with details)
+        each type of food is split into its own section, also seeen in the food menu
+    -->
     <div class = "food">
         <div id = "softdrinks" class = "area">
             <h2 class="foodType">Soft Drinks</h2> 
@@ -129,6 +133,7 @@
                     {% endfor %}
                 </div>  
         </div>
+        <!-- Form to update menu, only appears if logged in as admin -->
         {% if admin %}
             <div>
                 <form id = "inputForm" action="DrinksMenu/includes/menu-upload.inc.php" method="POST" enctype="multipart/form-data">
