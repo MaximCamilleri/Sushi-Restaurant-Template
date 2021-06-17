@@ -32,3 +32,4 @@
 
     $sql = "INSERT INTO users (user_firstname, user_lastname, user_email, user_telNumber, user_password) VALUES ($firstname, $lastname, $email, $telNumber, $password);";
     mysqli_query($conn, $sql);
+    header("location: ../../home.php");
